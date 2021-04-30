@@ -1,0 +1,10 @@
+ {
+		"id": "referenceapplication.registrationapp.registerPatient.editContactInfo",
+		"extensionPointId": "patientDashboard.overallActions",
+		"type": "link",
+		"label": "Modifier les informations de contact",
+		"url": "registrationapp/editSection.page?patientId={{patient.patientId}}§ionId=contactInfo&appId=referenceapplication.registrationapp.niger",
+		"icon": "icon-pencil",
+        "order": 28,
+		"requiredPrivilege": "App: registrationapp.registerPatient"
+	}

@@ -1,0 +1,16 @@
+{
+    "id": "openhmis.cashier.fr",
+    "description": "Nouvelle facture",
+    "order": 0,
+    "extensions": [
+        {
+            "id": "demoapp.homepageLink",
+            "extensionPointId": "org.openmrs.referenceapplication.homepageLink",
+            "type": "link",
+            "label": "Nouvelle facture",
+            "url": "openhmis.cashier/cashierBill/entities.page#/",
+            "icon": "icon-money",
+             "requiredPrivilege": "Task: Create new bill"
+        }
+    ]
+}

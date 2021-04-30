@@ -1,0 +1,325 @@
+{"id": "referenceapplication.registrationapp.niger",
+	"instanceOf": "registrationapp.registerPatient",
+	"label": "Register Patient",
+	"description": "Enregistrement de patient",
+	"extensions": [
+        {
+		"id": "referenceapplication.registrationapp.registerPatient.homepageLink",
+		"extensionPointId": "org.openmrs.referenceapplication.homepageLink",
+		"type": "link",
+		"label": "Créer Patient",
+		"url": "registrationapp/registerPatient.page?appId=referenceapplication.registrationapp.niger",
+		"icon": "icon-user",
+		"order": 1,
+		"requiredPrivilege": "App: registrationapp.registerPatient"
+	}, {
+		"id": "referenceapplication.registrationapp.registerPatient.editContactInfo",
+		"extensionPointId": "patientDashboard.overallActions",
+		"type": "link",
+		"label": "Modifier les informations d'identification",
+		"url": "registrationapp/editSection.page?patientId={{patient.patientId}}&sectionId=identification&appId=referenceapplication.registrationapp.niger",
+		"icon": "icon-pencil",
+        "order": 26,
+		"requiredPrivilege": "App: registrationapp.registerPatient"
+	}
+    , {
+		"id": "referenceapplication.registrationapp.registerPatient.editContactInfo",
+		"extensionPointId": "patientDashboard.overallActions",
+		"type": "link",
+		"label": "Modifier les données démographiques",
+		"url": "registrationapp/editSection.page?patientId={{patient.patientId}}&sectionId=demographics&appId=referenceapplication.registrationapp.niger",
+		"icon": "icon-pencil",
+        "order": 27,
+		"requiredPrivilege": "App: registrationapp.registerPatient"
+	}
+    , {
+		"id": "referenceapplication.registrationapp.registerPatient.editContactInfo",
+		"extensionPointId": "patientDashboard.overallActions",
+		"type": "link",
+		"label": "Modifier les informations de contact",
+		"url": "registrationapp/editSection.page?patientId={{patient.patientId}}&sectionId=contactInfo&appId=referenceapplication.registrationapp.niger",
+		"icon": "icon-pencil",
+        "order": 28,
+		"requiredPrivilege": "App: registrationapp.registerPatient"
+	}],
+    "config": {
+        "genderOptions": "M,F,U",
+        "afterCreatedUrl": "/coreapps/clinicianfacing/patient.page?patientId={{patientId}}",
+        "sections": [
+            {
+                "id": "identification",
+                "label": "Identification",
+                "questions": [
+                    {
+                        "legend": "Numero",
+                        "id": "national_card_Identifier",
+                        "fields": [
+                            {
+                                "type": "patientIdentifier",
+                                "label": "N° de la carte nationale d'identité",
+                                "formFieldName": "IDCIdentificationNumber",
+                                "uuid": "d2dbd334-92dc-48e8-a6d2-18afd65a6271",
+                                "widget": {
+                                    "providerName": "uicommons",
+                                    "fragmentId": "field/text"
+                                },
+                                "cssClasses": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "nationality",
+                        "legend": "Origine",
+                        "fields": [
+                            {
+                                "label": "Nationalité",
+                                "type": "personAttribute",
+                                "formFieldName": "nationality",
+                                "uuid": "8d871afc-c2cc-11de-8d13-0010c6dffd0f",
+                                "widget": {
+                                    "providerName": "registrationapp",
+                                    "fragmentId": "field/dropDown",
+                                    "config": {
+                                        "formFieldName": "nationality",
+                                        "conceptSet": "3934f642-b64b-42b6-8f4c-9e29bcd55737",
+                                        "options": [
+                                            {
+                                                "label": "",
+                                                "value": ""
+                                            }
+                                        ],
+                                        "initialValue": "",
+                                        "hideEmptyLabel": true,
+                                        "expanded": false
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "demographics",
+                "label": "registrationapp.patient.demographics.label",
+                "questions": [
+                    {
+                        "id": "personName",
+                        "legend": "registration.nameIn.localLanguage",
+                        "fields": []
+                    },
+                    {
+                        "legend": "Lieu de naissance",
+                        "id": "birthPlace",
+                        "fields": [
+                            {
+                                "type": "personAttribute",
+                                "label": "Lieu de naissance du patient",
+                                "formFieldName": "birthPlace",
+                                "uuid": "8d8718c2-c2cc-11de-8d13-0010c6dffd0f",
+                                "widget": {
+                                    "providerName": "uicommons",
+                                    "fragmentId": "field/textarea"
+                                },
+                                "cssClasses": []
+                            }
+                        ]
+                    },
+                    {
+                        "id": "",
+                        "legend": "Situation matrimoniale",
+                        "fields": [
+                            {
+                                "label": "Situation matrimoniale",
+                                "type": "personAttribute",
+                                "formFieldName": "maritalStatus",
+                                "uuid": "8d871f2a-c2cc-11de-8d13-0010c6dffd0f",
+                                "widget": {
+                                    "providerName": "registrationapp",
+                                    "fragmentId": "field/dropDown",
+                                    "config": {
+                                        "formFieldName": "maritalStatus",
+                                        "conceptSet": "611264c9-cab2-4e21-a433-6d42d7c5af11",
+                                        "options": [
+                                            {
+                                                "label": "",
+                                                "value": ""
+                                            }
+                                        ],
+                                        "initialValue": "",
+                                        "hideEmptyLabel": true,
+                                        "expanded": false
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": "",
+                        "legend": "Profession",
+                        "fields": [
+                            {
+                                "label": "Profession",
+                                "type": "personAttribute",
+                                "formFieldName": "profession",
+                                "uuid": "6f2704b8-7f16-4551-96ce-b21800fe6145",
+                                "widget": {
+                                    "providerName": "registrationapp",
+                                    "fragmentId": "field/dropDown",
+                                    "config": {
+                                        "formFieldName": "profession",
+                                        "conceptSet": "8223e0ae-bba1-4dd4-86c0-83f20d38ce47",
+                                        "options": [
+                                            {
+                                                "label": "",
+                                                "value": ""
+                                            }
+                                        ],
+                                        "initialValue": "",
+                                        "hideEmptyLabel": true,
+                                        "expanded": false
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": "Education",
+                        "legend": "Niveau d'instruction",
+                        "fields": [
+                            {
+                                "label": "Niveau d'instruction",
+                                "type": "personAttribute",
+                                "formFieldName": "Education",
+                                "uuid": "f09e9ee2-1b06-4f03-81dd-ed865845e658",
+                                "widget": {
+                                    "providerName": "registrationapp",
+                                    "fragmentId": "field/dropDown",
+                                    "config": {
+                                        "formFieldName": "Education",
+                                        "conceptSet": "b308fdd1-e86e-409d-8381-e7c01dee9466",
+                                        "options": [
+                                            {
+                                                "label": "",
+                                                "value": ""
+                                            }
+                                        ],
+                                        "initialValue": "",
+                                        "hideEmptyLabel": true,
+                                        "expanded": false
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "id": "Ethnie",
+                        "legend": "Ethnie",
+                        "fields": [
+                            {
+                                "label": "Ethnie",
+                                "type": "personAttribute",
+                                "formFieldName": "ethnicity",
+                                "uuid": "9407fe8a-6491-41ba-a9a0-381103b3b99b",
+                                "widget": {
+                                    "providerName": "registrationapp",
+                                    "fragmentId": "field/dropDown",
+                                    "config": {
+                                        "formFieldName": "ethnicity",
+                                        "conceptSet": "5fd6e566-b5b5-4049-86bc-94e9959031b7",
+                                        "options": [
+                                            {
+                                                "label": "",
+                                                "value": ""
+                                            }
+                                        ],
+                                        "initialValue": "",
+                                        "hideEmptyLabel": true,
+                                        "expanded": false
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "contactInfo",
+                "label": "registrationapp.patient.contactInfo.label",
+                "questions": [
+                    {
+                        "legend": "Person.address",
+                        "fields": [
+                            {
+                                "type": "personAddress",
+                                "label": "registrationapp.patient.address.question",
+                                "widget": {
+                                    "providerName": "registrationapp",
+                                    "fragmentId": "field/personAddressWithHierarchy",
+                                   "config" : {
+                                       "shortcutFor": "address1",
+                                       "manualFields": ["address2"]
+                                   }
+                               }
+                            }
+                        ]
+                    },
+                    {
+                        "legend": "registrationapp.patient.phone.label",
+                        "id": "phoneNumberLabel",
+                        "fields": [
+                            {
+                                "type": "personAttribute",
+                                "label": "N° de telephone du patient",
+                                "formFieldName": "phoneNumber",
+                                "uuid": "14d4f066-15f5-102d-96e4-000c29c2a5d7",
+                                "widget": {
+                                    "providerName": "uicommons",
+                                    "fragmentId": "field/text"
+                                },
+                                "cssClasses": [
+                                    "phone"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "legend": "registrationapp.person.relationship.label",
+                        "header": "registrationapp.person.relationship.question",
+                        "fields": [
+                            {
+                                "type": "personRelationships",
+                                "widget": {
+                                    "providerName": "registrationapp",
+                                    "fragmentId": "field/personRelationship"
+                                }
+                            },
+                            {
+                                "label": "Profession du conjoint",
+                                "type": "personAttribute",
+                                "formFieldName": "profession",
+                                "uuid": "8c2ea51f-002f-47c6-a223-1ab02027c037",
+                                "widget": {
+                                    "providerName": "registrationapp",
+                                    "fragmentId": "field/dropDown",
+                                    "config": {
+                                        "formFieldName": "profession",
+                                        "conceptSet": "8223e0ae-bba1-4dd4-86c0-83f20d38ce47",
+                                        "options": [
+                                            {
+                                                "label": "",
+                                                "value": ""
+                                            }
+                                        ],
+                                        "initialValue": "",
+                                        "hideEmptyLabel": true,
+                                        "expanded": false
+                                    }
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}
