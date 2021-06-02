@@ -1,0 +1,29 @@
+<org.openmrs.layout.address.AddressTemplate>
+    <nameMappings class="properties">
+        <property name="country" value="Pays" />
+        <property name="stateProvince" value="Region"/>
+        <property name="countyDistrict" value="Commune" />
+        <property name="cityVillage" value="Ville/Village" />
+        <property name="address1" value="Autre adresse" />
+    </nameMappings>
+
+    <sizeMappings class="properties">
+        <property name="country" value="40" />
+        <property name="stateProvince" value="40"/>
+        <property name="countyDistrict" value="40"/>
+        <property name="cityVillage" value="40"/>
+        <property name="address1" value="40"/>
+    </sizeMappings>
+
+    <elementDefaults class="properties">
+        <property name="country" value="Niger" />
+    </elementDefaults>
+
+    <lineByLineFormat>
+        <string>country</string>
+        <string>stateProvince</string>
+        <string>countyDistrict</string>
+        <string>cityVillage</string>
+        <string>address1</string>
+    </lineByLineFormat>
+</org.openmrs.layout.address.AddressTemplate>

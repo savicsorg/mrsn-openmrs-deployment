@@ -61,7 +61,7 @@
 
 		table.baseline-aligned-borded td {
 			vertical-align: baseline;
-			border: 1px solid black;
+			border: 1px solid;
 		}
 	</style>
 
@@ -70,21 +70,33 @@
 
 	<!--===============================   Section 1 =======================================  -->
 	<section headerLabel="GESTATIONS ANTERIEURES DE LA PATIENTE">
-		<table class="baseline-aligned" cellspacing="0" cellpadding="6" width="100%">
+		<table class="baseline-aligned"  border="1"  width="100%">
 			<tr>
 				<td>DATE D'ENTREE:</td>
 				<td colspan="3">
 					<encounterDate default="today" />
 				</td>
 			</tr>
+            <tr>
+                <td>Prestataire:</td>
+                <td colspan="3">
+                    <encounterProviderAndRole default="currentUser" encounterRole="1" required="true"/>
+                </td>
+            </tr>
+			<tr>
+                <td>Service:</td>
+                <td colspan="3">
+                    <encounterLocation required="true" tags="Admission Location,Transfer Location"/>
+                </td>
+            </tr>
 		</table>
 
-		<table class="baseline-aligned-borded" cellspacing="0" cellpadding="6" width="100%">
+		<table class="baseline-aligned"  border="1"  width="100%">
 			<tr>
 				<th>N°</th>
 				<th>Année</th>
 				<th>Terme</th>
-				<th>Mode d'accht</th>
+				<th>Mode d'accouchement</th>
 				<th>Poids</th>
 				<th>Sexe</th>
 				<th>Etat de l'enfant</th>
@@ -312,5 +324,10 @@
 			</tr>
 		</table>
 	</section>
-	<submit />
+	
+	
+	<center>
+        <submit />
+    </center>
+	
 </htmlform>

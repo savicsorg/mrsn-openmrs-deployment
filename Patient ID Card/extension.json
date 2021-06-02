@@ -1,10 +1,10 @@
  {
-		"id": "referenceapplication.registrationapp.registerPatient.editContactInfo",
+		"id": "patientDashboard.overallActions.xreport.1",
 		"extensionPointId": "patientDashboard.overallActions",
 		"type": "link",
-		"label": "Modifier les informations de contact",
-		"url": "registrationapp/editSection.page?patientId={{patient.patientId}}§ionId=contactInfo&appId=referenceapplication.registrationapp.niger",
-		"icon": "icon-pencil",
-        "order": 28,
-		"requiredPrivilege": "App: registrationapp.registerPatient"
+		"label": "Carte patient",
+		"url": "xreports/runReports.page?reportId=2&groupId=1&patientId={{patient.patientId}}",
+		"icon": "icon-user-md",
+        "order": 100,
+		"requiredPrivilege": "App: xreports.run"
 	}

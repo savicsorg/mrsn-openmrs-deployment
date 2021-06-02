@@ -1,6 +1,6 @@
 {"id": "referenceapplication.registrationapp.niger",
 	"instanceOf": "registrationapp.registerPatient",
-	"label": "Register Patient",
+	"label": "Enregistrement Patient",
 	"description": "Enregistrement de patient",
 	"extensions": [
         {
@@ -104,24 +104,28 @@
                 "questions": [
                     {
                         "id": "personName",
-                        "legend": "registration.nameIn.localLanguage",
+                        "legend": "Nom *",
                         "fields": []
                     },
                     {
-                        "legend": "Lieu de naissance",
+                        "legend": "Lieu de naissance *",
                         "id": "birthPlace",
                         "fields": [
                             {
-                                "type": "personAttribute",
+                                "type": "personAddress",
                                 "label": "Lieu de naissance du patient",
                                 "formFieldName": "birthPlace",
                                 "uuid": "8d8718c2-c2cc-11de-8d13-0010c6dffd0f",
                                 "widget": {
-                                    "providerName": "uicommons",
-                                    "fragmentId": "field/textarea"
-                                },
-                                "cssClasses": []
+                                    "providerName": "registrationapp",
+                                    "fragmentId": "field/personAddressWithHierarchy",
+                                    "config" : {
+                                        "manualFields": ["cityVillage","address1"]
+                                    }
+                               }
                             }
+                            
+                    
                         ]
                     },
                     {
@@ -150,6 +154,41 @@
                                         "expanded": false
                                     }
                                 }
+                            }
+                        ]
+                    },
+                    {
+                        "legend": "registrationapp.patient.address.required",
+                        "fields": [
+                            {
+                                "type": "personAddress",
+                                "label": "registrationapp.patient.address.question",
+                                "widget": {
+                                    "providerName": "registrationapp",
+                                    "fragmentId": "field/personAddressWithHierarchy",
+                                    "config" : {
+                                        "manualFields": ["cityVillage","address1"]
+                                    }
+                               }
+                            }
+                        ]
+                    },
+                    {
+                        "legend": "registrationapp.patient.phone.label",
+                        "id": "phoneNumberLabel",
+                        "fields": [
+                            {
+                                "type": "personAttribute",
+                                "label": "N° de telephone du patient",
+                                "formFieldName": "phoneNumber",
+                                "uuid": "14d4f066-15f5-102d-96e4-000c29c2a5d7",
+                                "widget": {
+                                    "providerName": "uicommons",
+                                    "fragmentId": "field/text"
+                                },
+                                "cssClasses": [
+                                    "phone"
+                                ]
                             }
                         ]
                     },
@@ -247,54 +286,22 @@
                 "label": "registrationapp.patient.contactInfo.label",
                 "questions": [
                     {
-                        "legend": "Person.address",
-                        "fields": [
-                            {
-                                "type": "personAddress",
-                                "label": "registrationapp.patient.address.question",
-                                "widget": {
-                                    "providerName": "registrationapp",
-                                    "fragmentId": "field/personAddressWithHierarchy",
-                                   "config" : {
-                                       "shortcutFor": "address1",
-                                       "manualFields": ["address2"]
-                                   }
-                               }
-                            }
-                        ]
-                    },
-                    {
-                        "legend": "registrationapp.patient.phone.label",
-                        "id": "phoneNumberLabel",
+                        "legend": "Conjoint",
+                        "header": "Le conjoint",
                         "fields": [
                             {
                                 "type": "personAttribute",
-                                "label": "N° de telephone du patient",
-                                "formFieldName": "phoneNumber",
-                                "uuid": "14d4f066-15f5-102d-96e4-000c29c2a5d7",
+                                "label": "Nom",
+                                "formFieldName": "spouseName",
+                                "uuid": "6dcba982-d834-4ca5-a37d-6f1a9340c050",
                                 "widget": {
                                     "providerName": "uicommons",
                                     "fragmentId": "field/text"
                                 },
-                                "cssClasses": [
-                                    "phone"
-                                ]
-                            }
-                        ]
-                    },
-                    {
-                        "legend": "registrationapp.person.relationship.label",
-                        "header": "registrationapp.person.relationship.question",
-                        "fields": [
-                            {
-                                "type": "personRelationships",
-                                "widget": {
-                                    "providerName": "registrationapp",
-                                    "fragmentId": "field/personRelationship"
-                                }
+                                "cssClasses": []
                             },
                             {
-                                "label": "Profession du conjoint",
+                                "label": "Profession",
                                 "type": "personAttribute",
                                 "formFieldName": "profession",
                                 "uuid": "8c2ea51f-002f-47c6-a223-1ab02027c037",
@@ -315,9 +322,129 @@
                                         "expanded": false
                                     }
                                 }
+                            },
+                            {
+                                "type": "personAttribute",
+                                "label": "N° de telephone",
+                                "formFieldName": "spousePhoneNumber",
+                                "uuid": "3b28e6e1-f4e6-442c-8fba-1b95c19ea2be",
+                                "widget": {
+                                    "providerName": "uicommons",
+                                    "fragmentId": "field/text"
+                                },
+                                "cssClasses": [
+                                    "phone"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "legend": "Père",
+                        "header": "Le père du patient",
+                        "fields": [
+                            {
+                                "type": "personAttribute",
+                                "label": "Nom du père",
+                                "formFieldName": "fatherName",
+                                "uuid": "e364058b-3716-41ae-ab0f-4b01d322977c",
+                                "widget": {
+                                    "providerName": "uicommons",
+                                    "fragmentId": "field/text"
+                                },
+                                "cssClasses": []
+                            },
+                            {
+                                "label": "Profession du père",
+                                "type": "personAttribute",
+                                "formFieldName": "matherProfession",
+                                "uuid": "071bcceb-2fcb-4fff-9a37-2e08e7df82b0",
+                                "widget": {
+                                    "providerName": "registrationapp",
+                                    "fragmentId": "field/dropDown",
+                                    "config": {
+                                        "formFieldName": "profession",
+                                        "conceptSet": "8223e0ae-bba1-4dd4-86c0-83f20d38ce47",
+                                        "options": [
+                                            {
+                                                "label": "",
+                                                "value": ""
+                                            }
+                                        ],
+                                        "initialValue": "",
+                                        "hideEmptyLabel": true,
+                                        "expanded": false
+                                    }
+                                }
+                            },
+                            {
+                                "type": "personAttribute",
+                                "label": "N° de telephone",
+                                "formFieldName": "fatherPhoneNumber",
+                                "uuid": "2fa82eab-e62d-4992-91bd-d6928a05be3c",
+                                "widget": {
+                                    "providerName": "uicommons",
+                                    "fragmentId": "field/text"
+                                },
+                                "cssClasses": [
+                                    "phone"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "legend": "Mère",
+                        "header": "La mère du patient",
+                        "fields": [
+                            {
+                                "type": "personAttribute",
+                                "label": "Nom",
+                                "formFieldName": "motherName",
+                                "uuid": "cbd9bf85-df43-48e6-9c52-58b4bd867f4a",
+                                "widget": {
+                                    "providerName": "uicommons",
+                                    "fragmentId": "field/text"
+                                },
+                                "cssClasses": []
+                            },
+                            {
+                                "label": "Profession",
+                                "type": "personAttribute",
+                                "formFieldName": "motherProfession",
+                                "uuid": "a01c6abb-8c7c-4a4a-94cb-5afeec6f7ba8",
+                                "widget": {
+                                    "providerName": "registrationapp",
+                                    "fragmentId": "field/dropDown",
+                                    "config": {
+                                        "formFieldName": "profession",
+                                        "conceptSet": "8223e0ae-bba1-4dd4-86c0-83f20d38ce47",
+                                        "options": [
+                                            {
+                                                "label": "",
+                                                "value": ""
+                                            }
+                                        ],
+                                        "initialValue": "",
+                                        "hideEmptyLabel": true,
+                                        "expanded": false
+                                    }
+                                }
+                            },
+                            {
+                                "type": "personAttribute",
+                                "label": "N° de telephone",
+                                "formFieldName": "motherPhoneNumber",
+                                "uuid": "38e55f06-0b80-4aab-a61d-104533e63e4c",
+                                "widget": {
+                                    "providerName": "uicommons",
+                                    "fragmentId": "field/text"
+                                },
+                                "cssClasses": [
+                                    "phone"
+                                ]
                             }
                         ]
                     }
+
                 ]
             }
         ]

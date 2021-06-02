@@ -64,8 +64,6 @@
     </ifMode>
 
     <div id="data-collection">
-        <obs conceptId="4917" answerConceptIds="775,744" answerCodes="HOSPITALISATION ,CONSULTATION EXTERNE," style="radio" />
-
         <encounterDiagnoses required="true" selectedDiagnosesTarget="#encounter-diagnoses-target"/>
 
         <p>
