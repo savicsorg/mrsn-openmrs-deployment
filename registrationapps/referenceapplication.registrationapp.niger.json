@@ -112,20 +112,16 @@
                         "id": "birthPlace",
                         "fields": [
                             {
-                                "type": "personAddress",
+                                "type": "personAttribute",
                                 "label": "Lieu de naissance du patient",
                                 "formFieldName": "birthPlace",
                                 "uuid": "8d8718c2-c2cc-11de-8d13-0010c6dffd0f",
                                 "widget": {
-                                    "providerName": "registrationapp",
-                                    "fragmentId": "field/personAddressWithHierarchy",
-                                    "config" : {
-                                        "manualFields": ["cityVillage","address1"]
-                                    }
-                               }
+                                    "providerName": "uicommons",
+                                    "fragmentId": "field/text"
+                                },
+                                "cssClasses": ["required"]
                             }
-                            
-                    
                         ]
                     },
                     {
@@ -249,36 +245,9 @@
                                 }
                             }
                         ]
-                    },
-                    {
-                        "id": "Ethnie",
-                        "legend": "Ethnie",
-                        "fields": [
-                            {
-                                "label": "Ethnie",
-                                "type": "personAttribute",
-                                "formFieldName": "ethnicity",
-                                "uuid": "9407fe8a-6491-41ba-a9a0-381103b3b99b",
-                                "widget": {
-                                    "providerName": "registrationapp",
-                                    "fragmentId": "field/dropDown",
-                                    "config": {
-                                        "formFieldName": "ethnicity",
-                                        "conceptSet": "5fd6e566-b5b5-4049-86bc-94e9959031b7",
-                                        "options": [
-                                            {
-                                                "label": "",
-                                                "value": ""
-                                            }
-                                        ],
-                                        "initialValue": "",
-                                        "hideEmptyLabel": true,
-                                        "expanded": false
-                                    }
-                                }
-                            }
-                        ]
                     }
+
+
                 ]
             },
             {
@@ -291,7 +260,7 @@
                         "fields": [
                             {
                                 "type": "personAttribute",
-                                "label": "Nom",
+                                "label": "Nom du conjoint",
                                 "formFieldName": "spouseName",
                                 "uuid": "6dcba982-d834-4ca5-a37d-6f1a9340c050",
                                 "widget": {
@@ -301,9 +270,9 @@
                                 "cssClasses": []
                             },
                             {
-                                "label": "Profession",
+                                "label": "Profession du conjoint",
                                 "type": "personAttribute",
-                                "formFieldName": "profession",
+                                "formFieldName": "professionConjoint",
                                 "uuid": "8c2ea51f-002f-47c6-a223-1ab02027c037",
                                 "widget": {
                                     "providerName": "registrationapp",
@@ -397,7 +366,7 @@
                         "fields": [
                             {
                                 "type": "personAttribute",
-                                "label": "Nom",
+                                "label": "Nom de la mère",
                                 "formFieldName": "motherName",
                                 "uuid": "cbd9bf85-df43-48e6-9c52-58b4bd867f4a",
                                 "widget": {
@@ -407,7 +376,7 @@
                                 "cssClasses": []
                             },
                             {
-                                "label": "Profession",
+                                "label": "Profession de la mère",
                                 "type": "personAttribute",
                                 "formFieldName": "motherProfession",
                                 "uuid": "a01c6abb-8c7c-4a4a-94cb-5afeec6f7ba8",
