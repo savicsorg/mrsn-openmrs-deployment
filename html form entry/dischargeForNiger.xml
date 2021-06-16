@@ -1,0 +1,44 @@
+<htmlform>
+    <script type="text/javascript">
+           $(function() {
+               $('#location-container select').focus();
+           });
+       </script>
+   
+       <h2><label><uimessage code="referenceapplication.simpleDischarge.title"/></label></h2>
+   
+       <section id="discharge">
+           <p>
+               <label><uimessage code="referenceapplication.simpleDischarge.dischargeDate"/></label>
+               <encounterDate id="encounterDate" showTime="false" default="now"/>
+           </p>
+   
+           <p>
+               <label><uimessage code="referenceapplication.simpleDischarge.dischargingClinician"/></label>
+               <encounterProviderAndRole default="currentUser" encounterRole="1" required="true"/>
+           </p>
+   
+           <p id="location-container">
+               <label><uimessage code="referenceapplication.simpleDischarge.dischargedFrom"/></label>
+               <encounterLocation required="true" tags="Admission Location,Transfer Location"/>
+           </p>
+   
+   
+       <p id="outcome-container">
+               <label>Résultat du patient</label>
+               <obs conceptId="4838" tags="Choisir un résultat"/>
+           </p>
+   
+   
+   
+   
+       </section>
+   
+   
+       <submit submitClass="confirm right" submitCode="uicommons.saveForm" />
+   
+       <ifMode mode="VIEW" include="false">
+           <button class="cancel"><uimessage code="uicommons.cancelForm"/></button>
+       </ifMode>
+   
+   </htmlform>

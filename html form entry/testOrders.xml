@@ -1,0 +1,106 @@
+<htmlform formUuid="a000cb34-9ec1-4344-a1c8-f692232f6edd" formName="DrugOrders" formEncounterType="67a71486-1a54-468f-ac3e-7091a9a79584" formVersion="1.0">
+    <macros>
+        paperFormId = (Fill this in)
+        headerColor =#009d8e
+		secondFeaderColor =yellow
+		fontOnHeaderColor = white
+    </macros>
+
+    <style>
+		form select,
+		.form select {
+			min-width: 80px;
+		}
+
+		.section {
+			border: 1px solid $headerColor;
+			padding: 2px;
+			text-align: left;
+			margin-bottom: 1em;
+		}
+
+		.sectionHeader {
+			background-color: $headerColor;
+			color: $fontOnHeaderColor;
+			display: block;
+			padding: 2px;
+			font-weight: bold;
+		}
+
+		.sectionSecondHeader {
+			background-color: $secondFeaderColor;
+			color: $fontOnHeaderColor;
+			display: block;
+			padding: 2px;
+			font-weight: bold;
+		}
+
+		table.baseline-aligned td {
+			vertical-align: baseline;
+		}
+
+
+
+		table.baseline-aligned-borded td {
+			vertical-align: baseline;
+			border: 1px solid black;
+		}
+	</style>
+
+
+    <ifMode mode="ENTER">
+        <script type="text/javascript"></script>
+    </ifMode>
+
+    <ifMode mode="EDIT">
+        <script type="text/javascript"></script>
+    </ifMode>
+
+    <ifMode mode="VIEW">
+        <script type="text/javascript"></script>
+    </ifMode>
+
+    <section headerLabel="Demande d'analyses médicales">
+        <div class="hidden" id="encounter-details" sectionTag="section" headerStyle="title" headerLabel="Encounter Details">
+            <fieldset>
+                <legend>When?</legend>
+                <label>When?</label>
+                <encounterDate default="now" showTime="false" />
+            </fieldset>
+
+            <fieldset>
+                <legend>Who?</legend>
+                <label>Who?</label>
+
+                <encounterProviderAndRole default="currentUser" encounterRole="240b26f9-dd88-4172-823d-4a8bfeb7841f" required="true" />
+            </fieldset>
+
+            <fieldset>
+                <legend>Where?</legend>
+                <label>Where?</label>
+
+                <encounterLocation default="SessionAttribute:emrContext.sessionLocationId" />
+            </fieldset>
+        </div>
+
+        
+        <section headerLabel="Bactériologie">
+            <htmlformflowsheet formId="b2da38f2-e5e9-4fa0-be52-857c306f7371" sharedEncounter="false" addAnotherButtonLabel="Nouveau" windowHeight="230" />
+        </section>
+        <section headerLabel="Biochimie">
+            <htmlformflowsheet formId="9d0354a0-9410-46ba-bbf1-e04edd2fa427" sharedEncounter="false" addAnotherButtonLabel="Nouveau" windowHeight="320" />
+        </section>
+        <section headerLabel="Hématologie">
+            <htmlformflowsheet formId="4d27daef-6f19-4526-86f8-05c91c48ae0d" sharedEncounter="false" addAnotherButtonLabel="Nouveau" windowHeight="230" />
+        </section>
+        <section headerLabel="Sérologie">
+            <htmlformflowsheet formId="8750db01-82db-46ed-ac41-92684ae84f3c" sharedEncounter="false" addAnotherButtonLabel="Nouveau" windowHeight="320" />
+        </section>
+        <section headerLabel="Parasitologie">
+            <htmlformflowsheet formId="de325215-92ce-4adf-b854-0d53c0fbf098" sharedEncounter="false" addAnotherButtonLabel="Nouveau" windowHeight="230" />
+        </section>
+        <section headerLabel="Examens">
+            <htmlformflowsheet formId="a8b183a5-c3a1-438f-b399-cb8185d1b41e" sharedEncounter="false" addAnotherButtonLabel="Nouveau" windowHeight="230" />
+        </section>
+    </section>
+</htmlform>

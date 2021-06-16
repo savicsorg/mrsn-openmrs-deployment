@@ -64,22 +64,10 @@
     </style>
 
     <span style="float:right">Paper Form ID: $paperFormId</span>
-    <h2>Leaving childbirth (v1.0)</h2>
+    <h2>Sortie post-accouchement (v1.0)</h2>
 
     <section headerLabel="SORTIE D'ACCOUCHEMENT">
         <table class="baseline-aligned" border="1" width="100%">
-            <tr>
-                <td>Debut de travail:</td>
-                <td colspan="3">
-                    <encounterDate default="today" showTime="true" />
-                </td>
-            </tr>
-            <tr>
-                <td>Date d'admission:</td>
-                <td colspan="3">
-                    <obs conceptId="4447" />
-                </td>
-            </tr>
             <tr>
                 <td>Prestataire:</td>
                 <td colspan="3">
@@ -96,7 +84,7 @@
             <tr>
                 <td>Date de sortie:</td>
                 <td colspan="3">
-                    <obs conceptId="5034" />
+                    <encounterDate default="today" showTime="true" />
                 </td>
             </tr>
         </table>
@@ -120,7 +108,7 @@
                     </td>
                     <td>Type</td>
                     <td>
-                        <obs conceptId="5038" />
+                        <obs conceptId="5038" size="90"/>
                     </td>
                 </tr>
 
@@ -130,7 +118,7 @@
                         <obs conceptId="5039" labelText=" " answerConceptId="1" />
                     </td>
                     <td colspan="2">
-                        <obs conceptId="5040" />
+                        <obs conceptId="5040" size="100"/>
                     </td>
                 </tr>
                 <tr>
@@ -139,7 +127,7 @@
                         <obs conceptId="5041" labelText=" " answerConceptId="1" />
                     </td>
                     <td colspan="2">
-                        <obs conceptId="5042" />
+                        <obs conceptId="5042"  size="100" />
                     </td>
                 </tr>
                 <tr>
@@ -148,7 +136,7 @@
                         <obs conceptId="5043" labelText=" " answerConceptId="1" />
                     </td>
                     <td colspan="2">
-                        <obs conceptId="5044" />
+                        <obs conceptId="5044"  size="100"/>
                     </td>
                 </tr>
                 <tr>
@@ -158,7 +146,7 @@
                     </td>
                     <td>Causes:</td>
                     <td>
-                        <obs conceptId="5046" />
+                        <obs conceptId="5046" size="90"/>
                     </td>
                 </tr>
             </table>
@@ -183,14 +171,14 @@
                     </td>
                     <td>Type</td>
                     <td>
-                        <obs conceptId="5050" />
+                        <obs conceptId="5050" size="90"/>
                     </td>
                 </tr>
 
                 <tr>
                     <td>Transfert:</td>
                     <td colspan="3">
-                        <obs conceptId="5051" />
+                        <obs conceptId="5051" size="90" />
                     </td>
                 </tr>
 
@@ -199,9 +187,9 @@
                     <td>
                         <obs conceptId="5052" labelText=" " answerConceptId="1" />
                     </td>
-                    <td>Causes:</td>
+                    <td>Cause(s):</td>
                     <td>
-                        <obs conceptId="5053" />
+                        <obs conceptId="5053" size="90"/>
                     </td>
                 </tr>
             </table>
@@ -211,13 +199,13 @@
             <tr>
                 <td>Conseil:</td>
                 <td colspan="3">
-                    <obs conceptId="5054" style="textarea" />
+                    <obs conceptId="5054" style="textarea" cols="90" />
                 </td>
             </tr>
             <tr>
                 <td>DIAGNOSTIC DE SORTIE OU FINAL:</td>
                 <td colspan="3">
-                    <obs conceptId="5055" style="textarea" />
+                    <obs conceptId="5055" style="textarea" cols="90"/>
                 </td>
             </tr>
         </table>
@@ -234,7 +222,7 @@
                 <tr>
                     <td>Rendez-vous:</td>
                     <td colspan="3">
-                        <obs conceptId="5057" />
+                        <obs conceptId="5057" size="100"/>
                     </td>
                 </tr>
             </table>

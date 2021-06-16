@@ -1,6 +1,6 @@
 <htmlform>
     <macros>
-        paperFormId = (Fill this in)
+        paperFormId = DossierGynécologique
         headerColor =#009d8e
 		secondFeaderColor =yellow
 		fontOnHeaderColor = white
@@ -51,7 +51,7 @@
 
     <table>
         <div>
-            <section headerLabel="Gestations antérieures">
+            <section headerLabel="Gestations antérieures de la patiente">
                 <htmlformflowsheet formId="146b0e96-72e8-4c0c-b766-428f2c77562a" sharedEncounter="true" addAnotherButtonLabel="Nouveau"  windowHeight="700" showHtmlForm="true"  />
             </section>
         </div>

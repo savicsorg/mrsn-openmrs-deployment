@@ -66,10 +66,10 @@
 	</style>
 
 	<span style="float:right">Paper Form ID: $paperFormId</span>
-	<h2>Dossier gynecologique (v1.0)</h2>
+	<h2>Dossier gynécologique (v1.0)</h2>
 
 	<!--===============================   Section 1 =======================================  -->
-	<section headerLabel="GESTATIONS ANTERIEURES DE LA PATIENTE">
+	<section headerLabel="GESTATIONS ANTÉRIEURES DE LA PATIENTE">
 		<table class="baseline-aligned"  border="1"  width="100%">
 			<tr>
 				<td>DATE D'ENTREE:</td>
@@ -97,7 +97,7 @@
 				<th>Année</th>
 				<th>Terme</th>
 				<th>Mode d'accouchement</th>
-				<th>Poids</th>
+				<th>Poids(grammes)</th>
 				<th>Sexe</th>
 				<th>Etat de l'enfant</th>
 			</tr>
@@ -115,7 +115,7 @@
 					<obs conceptId="4472" />
 				</td>
 				<td>
-					<obs conceptId="2361" />
+					<obs conceptId="5101" />
 				</td>
 				<td>
 					<obs conceptId="5009" />
@@ -137,7 +137,7 @@
 					<obs conceptId="4472" />
 				</td>
 				<td>
-					<obs conceptId="2361" />
+					<obs conceptId="5101" />
 				</td>
 				<td>
 					<obs conceptId="5009" />
@@ -159,7 +159,7 @@
 					<obs conceptId="4472" />
 				</td>
 				<td>
-					<obs conceptId="2361" />
+					<obs conceptId="5101" />
 				</td>
 				<td>
 					<obs conceptId="5009" />
@@ -181,7 +181,7 @@
 					<obs conceptId="4472" />
 				</td>
 				<td>
-					<obs conceptId="2361" />
+					<obs conceptId="5101" />
 				</td>
 				<td>
 					<obs conceptId="5009" />
@@ -203,7 +203,7 @@
 					<obs conceptId="4472" />
 				</td>
 				<td>
-					<obs conceptId="2361" />
+					<obs conceptId="5101" />
 				</td>
 				<td>
 					<obs conceptId="5009" />
@@ -225,7 +225,7 @@
 					<obs conceptId="4472" />
 				</td>
 				<td>
-					<obs conceptId="2361" />
+					<obs conceptId="5101" />
 				</td>
 				<td>
 					<obs conceptId="5009" />
@@ -247,7 +247,7 @@
 					<obs conceptId="4472" />
 				</td>
 				<td>
-					<obs conceptId="2361" />
+					<obs conceptId="5101" />
 				</td>
 				<td>
 					<obs conceptId="5009" />
@@ -269,7 +269,7 @@
 					<obs conceptId="4472" />
 				</td>
 				<td>
-					<obs conceptId="2361" />
+					<obs conceptId="5101" />
 				</td>
 				<td>
 					<obs conceptId="5009" />
@@ -291,7 +291,7 @@
 					<obs conceptId="4472" />
 				</td>
 				<td>
-					<obs conceptId="2361" />
+					<obs conceptId="5101" />
 				</td>
 				<td>
 					<obs conceptId="5009" />
@@ -313,7 +313,7 @@
 					<obs conceptId="4472" />
 				</td>
 				<td>
-					<obs conceptId="2361" />
+					<obs conceptId="5101" />
 				</td>
 				<td>
 					<obs conceptId="5009" />

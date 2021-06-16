@@ -1,0 +1,98 @@
+<htmlform formUuid="a000cb34-9ec1-4344-a1c8-f692232f6edd" formName="DrugDetails" formEncounterType="67a71486-1a54-468f-ac3e-7091a9a79584" formVersion="1.0">
+    <macros>
+        paperFormId = (Fill this in)
+        headerColor =#009d8e
+		secondFeaderColor =yellow
+		fontOnHeaderColor = white
+    </macros>
+
+    <style>
+		form select,
+		.form select {
+			min-width: 80px;
+		}
+
+		.section {
+			border: 1px solid $headerColor;
+			padding: 2px;
+			text-align: left;
+			margin-bottom: 1em;
+		}
+
+		.sectionHeader {
+			background-color: $headerColor;
+			color: $fontOnHeaderColor;
+			display: block;
+			padding: 2px;
+			font-weight: bold;
+		}
+
+		.sectionSecondHeader {
+			background-color: $secondFeaderColor;
+			color: $fontOnHeaderColor;
+			display: block;
+			padding: 2px;
+			font-weight: bold;
+		}
+
+		table.baseline-aligned td {
+			vertical-align: baseline;
+		}
+
+
+
+		table.baseline-aligned-borded td {
+			vertical-align: baseline;
+			border: 1px solid black;
+		}
+	</style>
+
+    <ifMode mode="ENTER">
+        <script type="text/javascript"></script>
+    </ifMode>
+
+    <ifMode mode="EDIT">
+        <script type="text/javascript"></script>
+    </ifMode>
+
+    <ifMode mode="VIEW">
+        <script type="text/javascript"></script>
+    </ifMode>
+
+
+    <div class="hidden" id="encounter-details" sectionTag="section" headerStyle="title" headerLabel="Encounter Details">
+        <fieldset>
+            <legend>When?</legend>
+            <label>When?</label>
+            <encounterDate default="now" showTime="false" />
+        </fieldset>
+
+        <fieldset>
+            <legend>Who?</legend>
+            <label>Who?</label>
+
+            <encounterProviderAndRole default="currentUser" encounterRole="240b26f9-dd88-4172-823d-4a8bfeb7841f" required="true" />
+        </fieldset>
+
+        <fieldset>
+            <legend>Where?</legend>
+            <label>Where?</label>
+
+            <encounterLocation default="SessionAttribute:emrContext.sessionLocationId" />
+        </fieldset>
+    </div>
+
+    <section headerLabel="Analyses en Batériologie">
+        <table class="baseline-aligned" border="1" width="100%">
+            <tr>
+                <td>
+                    <obs conceptId="4862" labelText="HF" answerConceptId="1" />
+                </td>
+                <td>
+                    <obs conceptId="4863" labelText="G-test" answerConceptId="1" />
+                </td>
+            </tr>
+        </table>
+    </section>
+    <submit />
+</htmlform>
