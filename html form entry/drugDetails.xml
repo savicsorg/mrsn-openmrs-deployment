@@ -12,6 +12,14 @@
 			min-width: 80px;
 		}
 
+        input#w8-display {
+            width: 97%;
+        }
+        #drug{
+            width: 100%;
+        }
+
+
 		.section {
 			border: 1px solid $headerColor;
 			padding: 2px;
@@ -48,7 +56,8 @@
 	</style>
 
     <ifMode mode="ENTER">
-        <script type="text/javascript"></script>
+        <script type="text/javascript">
+        </script>
     </ifMode>
 
     <ifMode mode="EDIT">
@@ -89,7 +98,7 @@
                     Médicament
                 </td>
                 <td>
-                    <obs conceptId="5106" cols="100" size="100" width="100" answerDrugs="true" displayTemplate="{{name}} {{concept}} ({{doseStrength}} {{units}})" />
+                    <obs conceptId="5106" id="drug" answerDrugs="true" displayTemplate="{{name}} {{concept}}" />
                 </td>
             </tr>
         </table>
@@ -100,12 +109,12 @@
                     Voie d'administration
                 </td>
                 <td>
-                    Quantité par dose
+                    <obs conceptId="2441" />
                 </td>
             </tr>
             <tr>
                 <td>
-                    <obs conceptId="2441" />
+                    Quantité par dose
                 </td>
                 <td>
                     <obs conceptId="462" />
@@ -117,13 +126,13 @@
                     Fréquence
                 </td>
                 <td>
-                    Durée
+                    <obs conceptId="460" tags="Choisir la fréquence d'utilisation" />
                 </td>
             </tr>
 
             <tr>
                 <td>
-                    <obs conceptId="460" tags="Choisir la fréquence d'utilisation" />
+                   Durée
                 </td>
                 <td>
                     <obs conceptId="404" />
