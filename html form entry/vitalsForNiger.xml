@@ -134,7 +134,7 @@
         <table class="baseline-aligned" border="1" width="70%">
             <tr>
                 <td>
-                    Taille (C)
+                    Taille
                 </td>
                 <td>
                     <obs conceptId="CIEL:5090" id="height" showUnits="uicommons.units.centimeters" unitsCssClass="append-to-value" />
@@ -153,7 +153,7 @@
                 <includeIf velocityTest="$patient.getAge($encounter.getEncounterDatetime()) > 5">
                     <td>
                         <h3>
-                            <uimessage code="referenceapplication.vitals.bmi.title" />
+                            IMC (Calculé)
                         </h3>
                     </td>
                     <td>
@@ -169,7 +169,7 @@
         <table class="baseline-aligned" border="1" width="70%">
             <tr>
                 <td>
-                    Température (C)
+                    Température
                 </td>
                 <td>
                     <obs conceptId="CIEL:5088" id="temperature" showUnits="uicommons.units.degreesCelsius" unitsCssClass="append-to-value" />
@@ -196,7 +196,7 @@
 
             <tr>
                 <td>
-                    Tension artérielle
+                    Tension artérielle (mmHg)
                 </td>
                 <td>
                     <obs conceptId="CIEL:5085" id="bp_systolic" />

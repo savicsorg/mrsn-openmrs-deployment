@@ -87,15 +87,15 @@
     <section headerLabel="ACCOUCHEMENT">
         <table class="baseline-aligned" border="1" width="100%">
             <tr>
-                <td>Debut de travail:</td>
-                <td colspan="3">
-                    <encounterDate default="today" showTime="true" />
-                </td>
-            </tr>
-            <tr>
                 <td>Date d'admission:</td>
                 <td colspan="3">
                     <obs conceptId="4447" />
+                </td>
+            </tr>
+            <tr>
+                <td>Debut de travail:</td>
+                <td colspan="3">
+                    <encounterDate default="today" showTime="true" />
                 </td>
             </tr>
             <tr>
@@ -113,7 +113,7 @@
 
 
             <tr>
-                <td>Motif:</td>
+                <td>Motif à l’admission:</td>
                 <td colspan="3">
                     <obs conceptId="382" size="120" />
                 </td>
@@ -131,7 +131,7 @@
                 </td>
             </tr>
             <tr>
-                <td>Enfants vivants:</td>
+                <td>Enfant(s) vivant(s):</td>
                 <td colspan="3">
                     <obs conceptId="255" />
                 </td>
@@ -149,13 +149,13 @@
                 </td>
             </tr>
             <tr>
-                <td>Accouchement anterieurs:</td>
+                <td>Accouchement(s) anterieur(s):</td>
                 <td colspan="3">
                     <obs conceptId="5018" />
                 </td>
             </tr>
             <tr>
-                <td>Nombre de morts-nés:</td>
+                <td>Nombre de mort(s)-né(s):</td>
                 <td colspan="3">
                     <obs conceptId="5019" />
                 </td>
@@ -196,7 +196,7 @@
                 </td>
             </tr>
             <tr>
-                <td>Bassin anormal:</td>
+                <td>Bassin normal:</td>
                 <td colspan="3">
                     <obs conceptId="$@Abnormal_pelvis@" answerConceptIds="$@YES@,$@NO@,$@Unknown@" answerLabels="Oui,Non,Inconnu" style="radio" />
                 </td>
@@ -217,7 +217,7 @@
 
             <tr>
                 <td>
-                    TA(cmHg):
+                    TA(mmHg):
                 </td>
                 <td>
                     <obs conceptId="5102"/>
@@ -241,7 +241,7 @@
                 </td>
             </tr>
             <tr>
-                <td>Conjonctives pâlos:</td>
+                <td>Conjonctives pâles:</td>
                 <td>
                     <obs conceptId="$@Pale_conjunctiva@" answerConceptIds="$@YES@,$@NO@,$@Unknown@" answerLabels="Oui,Non,Inconnu" style="radio" />
                 </td>

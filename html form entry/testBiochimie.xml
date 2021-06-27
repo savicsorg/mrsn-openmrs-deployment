@@ -45,6 +45,11 @@
 			vertical-align: baseline;
 			border: 1px solid black;
 		}
+
+        form label, .form label        {
+            margin-top: 0px;
+            font-size: 12px;
+        }
 	</style>
 
     <ifMode mode="ENTER">
@@ -60,58 +65,115 @@
     </ifMode>
 
 
-    <div class="hidden" id="encounter-details" sectionTag="section" headerStyle="title" headerLabel="Encounter Details">
-        <fieldset>
-            <legend>When?</legend>
-            <label>When?</label>
-            <encounterDate default="now" showTime="false" />
-        </fieldset>
+    <section headerLabel="Demande d'analyses en Biochimie">
+  
+        <div class="hidden" id="encounter-details" sectionTag="section" headerStyle="title" headerLabel="Encounter Details">
+            <fieldset>
+                <legend>Where?</legend>
+                <label>Where?</label>
+                <encounterLocation default="SessionAttribute:emrContext.sessionLocationId" />
+            </fieldset>
+        </div>
 
-        <fieldset>
-            <legend>Who?</legend>
-            <label>Who?</label>
+        <table class="baseline-aligned" border="1" width="100%">
+            <tr>
+                <td width="20%">
+                        Date
+                    </td>
+                <td colspan="3">
+                    <encounterDate default="now" showTime="false" />
+                </td>
+            </tr>
 
-            <encounterProviderAndRole default="currentUser" encounterRole="240b26f9-dd88-4172-823d-4a8bfeb7841f" required="true" />
-        </fieldset>
+            <tr>
+                <td width="20%">
+                        Prestataire
+                    </td>
+                <td colspan="3">
+                    <encounterProviderAndRole default="currentUser" encounterRole="240b26f9-dd88-4172-823d-4a8bfeb7841f" required="true" />
+                </td>
+            </tr>
 
-        <fieldset>
-            <legend>Where?</legend>
-            <label>Where?</label>
 
-            <encounterLocation default="SessionAttribute:emrContext.sessionLocationId" />
-        </fieldset>
-    </div>
+            <tr>
+                <td width="20%">
+                        ID échantillon 
+                    </td>
+                <td colspan="3">
+                    <obs conceptId="5122" size="15" required="true" />
+                </td>
+            </tr>
 
-    <section headerLabel="Analyses en Biochimie">
+            <tr>
+                <td width="20%">
+                        Type d'échantillon 
+                    </td>
+                <td colspan="3">
+                    <obs conceptId="5123" tags="Choisir le type d'echantillon" required="true"/>
+                </td>
+            </tr>
+
+            <tr>
+                <td width="20%">
+                Contexte de la demande: 
+            </td>
+                <td colspan="3">
+                    <obs conceptId="5124" tags="Choisir le contexte" />
+                </td>
+            </tr>
+        </table>
+
+        <section headerLabel="Motif">
+            <table class="baseline-aligned" border="1" width="100%">
+                <tr>
+                    <td colspan="4">
+                        <obs conceptId="5125" tags="Motif de la demande d'analyse" style="textarea" rows="5" cols="110" />
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section headerLabel="Information clinique">
+            <table class="baseline-aligned" border="1" width="100%">
+                <tr>
+                    <td colspan="4">
+                        <obs conceptId="5126" tags="Information clinique" style="textarea" rows="5" cols="110" />
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section headerLabel="Analyses disponibles">
+        
+    
         <table class="baseline-aligned" border="1" width="100%">
             <tr>
                 <td>
-                    <obs conceptId="4842" labelText="Magnésium" answerConceptId="1" />
+                    <obs conceptId="4842" labelText="Magnésium" style="checkbox" />
                 </td>
                 <td>
-                    <obs conceptId="4843" labelText="Transaminase" answerConceptId="1" />
+                    <obs conceptId="4843" labelText="Transaminase" style="checkbox" />
                 </td>
                 <td>
-                    <obs conceptId="4175" labelText="Acide urique" answerConceptId="1" />
+                    <obs conceptId="4175" labelText="Acide urique" style="checkbox" />
                 </td>
                 <td>
-                    <obs conceptId="2528" labelText="Glycémie" answerConceptId="1" />
+                    <obs conceptId="2528" labelText="Glycémie" style="checkbox" />
                 </td>
             </tr>
 
 
             <tr>
                 <td>
-                    <obs conceptId="4844" labelText="Alb" answerConceptId="1" />
+                    <obs conceptId="4844" labelText="Alb" style="checkbox" />
                 </td>
                 <td>
-                    <obs conceptId="2528" labelText="Sucre" answerConceptId="1" />
+                    <obs conceptId="2528" labelText="Sucre" style="checkbox" />
                 </td>
                 <td>
-                    <obs conceptId="4847" labelText="CRP" answerConceptId="1" />
+                    <obs conceptId="4847" labelText="CRP" style="checkbox" />
                 </td>
                 <td>
-                    <obs conceptId="4848" labelText="Calcium" answerConceptId="1" />
+                    <obs conceptId="4848" labelText="Calcium" style="checkbox" />
                 </td>
             </tr>
 
@@ -119,25 +181,26 @@
 
             <tr>
                 <td>
-                    <obs conceptId="4168" labelText="Urée" answerConceptId="1" />
+                    <obs conceptId="4168" labelText="Urée" style="checkbox" />
                 </td>
                 <td>
-                    <obs conceptId="4849" labelText="Créat" answerConceptId="1" />
+                    <obs conceptId="4849" labelText="Créat" style="checkbox" />
                 </td>
                 <td>
-                    <obs conceptId="4850" labelText="Triglycéride" answerConceptId="1" />
+                    <obs conceptId="4850" labelText="Triglycéride" style="checkbox" />
                 </td>
                 <td>
-                    <obs conceptId="4183" labelText="Protéines Totales" answerConceptId="1" />
+                    <obs conceptId="4183" labelText="Protéines Totales" style="checkbox" />
                 </td>
             </tr>
 
             <tr>
                 <td colspan="4">
-                    <obs conceptId="4851" labelText="Hdl cholestérole" answerConceptId="1" />
+                    <obs conceptId="4851" labelText="Hdl cholestérole" style="checkbox" />
                 </td>
             </tr>
         </table>
     </section>
     <submit />
+    </section>
 </htmlform>

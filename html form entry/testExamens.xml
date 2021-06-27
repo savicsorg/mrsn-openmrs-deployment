@@ -45,6 +45,11 @@
 			vertical-align: baseline;
 			border: 1px solid black;
 		}
+
+        form label, .form label        {
+            margin-top: 0px;
+            font-size: 12px;
+        }
 	</style>
 
     <ifMode mode="ENTER">
@@ -60,40 +65,94 @@
     </ifMode>
 
 
-    <div class="hidden" id="encounter-details" sectionTag="section" headerStyle="title" headerLabel="Encounter Details">
-        <fieldset>
-            <legend>When?</legend>
-            <label>When?</label>
-            <encounterDate default="now" showTime="false" />
-        </fieldset>
+    <section headerLabel="Demande d'analyses">
+        <div class="hidden" id="encounter-details" sectionTag="section" headerStyle="title" headerLabel="Encounter Details">
+            <fieldset>
+                <legend>Where?</legend>
+                <label>Where?</label>
+                <encounterLocation default="SessionAttribute:emrContext.sessionLocationId" />
+            </fieldset>
+        </div>
 
-        <fieldset>
-            <legend>Who?</legend>
-            <label>Who?</label>
-
-            <encounterProviderAndRole default="currentUser" encounterRole="240b26f9-dd88-4172-823d-4a8bfeb7841f" required="true" />
-        </fieldset>
-
-        <fieldset>
-            <legend>Where?</legend>
-            <label>Where?</label>
-
-            <encounterLocation default="SessionAttribute:emrContext.sessionLocationId" />
-        </fieldset>
-    </div>
-
-    <section headerLabel="Analyses">
         <table class="baseline-aligned" border="1" width="100%">
             <tr>
-                <td >
-                    <obs conceptId="4862" labelText="HF" answerConceptId="1" />
+                <td width="20%">
+                    Date
                 </td>
-                <td >
-                    <obs conceptId="4863" labelText="G-test" answerConceptId="1" />
+                <td colspan="3">
+                    <encounterDate default="now" showTime="false" />
+                </td>
+            </tr>
+
+            <tr>
+                <td width="20%">
+                    Prestataire
+                </td>
+                <td colspan="3">
+                    <encounterProviderAndRole default="currentUser" encounterRole="240b26f9-dd88-4172-823d-4a8bfeb7841f" required="true" />
+                </td>
+            </tr>
+
+
+            <tr>
+                <td width="20%">
+                    ID échantillon 
+                </td>
+                <td colspan="3">
+                    <obs conceptId="5122" size="15" required="true" />
+                </td>
+            </tr>
+
+            <tr>
+                <td width="20%">
+                    Type d'échantillon 
+                </td>
+                <td colspan="3">
+                    <obs conceptId="5123" tags="Choisir le type d'echantillon" required="true" />
+                </td>
+            </tr>
+
+            <tr>
+                <td width="20%">
+            Contexte de la demande: 
+        </td>
+                <td colspan="3">
+                    <obs conceptId="5124" tags="Choisir le contexte" />
                 </td>
             </tr>
         </table>
-    </section>
 
-    <submit />
+        <section headerLabel="Motif">
+            <table class="baseline-aligned" border="1" width="100%">
+                <tr>
+                    <td colspan="4">
+                        <obs conceptId="5125" tags="Motif de la demande d'analyse" style="textarea" rows="5" cols="110" />
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section headerLabel="Information clinique">
+            <table class="baseline-aligned" border="1" width="100%">
+                <tr>
+                    <td colspan="4">
+                        <obs conceptId="5126" tags="Information clinique" style="textarea" rows="5" cols="110" />
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section headerLabel="Analyses disponibles">
+            <table class="baseline-aligned" border="1" width="100%">
+                <tr>
+                    <td>
+                        <obs conceptId="4862" labelText="HF" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="4863" labelText="G-test" style="checkbox" />
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <submit />
+    </section>
 </htmlform>

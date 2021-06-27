@@ -1,47 +1,50 @@
-{"id": "referenceapplication.registrationapp.niger",
-	"instanceOf": "registrationapp.registerPatient",
-	"label": "Enregistrement Patient",
-	"description": "Enregistrement de patient",
-	"extensions": [
+{
+    "id": "referenceapplication.registrationapp.niger",
+    "instanceOf": "registrationapp.registerPatient",
+    "label": "Enregistrement Patient",
+    "description": "Enregistrement de patient",
+    "extensions": [
         {
-		"id": "referenceapplication.registrationapp.registerPatient.homepageLink",
-		"extensionPointId": "org.openmrs.referenceapplication.homepageLink",
-		"type": "link",
-		"label": "Créer Patient",
-		"url": "registrationapp/registerPatient.page?appId=referenceapplication.registrationapp.niger",
-		"icon": "icon-user",
-		"order": 1,
-		"requiredPrivilege": "App: registrationapp.registerPatient"
-	}, {
-		"id": "referenceapplication.registrationapp.registerPatient.editContactInfo",
-		"extensionPointId": "patientDashboard.overallActions",
-		"type": "link",
-		"label": "Modifier les informations d'identification",
-		"url": "registrationapp/editSection.page?patientId={{patient.patientId}}&sectionId=identification&appId=referenceapplication.registrationapp.niger",
-		"icon": "icon-pencil",
-        "order": 26,
-		"requiredPrivilege": "App: registrationapp.registerPatient"
-	}
-    , {
-		"id": "referenceapplication.registrationapp.registerPatient.editContactInfo",
-		"extensionPointId": "patientDashboard.overallActions",
-		"type": "link",
-		"label": "Modifier les données démographiques",
-		"url": "registrationapp/editSection.page?patientId={{patient.patientId}}&sectionId=demographics&appId=referenceapplication.registrationapp.niger",
-		"icon": "icon-pencil",
-        "order": 27,
-		"requiredPrivilege": "App: registrationapp.registerPatient"
-	}
-    , {
-		"id": "referenceapplication.registrationapp.registerPatient.editContactInfo",
-		"extensionPointId": "patientDashboard.overallActions",
-		"type": "link",
-		"label": "Modifier les informations de contact",
-		"url": "registrationapp/editSection.page?patientId={{patient.patientId}}&sectionId=contactInfo&appId=referenceapplication.registrationapp.niger",
-		"icon": "icon-pencil",
-        "order": 28,
-		"requiredPrivilege": "App: registrationapp.registerPatient"
-	}],
+            "id": "referenceapplication.registrationapp.registerPatient.homepageLink",
+            "extensionPointId": "org.openmrs.referenceapplication.homepageLink",
+            "type": "link",
+            "label": "Créer Patient",
+            "url": "registrationapp/registerPatient.page?appId=referenceapplication.registrationapp.niger",
+            "icon": "icon-user",
+            "order": 1,
+            "requiredPrivilege": "App: registrationapp.registerPatient"
+        },
+        {
+            "id": "referenceapplication.registrationapp.registerPatient.editContactInfo",
+            "extensionPointId": "patientDashboard.overallActions",
+            "type": "link",
+            "label": "Modifier les informations d'identification",
+            "url": "registrationapp/editSection.page?patientId={{patient.patientId}}&sectionId=identification&appId=referenceapplication.registrationapp.niger",
+            "icon": "icon-pencil",
+            "order": 26,
+            "requiredPrivilege": "App: registrationapp.registerPatient"
+        },
+        {
+            "id": "referenceapplication.registrationapp.registerPatient.editContactInfo",
+            "extensionPointId": "patientDashboard.overallActions",
+            "type": "link",
+            "label": "Modifier les données démographiques",
+            "url": "registrationapp/editSection.page?patientId={{patient.patientId}}&sectionId=demographics&appId=referenceapplication.registrationapp.niger",
+            "icon": "icon-pencil",
+            "order": 27,
+            "requiredPrivilege": "App: registrationapp.registerPatient"
+        },
+        {
+            "id": "referenceapplication.registrationapp.registerPatient.editContactInfo",
+            "extensionPointId": "patientDashboard.overallActions",
+            "type": "link",
+            "label": "Modifier les informations de contact",
+            "url": "registrationapp/editSection.page?patientId={{patient.patientId}}&sectionId=contactInfo&appId=referenceapplication.registrationapp.niger",
+            "icon": "icon-pencil",
+            "order": 28,
+            "requiredPrivilege": "App: registrationapp.registerPatient"
+        }
+    ],
     "config": {
         "genderOptions": "M,F,U",
         "afterCreatedUrl": "/coreapps/clinicianfacing/patient.page?patientId={{patientId}}",
@@ -51,19 +54,23 @@
                 "label": "Identification",
                 "questions": [
                     {
-                        "legend": "Numero",
+                        "legend": "Numéro",
                         "id": "national_card_Identifier",
                         "fields": [
                             {
                                 "type": "patientIdentifier",
-                                "label": "N° de la carte nationale d'identité",
+                                "label": "Numéro de la carte nationale d'identité",
                                 "formFieldName": "IDCIdentificationNumber",
                                 "uuid": "d2dbd334-92dc-48e8-a6d2-18afd65a6271",
                                 "widget": {
                                     "providerName": "uicommons",
-                                    "fragmentId": "field/text"
-                                },
-                                "cssClasses": []
+                                    "fragmentId": "field/text",
+                                    "cssClasses": [
+                                    ],
+                                    "config": {
+                                     
+                                    }
+                                }
                             }
                         ]
                     },
@@ -120,7 +127,9 @@
                                     "providerName": "uicommons",
                                     "fragmentId": "field/text"
                                 },
-                                "cssClasses": ["required"]
+                                "cssClasses": [
+                                    "required"
+                                ]
                             }
                         ]
                     },
@@ -162,10 +171,15 @@
                                 "widget": {
                                     "providerName": "registrationapp",
                                     "fragmentId": "field/personAddressWithHierarchy",
-                                    "config" : {
-                                        "manualFields": ["cityVillage","address1"]
+                                    "config": {
+                                        "manualFields": [
+                                            "stateProvince",
+                                            "countyDistrict",
+                                            "cityVillage",
+                                            "address1"
+                                        ]
                                     }
-                               }
+                                }
                             }
                         ]
                     },
@@ -246,67 +260,12 @@
                             }
                         ]
                     }
-
-
                 ]
             },
             {
                 "id": "contactInfo",
                 "label": "registrationapp.patient.contactInfo.label",
                 "questions": [
-                    {
-                        "legend": "Conjoint",
-                        "header": "Le conjoint",
-                        "fields": [
-                            {
-                                "type": "personAttribute",
-                                "label": "Nom du conjoint",
-                                "formFieldName": "spouseName",
-                                "uuid": "6dcba982-d834-4ca5-a37d-6f1a9340c050",
-                                "widget": {
-                                    "providerName": "uicommons",
-                                    "fragmentId": "field/text"
-                                },
-                                "cssClasses": []
-                            },
-                            {
-                                "label": "Profession du conjoint",
-                                "type": "personAttribute",
-                                "formFieldName": "professionConjoint",
-                                "uuid": "8c2ea51f-002f-47c6-a223-1ab02027c037",
-                                "widget": {
-                                    "providerName": "registrationapp",
-                                    "fragmentId": "field/dropDown",
-                                    "config": {
-                                        "formFieldName": "profession",
-                                        "conceptSet": "8223e0ae-bba1-4dd4-86c0-83f20d38ce47",
-                                        "options": [
-                                            {
-                                                "label": "",
-                                                "value": ""
-                                            }
-                                        ],
-                                        "initialValue": "",
-                                        "hideEmptyLabel": true,
-                                        "expanded": false
-                                    }
-                                }
-                            },
-                            {
-                                "type": "personAttribute",
-                                "label": "N° de telephone",
-                                "formFieldName": "spousePhoneNumber",
-                                "uuid": "3b28e6e1-f4e6-442c-8fba-1b95c19ea2be",
-                                "widget": {
-                                    "providerName": "uicommons",
-                                    "fragmentId": "field/text"
-                                },
-                                "cssClasses": [
-                                    "phone"
-                                ]
-                            }
-                        ]
-                    },
                     {
                         "legend": "Père",
                         "header": "Le père du patient",
@@ -412,8 +371,166 @@
                                 ]
                             }
                         ]
+                    },
+                    {
+                        "legend": "1er Conjoint",
+                        "header": "Le 1er conjoint",
+                        "fields": [
+                            {
+                                "type": "personAttribute",
+                                "label": "Nom du conjoint",
+                                "formFieldName": "spouseName1",
+                                "uuid": "6dcba982-d834-4ca5-a37d-6f1a9340c050",
+                                "widget": {
+                                    "providerName": "uicommons",
+                                    "fragmentId": "field/text"
+                                },
+                                "cssClasses": []
+                            },
+                            {
+                                "label": "Profession du conjoint",
+                                "type": "personAttribute",
+                                "formFieldName": "professionConjoint1",
+                                "uuid": "8c2ea51f-002f-47c6-a223-1ab02027c037",
+                                "widget": {
+                                    "providerName": "registrationapp",
+                                    "fragmentId": "field/dropDown",
+                                    "config": {
+                                        "formFieldName": "profession1",
+                                        "conceptSet": "8223e0ae-bba1-4dd4-86c0-83f20d38ce47",
+                                        "options": [
+                                            {
+                                                "label": "",
+                                                "value": ""
+                                            }
+                                        ],
+                                        "initialValue": "",
+                                        "hideEmptyLabel": true,
+                                        "expanded": false
+                                    }
+                                }
+                            },
+                            {
+                                "type": "personAttribute",
+                                "label": "N° de telephone",
+                                "formFieldName": "spousePhoneNumber1",
+                                "uuid": "3b28e6e1-f4e6-442c-8fba-1b95c19ea2be",
+                                "widget": {
+                                    "providerName": "uicommons",
+                                    "fragmentId": "field/text"
+                                },
+                                "cssClasses": [
+                                    "phone"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "legend": "2eme conjoint",
+                        "header": "Le 2eme conjoint",
+                        "fields": [
+                            {
+                                "type": "personAttribute",
+                                "label": "Nom du conjoint",
+                                "formFieldName": "spouseName2",
+                                "uuid": "2ad8533b-c1e1-4e3f-a761-88055584ebd5",
+                                "widget": {
+                                    "providerName": "uicommons",
+                                    "fragmentId": "field/text"
+                                },
+                                "cssClasses": []
+                            },
+                            {
+                                "label": "Profession du conjoint",
+                                "type": "personAttribute",
+                                "formFieldName": "professionConjoint2",
+                                "uuid": "48beecc7-7b65-4f9c-a68f-18f1b1a39e8f",
+                                "widget": {
+                                    "providerName": "registrationapp",
+                                    "fragmentId": "field/dropDown",
+                                    "config": {
+                                        "formFieldName": "profession2",
+                                        "conceptSet": "8223e0ae-bba1-4dd4-86c0-83f20d38ce47",
+                                        "options": [
+                                            {
+                                                "label": "",
+                                                "value": ""
+                                            }
+                                        ],
+                                        "initialValue": "",
+                                        "hideEmptyLabel": true,
+                                        "expanded": false
+                                    }
+                                }
+                            },
+                            {
+                                "type": "personAttribute",
+                                "label": "N° de telephone",
+                                "formFieldName": "spousePhoneNumber2",
+                                "uuid": "eb60a31f-b12a-470e-a2ba-f0800b018fc9",
+                                "widget": {
+                                    "providerName": "uicommons",
+                                    "fragmentId": "field/text"
+                                },
+                                "cssClasses": [
+                                    "phone"
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "legend": "3eme conjoint",
+                        "header": "Le 3eme conjoint",
+                        "fields": [
+                            {
+                                "type": "personAttribute",
+                                "label": "Nom du conjoint",
+                                "formFieldName": "spouseName3",
+                                "uuid": "1d868b1a-5ca4-4571-a46e-263fe74492fc",
+                                "widget": {
+                                    "providerName": "uicommons",
+                                    "fragmentId": "field/text"
+                                },
+                                "cssClasses": []
+                            },
+                            {
+                                "label": "Profession du conjoint",
+                                "type": "personAttribute",
+                                "formFieldName": "professionConjoint3",
+                                "uuid": "8ce43c08-51e1-4da1-ab07-054be6aeafaf",
+                                "widget": {
+                                    "providerName": "registrationapp",
+                                    "fragmentId": "field/dropDown",
+                                    "config": {
+                                        "formFieldName": "profession3",
+                                        "conceptSet": "8223e0ae-bba1-4dd4-86c0-83f20d38ce47",
+                                        "options": [
+                                            {
+                                                "label": "",
+                                                "value": ""
+                                            }
+                                        ],
+                                        "initialValue": "",
+                                        "hideEmptyLabel": true,
+                                        "expanded": false
+                                    }
+                                }
+                            },
+                            {
+                                "type": "personAttribute",
+                                "label": "N° de telephone",
+                                "formFieldName": "spousePhoneNumber3",
+                                "uuid": "a0e39fbe-fbff-4f7d-8500-317cb6d53aa6",
+                                "widget": {
+                                    "providerName": "uicommons",
+                                    "fragmentId": "field/text"
+                                },
+                                "cssClasses": [
+                                    "phone"
+                                ]
+                            }
+                        ]
                     }
-
                 ]
             }
         ]

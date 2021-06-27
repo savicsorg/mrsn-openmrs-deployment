@@ -19,6 +19,25 @@
 			margin-bottom: 1em;
 		}
 
+        md-button.md-raised:not([disabled]) {
+            box-shadow: 0 2px 5px 0 rgb(0 0 0 / 26%);
+        }
+
+        .md-button.md-default-theme.md-primary.md-fab, .md-button.md-primary.md-fab, .md-button.md-default-theme.md-primary.md-raised, .md-button.md-primary.md-raised {
+            color: rgba(255,255,255,0.87);
+            background-color: rgb(63,81,181);
+        }
+
+        .md-toolbar-tools .md-button {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .btn{
+            color: rgba(255,255,255,0.87);
+            background: rgb(63,81,181);
+            width: 60%
+        }
+
 		.sectionHeader {
 			background-color: $headerColor;
 			color: $fontOnHeaderColor;
@@ -35,72 +54,65 @@
 			font-weight: bold;
 		}
 
-		table.baseline-aligned td {
+        td {
+            text-align: center;
+        }
+        table tr {
+            border: 0px;
+        }
+
+        table.baseline-aligned-borded td {
 			vertical-align: baseline;
+			border: 0px;
 		}
+        table th, table td {
+            padding: 5px 10px;
+            border: 0px
+        }
 
-
-
-		table.baseline-aligned-borded td {
-			vertical-align: baseline;
-			border: 1px solid black;
-		}
+        form label, .form label        {
+            margin-top: 0px;
+            font-size: 12px;
+        }
 	</style>
 
+    <script type="text/javascript">
+        var  showform=function(uuid){
+            var queryParameters = {}, queryString = location.search.substring(1),
+            re = /([^&amp;=]+)=([^&amp;]*)/g, m;
 
-    <ifMode mode="ENTER">
-        <script type="text/javascript"></script>
-    </ifMode>
-
-    <ifMode mode="EDIT">
-        <script type="text/javascript"></script>
-    </ifMode>
-
-    <ifMode mode="VIEW">
-        <script type="text/javascript"></script>
-    </ifMode>
+           while (m = re.exec(queryString)) {
+               queryParameters[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
+            }
+            window.location = window.location.protocol + &quot;//&quot; + window.location.host + &quot;/&quot; + OPENMRS_CONTEXT_PATH + &quot;/htmlformentryui/htmlform/enterHtmlFormWithStandardUi.page?patientId=&quot; + queryParameters['patientId'] + &quot;&amp;visitId=&quot; + queryParameters['visitId'] + &quot;&amp;formUuid=&quot; + uuid
+        }
+    </script>
 
     <section headerLabel="Demande d'analyses médicales">
-        <div class="hidden" id="encounter-details" sectionTag="section" headerStyle="title" headerLabel="Encounter Details">
-            <fieldset>
-                <legend>When?</legend>
-                <label>When?</label>
-                <encounterDate default="now" showTime="false" />
-            </fieldset>
+        <table cellspacing="0" cellpadding="6" width="100%">
+            <tr>
+                <td>
+                    <button id="btnBacteriologie" type="button" class="btn md-raised md-primary md-button md-ink-ripple" onclick="showform('b2da38f2-e5e9-4fa0-be52-857c306f7371')">Bactériologie</button>
+                </td>
+                <td>
+                    <button id="btnBiochimie" type="button" class="btn md-raised md-primary md-button md-ink-ripple" onclick="showform('9d0354a0-9410-46ba-bbf1-e04edd2fa427')">Biochimie</button>
+                </td>
+                <td>
+                    <button id="btnHematologie" type="button" class="btn md-raised md-primary md-button md-ink-ripple" onclick="showform('4d27daef-6f19-4526-86f8-05c91c48ae0d')">Hématologie</button>
+                </td>
+            </tr>
 
-            <fieldset>
-                <legend>Who?</legend>
-                <label>Who?</label>
-
-                <encounterProviderAndRole default="currentUser" encounterRole="240b26f9-dd88-4172-823d-4a8bfeb7841f" required="true" />
-            </fieldset>
-
-            <fieldset>
-                <legend>Where?</legend>
-                <label>Where?</label>
-
-                <encounterLocation default="SessionAttribute:emrContext.sessionLocationId" />
-            </fieldset>
-        </div>
-
-        
-        <section headerLabel="Bactériologie">
-            <htmlformflowsheet formId="b2da38f2-e5e9-4fa0-be52-857c306f7371" sharedEncounter="false" addAnotherButtonLabel="Nouveau" windowHeight="230" />
-        </section>
-        <section headerLabel="Biochimie">
-            <htmlformflowsheet formId="9d0354a0-9410-46ba-bbf1-e04edd2fa427" sharedEncounter="false" addAnotherButtonLabel="Nouveau" windowHeight="320" />
-        </section>
-        <section headerLabel="Hématologie">
-            <htmlformflowsheet formId="4d27daef-6f19-4526-86f8-05c91c48ae0d" sharedEncounter="false" addAnotherButtonLabel="Nouveau" windowHeight="230" />
-        </section>
-        <section headerLabel="Sérologie">
-            <htmlformflowsheet formId="8750db01-82db-46ed-ac41-92684ae84f3c" sharedEncounter="false" addAnotherButtonLabel="Nouveau" windowHeight="320" />
-        </section>
-        <section headerLabel="Parasitologie">
-            <htmlformflowsheet formId="de325215-92ce-4adf-b854-0d53c0fbf098" sharedEncounter="false" addAnotherButtonLabel="Nouveau" windowHeight="230" />
-        </section>
-        <section headerLabel="Examens">
-            <htmlformflowsheet formId="a8b183a5-c3a1-438f-b399-cb8185d1b41e" sharedEncounter="false" addAnotherButtonLabel="Nouveau" windowHeight="230" />
-        </section>
+            <tr>
+                <td>
+                    <button id="btnSerologie" type="button" class="btn md-raised md-primary md-button md-ink-ripple" onclick="showform('8750db01-82db-46ed-ac41-92684ae84f3c')">Sérologie</button>
+                </td>
+                <td>
+                    <button id="btnParasitologie" type="button" class="btn md-raised md-primary md-button md-ink-ripple" onclick="showform('de325215-92ce-4adf-b854-0d53c0fbf098')">Parasitologie</button>
+                </td>
+                <td>
+                    <button id="btnExamen" type="button" class="btn md-raised md-primary md-button md-ink-ripple" onclick="showform('a8b183a5-c3a1-438f-b399-cb8185d1b41e')">Examen</button>
+                </td>
+            </tr>
+        </table>
     </section>
 </htmlform>

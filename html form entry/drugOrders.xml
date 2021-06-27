@@ -12,6 +12,14 @@
 			min-width: 80px;
 		}
 
+        input#w8-display {
+            width: 97%;
+        }
+        #drug{
+            width: 90%;
+        }
+
+
 		.section {
 			border: 1px solid $headerColor;
 			padding: 2px;
@@ -47,6 +55,21 @@
 		}
 	</style>
 
+    <script>
+        var $j = jQuery;
+        beforeSubmit.push(function() {
+            var val = getValue('drug.value');
+            var valOther = getValue('drugOther.value');
+            if (val == null || val == '') {
+                if  (valOther == null || valOther == '') {
+                    getField('drug.error').html('Veuillez selectionner ici un médicament').show();
+                    getField('drugOther.error').html('Ou veuillez saisir ici un médicament').show();
+                    return false;
+                }
+            }
+            return true;
+        });
+    </script>
 
     <ifMode mode="ENTER">
         <script type="text/javascript"></script>
@@ -60,31 +83,134 @@
         <script type="text/javascript"></script>
     </ifMode>
 
-    <section headerLabel="Prescription de médicaments">
-        <div class="hidden" id="encounter-details" sectionTag="section" headerStyle="title" headerLabel="Encounter Details">
-            <fieldset>
-                <legend>When?</legend>
-                <label>When?</label>
-                <encounterDate default="now" showTime="false" />
-            </fieldset>
 
-            <fieldset>
-                <legend>Who?</legend>
-                <label>Who?</label>
+    <div class="hidden" id="encounter-details" sectionTag="section" headerStyle="title" headerLabel="Encounter Details">
+        <fieldset>
+            <legend>Where?</legend>
+            <label>Where?</label>
+            <encounterLocation default="SessionAttribute:emrContext.sessionLocationId" />
+        </fieldset>
+    </div>
 
-                <encounterProviderAndRole default="currentUser" encounterRole="240b26f9-dd88-4172-823d-4a8bfeb7841f" required="true" />
-            </fieldset>
 
-            <fieldset>
-                <legend>Where?</legend>
-                <label>Where?</label>
+    <section headerLabel="Prescription de médicament">
+        <table class="baseline-aligned" border="1" width="100%">
+            <tr>
+                <td width="20%">
+                    Date
+                </td>
+                <td colspan="3">
+                    <encounterDate default="now" showTime="false" />
+                </td>
+            </tr>
 
-                <encounterLocation default="SessionAttribute:emrContext.sessionLocationId" />
-            </fieldset>
-        </div>
+            <tr>
+                <td width="20%">
+                    Prestataire
+                </td>
+                <td colspan="3">
+                    <encounterProviderAndRole default="currentUser" encounterRole="240b26f9-dd88-4172-823d-4a8bfeb7841f" required="true" />
+                </td>
+            </tr>
 
-        <div width="100%">
-            <htmlformflowsheet formId="3638ca40-b0e3-4a07-893a-ebaf9619701e" sharedEncounter="false" addAnotherButtonLabel="Nouveau" windowHeight="490" />
-        </div>
+            <tr>
+                <td width="20%">
+                    Médicament
+                </td>
+                <td colspan="3">
+                    <obs id="drug" conceptId="5106" answerDrugs="true" displayTemplate="{{name}} {{concept}}" />
+                </td>
+            </tr>
+
+            <tr>
+                <td width="20%">
+                   Autre médicament
+                </td>
+                <td colspan="3">
+                    <obs id="drugOther" conceptId="5108" size="87" />
+                </td>
+            </tr>
+
+            <tr>
+                <td width="20%">
+                    Voie d'administration
+                </td>
+                <td width="20%">
+                    <obs conceptId="2441" />
+                </td>
+                <td colspan="2"></td>
+            </tr>
+
+
+            <tr>
+                <td width="20%">
+                    Nombre d’unité
+                </td>
+                <td>
+                    <obs conceptId="462" />
+                </td>
+                <td colspan="2">
+                    <obs conceptId="2488" tags="Unités de dose" />
+                </td>
+            </tr>
+
+            <tr>
+                <td width="20%">
+                    Nombre de prise
+                </td>
+                <td>
+                    <obs conceptId="5120" size="10" />
+                </td>
+            </tr>
+
+            <tr>
+                <td width="20%">
+                    Fréquence
+                </td>
+                <td>
+                    <obs conceptId="5121" />
+                </td>
+                <td colspan="2">
+                    <obs conceptId="460" tags="Choisir la fréquence d'utilisation" />
+                </td>
+            </tr>
+
+
+            <tr>
+                <td width="20%">
+                    Moment de la prise
+                </td>
+                <td>
+                    <obs conceptId="5109" tags="Choisir le moment A" />
+                </td>
+                <td colspan="2">
+                    <obs conceptId="5113" tags="Choisir le moment B" />
+                </td>
+            </tr>
+
+
+            <tr>
+                <td width="20%">
+                   Durée
+                </td>
+                <td>
+                    <obs conceptId="404" />
+                </td>
+                <td colspan="2">
+                    <obs conceptId="285" tags="Choisir la durée d'utilisation" />
+                </td>
+            </tr>
+        </table>
+        <section headerLabel="Indications">
+            <table class="baseline-aligned" border="1" width="100%">
+                <tr>
+                    <td colspan="4">
+                        <obs conceptId="652" tags="Observations" style="textarea" rows="5" cols="110" />
+                    </td>
+                </tr>
+            </table>
+        </section>
     </section>
+
+    <submit />
 </htmlform>
