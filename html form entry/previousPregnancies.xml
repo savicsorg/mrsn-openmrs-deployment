@@ -70,264 +70,284 @@
 
 	<!--===============================   Section 1 =======================================  -->
 	<section headerLabel="GESTATIONS ANTÉRIEURES DE LA PATIENTE">
-		<table class="baseline-aligned"  border="1"  width="100%">
+		<table class="baseline-aligned" border="1" width="100%">
 			<tr>
 				<td>DATE D'ENTREE:</td>
 				<td colspan="3">
 					<encounterDate default="today" />
 				</td>
 			</tr>
-            <tr>
-                <td>Prestataire:</td>
-                <td colspan="3">
-                    <encounterProviderAndRole default="currentUser" encounterRole="1" required="true"/>
-                </td>
-            </tr>
 			<tr>
-                <td>Service:</td>
-                <td colspan="3">
-                    <encounterLocation required="true" tags="Admission Location,Transfer Location"/>
-                </td>
-            </tr>
+				<td>Prestataire:</td>
+				<td colspan="3">
+					<encounterProviderAndRole default="currentUser" encounterRole="1" required="true" />
+				</td>
+			</tr>
+			<tr>
+				<td>Service:</td>
+				<td colspan="3">
+					<encounterLocation required="true" tags="Admission Location,Transfer Location" />
+				</td>
+			</tr>
 		</table>
 
-		<table class="baseline-aligned"  border="1"  width="100%">
+
+		<table class="baseline-aligned" border="1" width="100%">
 			<tr>
-				<th>N°</th>
-				<th>Année</th>
+				<th scope="row">N°</th>
+				<th width="10">Année</th>
 				<th>Terme</th>
 				<th>Mode d'accouchement</th>
-				<th>Poids(grammes)</th>
+				<th>Poids(g)</th>
 				<th>Sexe</th>
 				<th>Etat de l'enfant</th>
 			</tr>
 
+			<obsgroup groupingConceptId="7839889a-4572-4214-ba5d-e6bdeaf4c268">
+				<tr>
+					<th scope="row">01</th>
+					<td width="10">
+						<obs conceptId="805b1508-5033-43d6-a3ab-bad9ac19897f"/>
+					</td>
+					<td>
+						<obs conceptId="1395AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" style="no_yes"/>
+					</td>
+					<td>
+						<obs conceptId="fec005b5-6d44-487f-ae34-9f0f483b4ae8"/>
+					</td>
+					<td>
+						<obs conceptId="d6dfa19c-d298-46a1-a087-dcf99d000dff"/>
+					</td>
+					<td>
+						<obs conceptId="d46a5dfd-e4a2-43b7-bc68-2c7ff55601f7"/>
+					</td>
+					<td>
+						<obs conceptId="7f615c5e-9e9f-4564-918a-63d8b73d2357"/>
+					</td>
+				</tr>
+			</obsgroup>
 
-			<tr>
-				<th scope="row">1</th>
-				<td width="10">
-					<obs conceptId="5006" />
-				</td>
-				<td>
-					<obs conceptId="934" style="no_yes" />
-				</td>
-				<td>
-					<obs conceptId="4472" />
-				</td>
-				<td>
-					<obs conceptId="5101" />
-				</td>
-				<td>
-					<obs conceptId="5009" />
-				</td>
-				<td>
-					<obs conceptId="5010" />
-				</td>
-			</tr>
+			<obsgroup groupingConceptId="9a1af240-57df-4c4f-ba9b-890b48b53dfc">
+				<tr>
+					<th scope="row">02</th>
+					<td width="10">
+						<obs conceptId="805b1508-5033-43d6-a3ab-bad9ac19897f"/>
+					</td>
+					<td>
+						<obs conceptId="1395AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" style="no_yes"/>
+					</td>
+					<td>
+						<obs conceptId="fec005b5-6d44-487f-ae34-9f0f483b4ae8"/>
+					</td>
+					<td>
+						<obs conceptId="d6dfa19c-d298-46a1-a087-dcf99d000dff"/>
+					</td>
+					<td>
+						<obs conceptId="d46a5dfd-e4a2-43b7-bc68-2c7ff55601f7"/>
+					</td>
+					<td>
+						<obs conceptId="7f615c5e-9e9f-4564-918a-63d8b73d2357"/>
+					</td>
+				</tr>
+			</obsgroup>
 
-			<tr>
-				<th scope="row">2</th>
-				<td width="10">
-					<obs conceptId="5006" />
-				</td>
-				<td>
-					<obs conceptId="934" style="no_yes" />
-				</td>
-				<td>
-					<obs conceptId="4472" />
-				</td>
-				<td>
-					<obs conceptId="5101" />
-				</td>
-				<td>
-					<obs conceptId="5009" />
-				</td>
-				<td>
-					<obs conceptId="5010" />
-				</td>
-			</tr>
+			<obsgroup groupingConceptId="9331d9b2-7635-4038-a9e7-cb93cdb169c6">
+				<tr>
+					<th scope="row">03</th>
+					<td width="10">
+						<obs conceptId="805b1508-5033-43d6-a3ab-bad9ac19897f"/>
+					</td>
+					<td>
+						<obs conceptId="1395AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" style="no_yes"/>
+					</td>
+					<td>
+						<obs conceptId="fec005b5-6d44-487f-ae34-9f0f483b4ae8"/>
+					</td>
+					<td>
+						<obs conceptId="d6dfa19c-d298-46a1-a087-dcf99d000dff"/>
+					</td>
+					<td>
+						<obs conceptId="d46a5dfd-e4a2-43b7-bc68-2c7ff55601f7"/>
+					</td>
+					<td>
+						<obs conceptId="7f615c5e-9e9f-4564-918a-63d8b73d2357"/>
+					</td>
+				</tr>
+			</obsgroup>
 
-			<tr>
-				<th scope="row">3</th>
-				<td width="10">
-					<obs conceptId="5006" />
-				</td>
-				<td>
-					<obs conceptId="934" style="no_yes" />
-				</td>
-				<td>
-					<obs conceptId="4472" />
-				</td>
-				<td>
-					<obs conceptId="5101" />
-				</td>
-				<td>
-					<obs conceptId="5009" />
-				</td>
-				<td>
-					<obs conceptId="5010" />
-				</td>
-			</tr>
+			<obsgroup groupingConceptId="56e1c401-0f5d-4786-a0f7-10ce21e7b0c3">
+				<tr>
+					<th scope="row">04</th>
+					<td width="10">
+						<obs conceptId="805b1508-5033-43d6-a3ab-bad9ac19897f"/>
+					</td>
+					<td>
+						<obs conceptId="1395AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" style="no_yes"/>
+					</td>
+					<td>
+						<obs conceptId="fec005b5-6d44-487f-ae34-9f0f483b4ae8"/>
+					</td>
+					<td>
+						<obs conceptId="d6dfa19c-d298-46a1-a087-dcf99d000dff"/>
+					</td>
+					<td>
+						<obs conceptId="d46a5dfd-e4a2-43b7-bc68-2c7ff55601f7"/>
+					</td>
+					<td>
+						<obs conceptId="7f615c5e-9e9f-4564-918a-63d8b73d2357"/>
+					</td>
+				</tr>
+			</obsgroup>
 
-			<tr>
-				<th scope="row">4</th>
-				<td width="10">
-					<obs conceptId="5006" />
-				</td>
-				<td>
-					<obs conceptId="934" style="no_yes" />
-				</td>
-				<td>
-					<obs conceptId="4472" />
-				</td>
-				<td>
-					<obs conceptId="5101" />
-				</td>
-				<td>
-					<obs conceptId="5009" />
-				</td>
-				<td>
-					<obs conceptId="5010" />
-				</td>
-			</tr>
+			<obsgroup groupingConceptId="fd6a155b-0ed6-4a4c-9cf8-519856b24352">
+				<tr>
+					<th scope="row">05</th>
+					<td width="10">
+						<obs conceptId="805b1508-5033-43d6-a3ab-bad9ac19897f"/>
+					</td>
+					<td>
+						<obs conceptId="1395AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" style="no_yes"/>
+					</td>
+					<td>
+						<obs conceptId="fec005b5-6d44-487f-ae34-9f0f483b4ae8"/>
+					</td>
+					<td>
+						<obs conceptId="d6dfa19c-d298-46a1-a087-dcf99d000dff"/>
+					</td>
+					<td>
+						<obs conceptId="d46a5dfd-e4a2-43b7-bc68-2c7ff55601f7"/>
+					</td>
+					<td>
+						<obs conceptId="7f615c5e-9e9f-4564-918a-63d8b73d2357"/>
+					</td>
+				</tr>
+			</obsgroup>
 
-			<tr>
-				<th scope="row">5</th>
-				<td width="10">
-					<obs conceptId="5006" />
-				</td>
-				<td>
-					<obs conceptId="934" style="no_yes" />
-				</td>
-				<td>
-					<obs conceptId="4472" />
-				</td>
-				<td>
-					<obs conceptId="5101" />
-				</td>
-				<td>
-					<obs conceptId="5009" />
-				</td>
-				<td>
-					<obs conceptId="5010" />
-				</td>
-			</tr>
+			<obsgroup groupingConceptId="d1e9be0b-bc43-46c5-b84a-92a06f7b75c9">
+				<tr>
+					<th scope="row">06</th>
+					<td width="10">
+						<obs conceptId="805b1508-5033-43d6-a3ab-bad9ac19897f"/>
+					</td>
+					<td>
+						<obs conceptId="1395AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" style="no_yes"/>
+					</td>
+					<td>
+						<obs conceptId="fec005b5-6d44-487f-ae34-9f0f483b4ae8"/>
+					</td>
+					<td>
+						<obs conceptId="d6dfa19c-d298-46a1-a087-dcf99d000dff"/>
+					</td>
+					<td>
+						<obs conceptId="d46a5dfd-e4a2-43b7-bc68-2c7ff55601f7"/>
+					</td>
+					<td>
+						<obs conceptId="7f615c5e-9e9f-4564-918a-63d8b73d2357"/>
+					</td>
+				</tr>
+			</obsgroup>
 
-			<tr>
-				<th scope="row">6</th>
-				<td width="10">
-					<obs conceptId="5006" />
-				</td>
-				<td>
-					<obs conceptId="934" style="no_yes" />
-				</td>
-				<td>
-					<obs conceptId="4472" />
-				</td>
-				<td>
-					<obs conceptId="5101" />
-				</td>
-				<td>
-					<obs conceptId="5009" />
-				</td>
-				<td>
-					<obs conceptId="5010" />
-				</td>
-			</tr>
+			<obsgroup groupingConceptId="d9189377-fddd-4eb5-b607-3e5365d92a6c">
+				<tr>
+					<th scope="row">07</th>
+					<td width="10">
+						<obs conceptId="805b1508-5033-43d6-a3ab-bad9ac19897f"/>
+					</td>
+					<td>
+						<obs conceptId="1395AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" style="no_yes"/>
+					</td>
+					<td>
+						<obs conceptId="fec005b5-6d44-487f-ae34-9f0f483b4ae8"/>
+					</td>
+					<td>
+						<obs conceptId="d6dfa19c-d298-46a1-a087-dcf99d000dff"/>
+					</td>
+					<td>
+						<obs conceptId="d46a5dfd-e4a2-43b7-bc68-2c7ff55601f7"/>
+					</td>
+					<td>
+						<obs conceptId="7f615c5e-9e9f-4564-918a-63d8b73d2357"/>
+					</td>
+				</tr>
+			</obsgroup>
 
-			<tr>
-				<th scope="row">7</th>
-				<td width="10">
-					<obs conceptId="5006" />
-				</td>
-				<td>
-					<obs conceptId="934" style="no_yes" />
-				</td>
-				<td>
-					<obs conceptId="4472" />
-				</td>
-				<td>
-					<obs conceptId="5101" />
-				</td>
-				<td>
-					<obs conceptId="5009" />
-				</td>
-				<td>
-					<obs conceptId="5010" />
-				</td>
-			</tr>
+			<obsgroup groupingConceptId="daa1bfed-74c7-4f0d-957e-5e4ddc23a50e">
+				<tr>
+					<th scope="row">08</th>
+					<td width="10">
+						<obs conceptId="805b1508-5033-43d6-a3ab-bad9ac19897f"/>
+					</td>
+					<td>
+						<obs conceptId="1395AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" style="no_yes"/>
+					</td>
+					<td>
+						<obs conceptId="fec005b5-6d44-487f-ae34-9f0f483b4ae8"/>
+					</td>
+					<td>
+						<obs conceptId="d6dfa19c-d298-46a1-a087-dcf99d000dff"/>
+					</td>
+					<td>
+						<obs conceptId="d46a5dfd-e4a2-43b7-bc68-2c7ff55601f7"/>
+					</td>
+					<td>
+						<obs conceptId="7f615c5e-9e9f-4564-918a-63d8b73d2357"/>
+					</td>
+				</tr>
+			</obsgroup>
 
-			<tr>
-				<th scope="row">8</th>
-				<td width="10">
-					<obs conceptId="5006" />
-				</td>
-				<td>
-					<obs conceptId="934" style="no_yes" />
-				</td>
-				<td>
-					<obs conceptId="4472" />
-				</td>
-				<td>
-					<obs conceptId="5101" />
-				</td>
-				<td>
-					<obs conceptId="5009" />
-				</td>
-				<td>
-					<obs conceptId="5010" />
-				</td>
-			</tr>
+			<obsgroup groupingConceptId="6446661a-88c6-4638-a191-002d45de3f3b">
+				<tr>
+					<th scope="row">09</th>
+					<td width="10">
+						<obs conceptId="805b1508-5033-43d6-a3ab-bad9ac19897f"/>
+					</td>
+					<td>
+						<obs conceptId="1395AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" style="no_yes"/>
+					</td>
+					<td>
+						<obs conceptId="fec005b5-6d44-487f-ae34-9f0f483b4ae8"/>
+					</td>
+					<td>
+						<obs conceptId="d6dfa19c-d298-46a1-a087-dcf99d000dff"/>
+					</td>
+					<td>
+						<obs conceptId="d46a5dfd-e4a2-43b7-bc68-2c7ff55601f7"/>
+					</td>
+					<td>
+						<obs conceptId="7f615c5e-9e9f-4564-918a-63d8b73d2357"/>
+					</td>
+				</tr>
+			</obsgroup>
 
-			<tr>
-				<th scope="row">9</th>
-				<td width="10">
-					<obs conceptId="5006" />
-				</td>
-				<td>
-					<obs conceptId="934" style="no_yes" />
-				</td>
-				<td>
-					<obs conceptId="4472" />
-				</td>
-				<td>
-					<obs conceptId="5101" />
-				</td>
-				<td>
-					<obs conceptId="5009" />
-				</td>
-				<td>
-					<obs conceptId="5010" />
-				</td>
-			</tr>
-
-			<tr>
-				<th scope="row">10</th>
-				<td width="10">
-					<obs conceptId="5006" />
-				</td>
-				<td>
-					<obs conceptId="934" style="no_yes" />
-				</td>
-				<td>
-					<obs conceptId="4472" />
-				</td>
-				<td>
-					<obs conceptId="5101" />
-				</td>
-				<td>
-					<obs conceptId="5009" />
-				</td>
-				<td>
-					<obs conceptId="5010" />
-				</td>
-			</tr>
+			<obsgroup groupingConceptId="e740ce8b-452d-419a-9afd-ce85b77def24">
+				<tr>
+					<th scope="row">10</th>
+					<td width="10">
+						<obs conceptId="805b1508-5033-43d6-a3ab-bad9ac19897f"/>
+					</td>
+					<td>
+						<obs conceptId="1395AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" style="no_yes"/>
+					</td>
+					<td>
+						<obs conceptId="fec005b5-6d44-487f-ae34-9f0f483b4ae8"/>
+					</td>
+					<td>
+						<obs conceptId="d6dfa19c-d298-46a1-a087-dcf99d000dff"/>
+					</td>
+					<td>
+						<obs conceptId="d46a5dfd-e4a2-43b7-bc68-2c7ff55601f7"/>
+					</td>
+					<td>
+						<obs conceptId="7f615c5e-9e9f-4564-918a-63d8b73d2357"/>
+					</td>
+				</tr>
+			</obsgroup>
 		</table>
 	</section>
-	
-	
+
+
 	<center>
-        <submit />
-    </center>
-	
+		<submit />
+	</center>
+
 </htmlform>

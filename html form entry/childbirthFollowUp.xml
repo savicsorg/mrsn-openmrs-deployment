@@ -89,7 +89,7 @@
             <tr>
                 <td>Date d'admission:</td>
                 <td colspan="3">
-                    <obs conceptId="4447" />
+                    <obs conceptId="1640AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" />
                 </td>
             </tr>
             <tr>
@@ -115,7 +115,7 @@
             <tr>
                 <td>Motif à l’admission:</td>
                 <td colspan="3">
-                    <obs conceptId="382" size="120" />
+                    <obs conceptId="162879AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" size="120" />
                 </td>
             </tr>
             <tr>
@@ -133,7 +133,7 @@
             <tr>
                 <td>Enfant(s) vivant(s):</td>
                 <td colspan="3">
-                    <obs conceptId="255" />
+                    <obs conceptId="1825AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA" />
                 </td>
             </tr>
             <tr>
@@ -151,13 +151,13 @@
             <tr>
                 <td>Accouchement(s) anterieur(s):</td>
                 <td colspan="3">
-                    <obs conceptId="5018" />
+                    <obs conceptId="fcd8b30b-3925-4d5f-b9b3-ec0817eac76f" />
                 </td>
             </tr>
             <tr>
                 <td>Nombre de mort(s)-né(s):</td>
                 <td colspan="3">
-                    <obs conceptId="5019" />
+                    <obs conceptId="1503a559-d5e8-49c2-91fb-b96afb5faea8" />
                 </td>
             </tr>
 
@@ -169,7 +169,7 @@
 
                     <div id="divNbr">
                         Nombre
-                        <obs conceptId="5104" />
+                        <obs conceptId="e1595e60-06c1-4255-b338-4893ccc0702e" />
                     </div>
 
                 </td>
@@ -205,7 +205,7 @@
             <tr>
                 <td>HU(cm):</td>
                 <td>
-                    <obs conceptId="5024" />
+                    <obs conceptId="301f8062-f4d7-484a-89a1-ee5405be7baa" />
                 </td>
                 <td>
                     entre 30 et 38 cm:
@@ -220,11 +220,11 @@
                     TA(mmHg):
                 </td>
                 <td>
-                    <obs conceptId="5102"/>
+                    <obs conceptId="8df02188-e817-41ee-af02-987ccc543a2d"/>
                     /
-                    <obs conceptId="5103" />
+                    <obs conceptId="314accff-875c-42b8-b027-8b0e737c364c" />
                 </td>
-                <td>plus de 13/8:</td>
+                <td>plus de 130/80:</td>
                 <td>
                     <obs conceptId="$@TA_over_13@" answerConceptIds="$@YES@,$@NO@,$@Unknown@" answerLabels="Oui,Non,Inconnu" style="radio" />
                 </td>
@@ -257,13 +257,13 @@
                 </td>
                 <td>depuis:</td>
                 <td>
-                    <obs conceptId="5032" />
+                    <obs conceptId="a18e1ae3-385c-4563-8e9a-3cbd03ae79cc" />
                 </td>
             </tr>
             <tr>
                 <td>Facteurs de risque:</td>
                 <td colspan="3">
-                    <obs conceptId="5033" size="120" />
+                    <obs conceptId="a52ce37c-a0b8-427a-becb-ab07253f5e15" size="120" />
                 </td>
             </tr>
         </table>

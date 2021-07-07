@@ -189,7 +189,7 @@
                         "fields": [
                             {
                                 "type": "personAttribute",
-                                "label": "N° de telephone du patient",
+                                "label": "N° de téléphone du patient",
                                 "formFieldName": "phoneNumber",
                                 "uuid": "14d4f066-15f5-102d-96e4-000c29c2a5d7",
                                 "widget": {
@@ -306,7 +306,7 @@
                             },
                             {
                                 "type": "personAttribute",
-                                "label": "N° de telephone",
+                                "label": "N° de téléphone",
                                 "formFieldName": "fatherPhoneNumber",
                                 "uuid": "2fa82eab-e62d-4992-91bd-d6928a05be3c",
                                 "widget": {
@@ -359,7 +359,7 @@
                             },
                             {
                                 "type": "personAttribute",
-                                "label": "N° de telephone",
+                                "label": "N° de téléphone",
                                 "formFieldName": "motherPhoneNumber",
                                 "uuid": "38e55f06-0b80-4aab-a61d-104533e63e4c",
                                 "widget": {
@@ -373,7 +373,7 @@
                         ]
                     },
                     {
-                        "legend": "1er Conjoint",
+                        "legend": "1er conjoint",
                         "header": "Le 1er conjoint",
                         "fields": [
                             {
@@ -412,7 +412,7 @@
                             },
                             {
                                 "type": "personAttribute",
-                                "label": "N° de telephone",
+                                "label": "N° de téléphone",
                                 "formFieldName": "spousePhoneNumber1",
                                 "uuid": "3b28e6e1-f4e6-442c-8fba-1b95c19ea2be",
                                 "widget": {
@@ -465,7 +465,7 @@
                             },
                             {
                                 "type": "personAttribute",
-                                "label": "N° de telephone",
+                                "label": "N° de téléphone",
                                 "formFieldName": "spousePhoneNumber2",
                                 "uuid": "eb60a31f-b12a-470e-a2ba-f0800b018fc9",
                                 "widget": {
@@ -518,7 +518,7 @@
                             },
                             {
                                 "type": "personAttribute",
-                                "label": "N° de telephone",
+                                "label": "N° de téléphone",
                                 "formFieldName": "spousePhoneNumber3",
                                 "uuid": "a0e39fbe-fbff-4f7d-8500-317cb6d53aa6",
                                 "widget": {

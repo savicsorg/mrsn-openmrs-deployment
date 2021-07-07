@@ -73,7 +73,7 @@
 
         <p>
         <label>Observations</label>
-            <obs conceptId="5011" tags="Observations" style="textarea" rows="5" />
+            <obs conceptId="5011" tags="Observations" style="textarea" rows="5"  />
        </p>
 
     </div>

@@ -101,7 +101,7 @@
             <tr>
                 <td style="vertical-align:top">Histoire de la maladie:</td>
                 <td colspan="6">
-                    <obs conceptId="5058" tags="Observations" style="textarea" rows="5" cols="90" />
+                    <obs conceptId="a1b341b1-4ed5-4075-8e39-9964f65f0399" tags="Observations" style="textarea" rows="5" cols="90" />
                 </td>
             </tr>
         </table>
@@ -111,19 +111,19 @@
         <table class="baseline-aligned" border="1" width="100%">
             <tr>
                 <td>
-                    <obs conceptId="5059" answerConceptId="1" answerLabel="Gynécologue" style="checkbox" />
+                    <obs conceptId="8bedde3d-7b7d-4e42-a1a7-b9587191c5b0" answerConceptId="1" answerLabel="Gynécologue" style="checkbox" />
                 </td>
                 <td>
-                    <obs conceptId="5060" answerConceptId="1" answerLabel="DES/CCD" style="checkbox" />
+                    <obs conceptId="0b7feb29-16d4-4da1-b790-640ac8fb716b" answerConceptId="1" answerLabel="DES/CCD" style="checkbox" />
                 </td>
                 <td>
-                    <obs conceptId="5061" answerConceptId="1" answerLabel="Sage-femme" style="checkbox" />
+                    <obs conceptId="9bdf4fd6-c98c-4ebb-a385-d4ef907564b7" answerConceptId="1" answerLabel="Sage-femme" style="checkbox" />
                 </td>
                 <td>
-                    <obs conceptId="5062" answerConceptId="1" answerLabel="Infirmière" style="checkbox" />
+                    <obs conceptId="87797275-c8e2-44fc-a058-97591ee363d1" answerConceptId="1" answerLabel="Infirmière" style="checkbox" />
                 </td>
                 <td>
-                    <obs conceptId="5063" answerConceptId="1" answerLabel="Elève/étudiant" style="checkbox" />
+                    <obs conceptId="6e96a708-5b1a-4e69-b5a5-7eb37dce0e45" answerConceptId="1" answerLabel="Elève/étudiant" style="checkbox" />
                 </td>
             </tr>
         </table>
@@ -132,75 +132,75 @@
         <table class="baseline-aligned" border="1" width="100%">
             <tr>
                 <td>
-                    <obs conceptId="5064" labelText="Autre:" />
+                    <obs conceptId="a00523f6-f54e-4503-9de5-f36178030710" labelText="Autre:" />
                 </td>
                 <td>
-                    <obs conceptId="711" labelText="DDR:" allowFutureDates="false"/>
+                    <obs conceptId="3cd653c6-26fe-102b-80cb-0017a47871b2" labelText="DDR:" allowFutureDates="false"/>
                 </td>
                 <td>
-                    <obs conceptId="5065" labelText="Age de grosssesse(SA):" />
+                    <obs conceptId="d84d7340-cbc1-44a7-b7b7-c6129eabf649" labelText="Age de grosssesse(SA):" />
                 </td>
                 <td>
                     CPNR:
                     <obs conceptId="$@CPNR@" answerConceptIds="$@YES@,$@NO@" answerLabels="Oui,Non" style="radio" />
                     <div id="divNbr">
                         Nombre
-                        <obs conceptId="5105" />
+                        <obs conceptId="1585d98d-914d-45a0-b804-0d8ec166e61e" />
                     </div>
                 </td>
             </tr>
             <tr>
                 <td colspan="6">
-                    <obs conceptId="5067" labelText="Date et heure de l'examen:" />
+                    <obs conceptId="7d753657-2da6-4a6f-9a2a-02dd1fb26dbd" labelText="Date et heure de l'examen:" />
                 </td>
             </tr>
         </table>
     </section>
 
 
-    <section headerLabel="EXAMEN GENERAL">
+    <section headerLabel="EXAMEN GÉNÉRAL">
         <table class="baseline-aligned" border="1" width="100%">
             <tr>
                 <td>Etat de la patiente:</td>
                 <td>
-                    <obs conceptId="5068" answerConceptId="1" answerLabel="Bon" style="checkbox" />
+                    <obs conceptId="9ae77591-667e-4a74-a73c-f47c538b063e" answerConceptId="1" answerLabel="Bon" style="checkbox" />
                 </td>
                 <td>
-                    <obs conceptId="5069" answerConceptId="1" answerLabel="Altéré" style="checkbox" />
+                    <obs conceptId="aa14569b-2428-4b79-b65f-c7e96157aeb9" answerConceptId="1" answerLabel="Altéré" style="checkbox" />
                 </td>
                 <td>
-                    <obs conceptId="5070" answerConceptId="1" answerLabel="Précaire" style="checkbox" />
+                    <obs conceptId="ffe896bb-89a9-4124-b867-9ecadf830753" answerConceptId="1" answerLabel="Précaire" style="checkbox" />
                 </td>
             </tr>
             <tr>
                 <td>Etat de la conscience:</td>
                 <td>
-                    <obs conceptId="5071" answerConceptId="1" answerLabel="Consciente" style="checkbox" />
+                    <obs conceptId="0a2d624d-d62d-408d-9642-95ca36cfcc34" answerConceptId="1" answerLabel="Consciente" style="checkbox" />
                 </td>
                 <td>
-                    <obs conceptId="5072" answerConceptId="1" answerLabel="Obnubilée" style="checkbox" />
+                    <obs conceptId="ecc716b7-25b3-44d1-8165-d977c8f479bc" answerConceptId="1" answerLabel="Obnubilée" style="checkbox" />
                 </td>
                 <td>
                     <obs conceptId="5073" answerConceptId="1" answerLabel="Agitée" style="checkbox" />
                 </td>
                 <td>
-                    <obs conceptId="5074" answerConceptId="1" answerLabel="Inconsciente" style="checkbox" />
+                    <obs conceptId="6e8c5dae-d5a0-4e76-85be-4c17336a5ffb" answerConceptId="1" answerLabel="Inconsciente" style="checkbox" />
                 </td>
             </tr>
             <tr>
                 <td  colspan="2">
-                    <obs conceptId="5102" labelText="TA(cmHg):" />
+                    <obs conceptId="8df02188-e817-41ee-af02-987ccc543a2d" labelText="TA(mmHg):" />
                     /
-                    <obs conceptId="5103" />
+                    <obs conceptId="314accff-875c-42b8-b027-8b0e737c364c" />
                 </td>
                 <td>
-                    <obs conceptId="2366" labelText="Pouls(puls/min):" />
+                    <obs conceptId="3ce93824-26fe-102b-80cb-0017a47871b2" labelText="Pouls(puls/min):" />
                 </td>
                 <td>
-                    <obs conceptId="2365" labelText="Température(°C):" />
+                    <obs conceptId="3ce939d2-26fe-102b-80cb-0017a47871b2" labelText="Température(°C):" />
                 </td>
                 <td>
-                    <obs conceptId="5075" labelText="Respiration(mvts/min):" />
+                    <obs conceptId="48ad7006-9cfe-4168-a12d-7dca71c8eee8" labelText="Respiration(mvts/min):" />
                 </td>
             </tr>
         </table>
@@ -214,96 +214,96 @@
             <tr>
                 <td>Etat des seins:</td>
                 <td colspan="5">
-                    <obs conceptId="5076" />
+                    <obs conceptId="893079df-8e9c-42a6-b743-74ca914c672a" />
                 </td>
             </tr>
             <tr>
                 <td>Etat de l'utérus</td>
                 <td>
-                    <obs conceptId="5077" />
+                    <obs conceptId="319991ca-8bbd-4f8a-836c-174df569585c" />
                 </td>
 
                 <td>HU(cm):</td>
                 <td>
-                    <obs conceptId="5024" />
+                    <obs conceptId="301f8062-f4d7-484a-89a1-ee5405be7baa" />
                 </td>
 
                 <td>CU:</td>
                 <td>
-                    <obs conceptId="5078" size="40" />
+                    <obs conceptId="557f7d78-ce22-43cb-b215-ca0fbc3bc64d" size="40" />
                 </td>
             </tr>
             <tr>
-                <td>Présentation:</td>
+                <td>Présentation (générale):</td>
                 <td>
-                    <obs conceptId="5079" />
+                    <obs conceptId="9608bb70-a0bd-4e83-8595-e09c1871e5db" />
                 </td>
 
                 <td>BCF(bts/min):</td>
                 <td>
-                    <obs conceptId="5080" />
+                    <obs conceptId="cd8b6790-8552-4624-b1a1-0cae14c16e23" />
                 </td>
 
                 <td>Mouvement actif du foetus:</td>
                 <td>
-                    <obs conceptId="5081" />
+                    <obs conceptId="2ad3aa77-65f2-46c7-ae5f-896a55cc0235" />
                 </td>
             </tr>
 
             <tr>
                 <td>Vulve:</td>
                 <td colspan="2">
-                    <obs conceptId="382"   size="40"/>
+                    <obs conceptId="162879AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"   size="40"/>
                 </td>
 
                 <td>Spéculum:</td>
                 <td colspan="2">
-                    <obs conceptId="5083"  size="60"/>
+                    <obs conceptId="07225543-1394-442c-8c6d-d2e3d95a2c33"  size="60"/>
                 </td>
             </tr>
 
             <tr>
                 <td>TV:</td>
                 <td colspan="5">
-                    <obs conceptId="5084" size="80"/>
+                    <obs conceptId="ce6eddc8-186c-4bb2-8a0f-237260467d8b" size="80"/>
                 </td>
             </tr>
 
             <tr>
                 <td>PDE:</td>
                 <td>
-                    <obs conceptId="5085" />
+                    <obs conceptId="14d5c9e7-6384-47ca-95b1-01535a697c59" />
                 </td>
 
 
-                <td>Présentation:</td>
+                <td>Présentation (descente):</td>
                 <td>
-                    <obs conceptId="5086" />
+                    <obs conceptId="a8097d91-3993-4b8a-a6d2-7125ed39cd99" />
                 </td>
 
 
                 <td>Variole:</td>
                 <td>
-                    <obs conceptId="5087" />
+                    <obs conceptId="a3861967-0125-4ef5-ae3b-bdfc89e7a151" />
                 </td>
             </tr>
 
             <tr>
                 <td>Segment inférieur:</td>
                 <td colspan="2">
-                    <obs conceptId="5088" size="40"/>
+                    <obs conceptId="dd549d69-3ea4-47dc-ba0e-b41d593679e9" size="40"/>
                 </td>
 
                 <td>Bassin:</td>
                 <td colspan="2">
-                    <obs conceptId="5089" size="60"/>
+                    <obs conceptId="5793db68-6f0d-404b-9370-d5c051b89dcd" size="60"/>
                 </td>
             </tr>
 
             <tr>
                 <td>Doigtier:</td>
                 <td colspan="5">
-                    <obs conceptId="5090" size="125"/>
+                    <obs conceptId="1c55b28e-9392-4d65-9c5f-31b726f95a42" size="125"/>
                 </td>
             </tr>
         </table>
@@ -311,53 +311,53 @@
 
 
     <section headerLabel="EXAMEN DES AUTRES APPAREILS">
-        <table class="baseline-aligned" border="1" size="80">
+        <table class="baseline-aligned" border="1" width="100%">
             <tr>
                 <td>Cardio vasculaire:</td>
                 <td>
-                    <obs conceptId="5091" size="80"/>
+                    <obs conceptId="2f3c03bc-216f-4839-b348-0bf0ea11c63c" size="80"/>
                 </td>
             </tr>
             <tr>
                 <td>Pulmonaire:</td>
                 <td>
-                    <obs conceptId="5092" size="80"/>
+                    <obs conceptId="1522b53e-9a2b-4430-9854-e251ceb47c6a" size="80"/>
                 </td>
             </tr>
             <tr>
                 <td>Urinaire:</td>
                 <td>
-                    <obs conceptId="5093" size="80"/>
+                    <obs conceptId="68b79172-668b-4a13-926b-3f6e36f0c2a5" size="80"/>
                 </td>
             </tr>
             <tr>
                 <td>Autres:</td>
                 <td>
-                    <obs conceptId="5098" size="80"/>
+                    <obs conceptId="b00c767f-c5d5-41ee-9e32-5ee576b2d65f" size="80"/>
                 </td>
             </tr>
             <tr>
                 <td>Diagnostic(Dg) et conduite à tenir(CAT):</td>
                 <td>
-                    <obs conceptId="5094" size="80"/>
+                    <obs conceptId="f6574118-8ee1-43ea-8a01-730075a0fc69" size="80"/>
                 </td>
             </tr>
             <tr>
                 <td>1</td>
                 <td>
-                    <obs conceptId="5095" size="80"/>
+                    <obs conceptId="b010ed1d-0803-4bf6-8573-c0f8e9e04a62" size="80"/>
                 </td>
             </tr>
             <tr>
                 <td>2</td>
                 <td>
-                    <obs conceptId="5096" size="80"/>
+                    <obs conceptId="59a59fcc-8199-466d-a6af-7eb7b5bb00d8" size="80"/>
                 </td>
             </tr>
             <tr>
                 <td>3</td>
                 <td>
-                    <obs conceptId="5097" size="80"/>
+                    <obs conceptId="0a2b6c84-671c-412a-a68c-b9a550c3ac51" size="80"/>
                 </td>
             </tr>
         </table>

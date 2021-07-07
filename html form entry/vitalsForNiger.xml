@@ -133,30 +133,28 @@
     <section id="vitals" sectionTag="section" headerStyle="title" headerLabel="Signes généraux">
         <table class="baseline-aligned" border="1" width="70%">
             <tr>
-                <td>
+                <td colspan="60">
                     Taille
                 </td>
-                <td>
+                <td colspan="40">
                     <obs conceptId="CIEL:5090" id="height" showUnits="uicommons.units.centimeters" unitsCssClass="append-to-value" />
                 </td>
             </tr>
 
             <tr>
-                <td>
+                <td colspan="60">
                     Poids
                 </td>
-                <td>
+                <td colspan="40">
                     <obs conceptId="CIEL:5089" id="weight" showUnits="uicommons.units.kilograms" unitsCssClass="append-to-value" />
                 </td>
             </tr>
             <tr>
                 <includeIf velocityTest="$patient.getAge($encounter.getEncounterDatetime()) > 5">
-                    <td>
-                        <h3>
-                            IMC (Calculé)
-                        </h3>
+                    <td colspan="60">
+                        IMC (Calculé)
                     </td>
-                    <td>
+                    <td colspan="40">
                         <span id='calculated-bmi'></span>
                         <input type="hidden" name="focus-in-bmi-question" id="hidden-calculated-bmi" />
                     </td>
@@ -168,37 +166,37 @@
     <section id="vitals" sectionTag="section" headerStyle="title" headerLabel="Signes vitaux">
         <table class="baseline-aligned" border="1" width="70%">
             <tr>
-                <td>
+                <td colspan="60"> 
                     Température
                 </td>
-                <td>
+                <td colspan="40">
                     <obs conceptId="CIEL:5088" id="temperature" showUnits="uicommons.units.degreesCelsius" unitsCssClass="append-to-value" />
                 </td>
             </tr>
 
             <tr>
-                <td>
+                <td colspan="60">
                     Pouls
                 </td>
-                <td>
+                <td colspan="40">
                     <obs conceptId="CIEL:5087" id="heart_rate" showUnits="uicommons.units.perMinute" unitsCssClass="append-to-value" />
                 </td>
             </tr>
 
             <tr>
-                <td>
+                <td colspan="60">
                     Fréquence respiratoire
                 </td>
-                <td>
+                <td colspan="40">
                     <obs conceptId="CIEL:5242" id="respiratory_rate" showUnits="uicommons.units.perMinute" unitsCssClass="append-to-value" />
                 </td>
             </tr>
 
             <tr>
-                <td>
+                <td colspan="60">
                     Tension artérielle (mmHg)
                 </td>
-                <td>
+                <td colspan="40">
                     <obs conceptId="CIEL:5085" id="bp_systolic" />
                     /
                     <obs conceptId="CIEL:5086" id="bp_diastolic" />
@@ -206,10 +204,10 @@
             </tr>
 
             <tr>
-                <td>
+                <td colspan="60">
                     Saturation en oxygène du sang
                 </td>
-                <td>
+                <td colspan="40">
                     <obs conceptId="CIEL:5092" id="o2_sat" showUnits="uicommons.units.percent" unitsCssClass="append-to-value" />
                 </td>
             </tr>

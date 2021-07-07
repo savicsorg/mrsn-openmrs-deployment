@@ -91,138 +91,169 @@
         <section headerLabel="Mère/femme">
             <table class="baseline-aligned" border="1" width="100%">
                 <tr>
-                    <td>Guérison</td>
-                    <td>
-                        <obs conceptId="5035" labelText=" " answerConceptId="1" />
+                    <td width="20%">Guérison:</td>
+                    <td width="20%">
+                        <obs conceptId="e9c27899-d97c-4914-9c85-6c20096f04d8" labelText=" " answerConceptIds="$@YES@,$@NO@" answerLabels="Oui,Non" style="radio" />
                     </td>
-                    <td>Amélioration</td>
-                    <td>
-                        <obs conceptId="5036" labelText=" " answerConceptId="1" />
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>Avec complications</td>
-                    <td>
-                        <obs conceptId="5037" labelText=" " answerConceptId="1" />
-                    </td>
-                    <td>Type</td>
-                    <td>
-                        <obs conceptId="5038" size="90"/>
-                    </td>
-                </tr>
-
-                <tr>
-                    <td>Référence:</td>
-                    <td>
-                        <obs conceptId="5039" labelText=" " answerConceptId="1" />
-                    </td>
-                    <td colspan="2">
-                        <obs conceptId="5040" size="100"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Evasion:</td>
-                    <td>
-                        <obs conceptId="5041" labelText=" " answerConceptId="1" />
-                    </td>
-                    <td colspan="2">
-                        <obs conceptId="5042"  size="100" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>Sans avis médical:</td>
-                    <td>
-                        <obs conceptId="5043" labelText=" " answerConceptId="1" />
-                    </td>
-                    <td colspan="2">
-                        <obs conceptId="5044"  size="100"/>
-                    </td>
-                </tr>
-                <tr>
-                    <td>Décès:</td>
-                    <td>
-                        <obs conceptId="5045" labelText=" " answerConceptId="1" />
-                    </td>
-                    <td>Causes:</td>
-                    <td>
-                        <obs conceptId="5046" size="90"/>
+                    <td width="10%">Amélioration</td>
+                    <td width="50%">
+                        <obs conceptId="7fb65cb6-1eaf-44b5-90e9-7bcdf622edfd" labelText=" " answerConceptIds="$@YES@,$@NO@" answerLabels="Oui,Non" style="radio" />
                     </td>
                 </tr>
             </table>
-        </section>
-
-        <section headerLabel="Enfants">
             <table class="baseline-aligned" border="1" width="100%">
                 <tr>
-                    <td>Vivant</td>
-                    <td>
-                        <obs conceptId="5047" labelText=" " answerConceptId="1" />
+                    <td width="20%">Avec complications:</td>
+                    <td width="20%">
+                        <obs conceptId="afaa92c5-62c5-4a4f-87b2-7fae22ba46bb" labelText=" " answerConceptIds="$@YES@,$@NO@" answerLabels="Oui,Non" style="radio" />
                     </td>
-                    <td>Sans complication</td>
-                    <td>
-                        <obs conceptId="5048" labelText=" " answerConceptId="1" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>Avec complications</td>
-                    <td>
-                        <obs conceptId="5049" labelText=" " answerConceptId="1" />
-                    </td>
-                    <td>Type</td>
-                    <td>
-                        <obs conceptId="5050" size="90"/>
+                    <td width="10%">Type</td>
+                    <td width="50%">
+                        <obs conceptId="85396ee2-22cb-4e8b-845f-f62160e64e45" size="70" />
                     </td>
                 </tr>
-
+            </table>
+            <table class="baseline-aligned" border="1" width="100%">
                 <tr>
-                    <td>Transfert:</td>
-                    <td colspan="3">
-                        <obs conceptId="5051" size="90" />
+                    <td width="20%">Admise avec BCF</td>
+                    <td width="80%">
+                        <obs conceptId="6f5d0e6a-c40b-4759-a4e6-82267991f5c9" labelText=" " answerConceptIds="$@YES@,$@NO@" answerLabels="Oui,Non" style="radio" />
                     </td>
                 </tr>
-
+            </table>
+            <table class="baseline-aligned" border="1" width="100%">
                 <tr>
-                    <td>Décès:</td>
-                    <td>
-                        <obs conceptId="5052" labelText=" " answerConceptId="1" />
+                    <td width="20%">Référence:</td>
+                    <td width="20%">
+                        <obs conceptId="ad5446ca-1cc7-4233-a738-4e4101648236" labelText=" " answerConceptIds="$@YES@,$@NO@" answerLabels="Oui,Non" style="radio" />
                     </td>
-                    <td>Cause(s):</td>
-                    <td>
-                        <obs conceptId="5053" size="90"/>
+                    <td width="60%" colspan="2">
+                        <obs conceptId="1edaf170-25f9-4c51-b856-3224a77eee2d" size="80" />
+                    </td>
+                </tr>
+            </table>
+            <table class="baseline-aligned" border="1" width="100%">
+                <tr>
+                    <td width="20%">Evasion:</td>
+                    <td width="20%">
+                        <obs conceptId="9ce2a9ac-ae94-42d6-9436-065ca3fc4f12" labelText=" " answerConceptIds="$@YES@,$@NO@" answerLabels="Oui,Non" style="radio" />
+                    </td>
+                    <td width="60%" colspan="2">
+                        <obs conceptId="ab175771-227b-4e22-ae6e-2a47fcf8e4c3" size="80" />
+                    </td>
+                </tr>
+            </table>
+            <table class="baseline-aligned" border="1" width="100%">
+                <tr>
+                    <td width="20%">Sans avis médical:</td>
+                    <td width="20%">
+                        <obs conceptId="88597fc5-4494-4e74-9b76-012c42d46200" labelText=" " answerConceptIds="$@YES@,$@NO@" answerLabels="Oui,Non" style="radio" />
+                    </td>
+                    <td width="60%" colspan="2">
+                        <obs conceptId="f2e33411-807e-4486-a0ea-05955961a0a7" size="80" />
+                    </td>
+                </tr>
+            </table>
+            <table class="baseline-aligned" border="1" width="100%">
+                <tr>
+                    <td width="20%">Décès:</td>
+                    <td width="20%">
+                        <obs conceptId="f5f3518e-abff-4526-b1a2-ba239c1cee2d" labelText=" " answerConceptIds="$@YES@,$@NO@" answerLabels="Oui,Non" style="radio" />
+                    </td>
+                    <td width="10%">Cause(s):</td>
+                    <td width="50%">
+                        <obs conceptId="5c9a8a42-5a68-4085-bf52-cae6dffc50ad" size="70" />
                     </td>
                 </tr>
             </table>
         </section>
 
+        <section headerLabel="Nouveau(x)-né(s)">
+            <table class="baseline-aligned" border="1" width="100%">
+                <tr>
+                    <td width="20%">Vivant</td>
+                    <td width="20%">
+                        <obs conceptId="3f503cd7-9066-4cfa-ac90-7dc317ee4579" labelText=" " answerConceptIds="$@YES@,$@NO@" answerLabels="Oui,Non" style="radio" />
+                    </td>
+                    <td width="20%">Sans complication</td>
+                    <td width="40%">
+                        <obs conceptId="8ad67a69-22b5-4537-bd90-b065ede98f7b" labelText=" " answerConceptIds="$@YES@,$@NO@" answerLabels="Oui,Non" style="radio" />
+                    </td>
+                </tr>
+            </table>
+            <table class="baseline-aligned" border="1" width="100%">
+                <tr>
+                    <td width="20%">Avec complications</td>
+                    <td width="20%">
+                        <obs conceptId="4291d00b-5687-4c69-8c49-c7f5d02c759a" labelText=" " answerConceptIds="$@YES@,$@NO@" answerLabels="Oui,Non" style="radio" />
+                    </td>
+                    <td width="20%">Type</td>
+                    <td width="40%">
+                        <obs conceptId="34e8e293-5f64-4d09-b65f-d163be06a46d" size="50" />
+                    </td>
+                </tr>
+            </table>
+            <table class="baseline-aligned" border="1" width="100%">
+                <tr>
+                    <td width="20%">Transfert:</td>
+                    <td width="80%" colspan="3">
+                        <obs conceptId="cf6ae24e-fb87-4cca-948e-9a20fb1e564c" size="105" />
+                    </td>
+                </tr>
+            </table>
+            <table class="baseline-aligned" border="1" width="100%">
+                <tr>
+                    <td width="20%">Décès(avant 24h) :</td>
+                    <td width="20%">
+                        <obs conceptId="47de2e12-cc8f-4495-af65-798a00506c76" labelText=" " answerConceptIds="$@YES@,$@NO@" answerLabels="Oui,Non" style="radio" />
+                    </td>
+                    <td width="20%">Cause(s):</td>
+                    <td width="40%">
+                        <obs conceptId="cd531544-5154-478e-a1d9-ee85d609bf40" size="50" />
+                    </td>
+                </tr>
+            </table>
+            <table class="baseline-aligned" border="1" width="100%">
+                <tr>
+                    <td width="20%">Mort(s)-né(s):</td>
+                    <td width="20%">
+                        <obs conceptId="ac7ed457-fa56-4d1c-90b1-ae3a36f1c594" labelText=" " answerConceptIds="$@YES@,$@NO@" answerLabels="Oui,Non" style="radio" />
+                    </td>
+                    <td width="20%">Cause(s):</td>
+                    <td width="40%">
+                        <obs conceptId="e277475f-77ae-48c9-b2d6-509caa72541f" size="50" />
+                    </td>
+                </tr>
+            </table>
+
+
+        </section>
         <table class="baseline-aligned" border="1" width="100%">
             <tr>
                 <td>Conseil:</td>
                 <td colspan="3">
-                    <obs conceptId="5054" style="textarea" cols="90" />
+                    <obs conceptId="632ecbad-c067-41ef-ae76-802bed3a223a" style="textarea" cols="80" />
                 </td>
             </tr>
             <tr>
                 <td>DIAGNOSTIC DE SORTIE OU FINAL:</td>
                 <td colspan="3">
-                    <obs conceptId="5055" style="textarea" cols="90"/>
+                    <obs conceptId="01c43e58-db8f-4939-a477-3e525bb1b33f" style="textarea" cols="80" />
                 </td>
             </tr>
         </table>
-
-
         <section headerLabel="VISITE POST NATALE">
             <table class="baseline-aligned" border="1" width="100%">
                 <tr>
                     <td>Date:</td>
                     <td colspan="3">
-                        <obs conceptId="5056" />
+                        <obs conceptId="e42a8903-6369-4026-9ac8-ced264c80515" />
                     </td>
                 </tr>
                 <tr>
                     <td>Rendez-vous:</td>
                     <td colspan="3">
-                        <obs conceptId="5057" size="100"/>
+                        <obs conceptId="0184d504-ff60-403b-9063-bdd46fd9cee3" size="100" />
                     </td>
                 </tr>
             </table>
