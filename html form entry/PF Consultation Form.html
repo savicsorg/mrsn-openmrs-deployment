@@ -120,350 +120,342 @@
 
 		if (jQuery) {
 
-			//If  submission does not work redirect with an error message
-			beforeSubmit.push(function () {
-				var req_1 = getValue('req_1.value');
-				var req_2 = getValue('req_2.value');
-				var req_3 = getValue('req_3.value');
-				var req_4 = getValue('req_4.value');
-				var req_5 = getValue('req_5.value');
-				var req_6 = getValue('req_6.value');
-				var req_7 = getValue('req_7.value');
-				var req_8 = getValue('req_8.value');
-				var req_9 = getValue('req_9.value');
-				var req_10 = getValue('req_10.value');
-				var req_11 = getValue('req_11.value');
-				var req_12 = getValue('req_12.value');
-				var req_13 = getValue('req_13.value');
-				var req_14 = getValue('req_14.value');
-				var req_15 = getValue('req_15.value');
-				var req_16 = getValue('req_16.value');
-				var req_17 = getValue('req_17.value');
-				var req_18 = getValue('req_18.value');
-				var req_19 = getValue('req_19.value');
-				var req_20 = getValue('req_20.value');
-				var req_21 = getValue('req_21.value');
-				var req_22 = getValue('req_22.value');
-				var req_23 = getValue('req_23.value');
-				var req_24 = getValue('req_24.value');
-				var req_25 = getValue('req_25.value');
-				var req_26 = getValue('req_26.value');
-				var req_27 = getValue('req_27.value');
-				var req_28 = getValue('req_28.value');
-				var req_29 = getValue('req_29.value');
-				var req_30 = getValue('req_30.value');
-				var req_31 = getValue('req_31.value');
-				var req_32 = getValue('req_32.value');
-				var req_33 = getValue('req_33.value');
-				var req_34 = getValue('req_34.value');
-				var req_35 = getValue('req_35.value');
-				var req_36 = getValue('req_36.value');
-				var req_37 = getValue('req_37.value');
-				var req_38 = getValue('req_38.value');
-				var req_39 = getValue('req_39.value');
-
-				console.log([req_1, getField('req_1.error')]);
-				if (!req_1 || req_1 == "") {
-					getField('req_1.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_1.error').html('This field is required').hide();
-				}
-
-				if (!req_2 || req_2 == "") {
-					getField('req_2.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_2.error').html('This field is required').hide();
-				}
-
-
-				if (!req_3 || req_3 == "") {
-					getField('req_3.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_3.error').html('This field is required').hide();
-				}
-
-				if (!req_4 || req_4 == "") {
-					getField('req_4.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_4.error').html('This field is required').hide();
-				}
-
-				if (!req_5 || req_5 == "") {
-					getField('req_5.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_5.error').html('This field is required').hide();
-				}
-
-				if (!req_6 || req_6 == "") {
-					getField('req_6.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_6.error').html('This field is required').hide();
-				}
-
-				if (!req_7 || req_7 == "") {
-					getField('req_7.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_7.error').html('This field is required').hide();
-				}
-
-				if (!req_8 || req_8 == "") {
-					getField('req_8.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_8.error').html('This field is required').hide();
-				}
-
-				if (!req_9 || req_9 == "") {
-					getField('req_9.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_9.error').html('This field is required').hide();
-				}
-
-				if (!req_12 || req_12 == "") {
-					getField('req_12.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_12.error').html('This field is required').hide();
-				}
-				if (!req_13 || req_13 == "") {
-					getField('req_13.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_13.error').html('This field is required').hide();
-				}
-
-				if (!req_14 || req_14 == "") {
-					getField('req_14.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_14.error').html('This field is required').hide();
-				}
-
-				if (!req_15 || req_15 == "") {
-					getField('req_15.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_15.error').html('This field is required').hide();
-				}
-
-				if (!req_16 || req_16 == "") {
-					getField('req_16.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_16.error').html('This field is required').hide();
-				}
-
-				if (!req_17 || req_17 == "") {
-					getField('req_17.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_17.error').html('This field is required').hide();
-				}
-
-				if (!req_18 || req_18 == "") {
-					getField('req_18.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_18.error').html('This field is required').hide();
-				}
-
-				if (!req_19 || req_19 == "") {
-					getField('req_19.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_19.error').html('This field is required').hide();
-				}
-
-				if (!req_20 || req_20 == "") {
-					getField('req_20.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_20.error').html('This field is required').hide();
-				}
-
-				if (!req_21 || req_21 == "") {
-					getField('req_21.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_21.error').html('This field is required').hide();
-				}
-
-				if (!req_22 || req_22 == "") {
-					getField('req_22.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_22.error').html('This field is required').hide();
-				}
-
-				if (!req_23 || req_23 == "") {
-					getField('req_23.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_23.error').html('This field is required').hide();
-				}
-
-				if (!req_24 || req_24 == "") {
-					getField('req_24.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_24.error').html('This field is required').hide();
-				}
-
-				if (!req_25 || req_25 == "") {
-					getField('req_25.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_25.error').html('This field is required').hide();
-				}
-
-				if (!req_26 || req_26 == "") {
-					getField('req_26.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_26.error').html('This field is required').hide();
-				}
-
-				if (!req_27 || req_27 == "") {
-					getField('req_27.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_27.error').html('This field is required').hide();
-				}
-
-				if (!req_28 || req_28 == "") {
-					getField('req_28.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_28.error').html('This field is required').hide();
-				}
-
-				if (!req_29 || req_29 == "") {
-					getField('req_29.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_29.error').html('This field is required').hide();
-				}
-
-				if (!req_30 || req_30 == "") {
-					getField('req_30.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_30.error').html('This field is required').hide();
-				}
-
-				if (!req_31 || req_31 == "") {
-					getField('req_31.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_31.error').html('This field is required').hide();
-				}
-
-				if (!req_32 || req_32 == "") {
-					getField('req_32.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_32.error').html('This field is required').hide();
-				}
-
-				if (!req_33 || req_33 == "") {
-					getField('req_33.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_33.error').html('This field is required').hide();
-				}
-
-				if (!req_34 || req_34 == "") {
-					getField('req_34.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_34.error').html('This field is required').hide();
-				}
-
-				if (!req_35 || req_35 == "") {
-					getField('req_35.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_35.error').html('This field is required').hide();
-				}
-
-				if (!req_36 || req_36 == "") {
-					getField('req_36.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_36.error').html('This field is required').hide();
-				}
-
-				if (!req_37 || req_37 == "") {
-					getField('req_37.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_37.error').html('This field is required').hide();
-				}
-
-				if (!req_38 || req_38 == "") {
-					getField('req_38.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_38.error').html('This field is required').hide();
-				}
-
-				if (!req_39 || req_39 == "") {
-					getField('req_39.error').html('This field is required').show();
-					window.scrollTo({ top: 0, behavior: 'smooth' });
-					return false;
-				} else {
-					getField('req_39.error').html('This field is required').hide();
-				}
-
-				return true;
-
-			});
-
 			$(document).ready(function () {
+
+				//If  submission does not work redirect with an error message
+				beforeSubmit.push(function () {
+
+					var req_1 = getValue('req_1.value');
+					var req_2 = getValue('req_2.value');
+					var req_3 = getValue('req_3.value');
+					var req_4 = getValue('req_4.value');
+					var req_5 = getValue('req_5.value');
+					var req_6 = getValue('req_6.value');
+					var req_7 = getValue('req_7.value');
+					var req_8 = getValue('req_8.value');
+					var req_9 = getValue('req_9.value');
+					var req_12 = getValue('req_12.value');
+					var req_13 = getValue('req_13.value');
+					var req_14 = getValue('req_14.value');
+					var req_15 = getValue('req_15.value');
+					var req_16 = getValue('req_16.value');
+					var req_17 = getValue('req_17.value');
+					var req_18 = getValue('req_18.value');
+					var req_19 = getValue('req_19.value');
+					var req_20 = getValue('req_20.value');
+					var req_21 = getValue('req_21.value');
+					var req_22 = getValue('req_22.value');
+					var req_23 = getValue('req_23.value');
+					var req_24 = getValue('req_24.value');
+					var req_25 = getValue('req_25.value');
+					var req_26 = getValue('req_26.value');
+					var req_27 = getValue('req_27.value');
+					var req_28 = getValue('req_28.value');
+					var req_29 = getValue('req_29.value');
+					var req_30 = getValue('req_30.value');
+					var req_31 = getValue('req_31.value');
+					var req_32 = getValue('req_32.value');
+					var req_33 = getValue('req_33.value');
+					var req_34 = getValue('req_34.value');
+					var req_35 = getValue('req_35.value');
+					var req_36 = getValue('req_36.value');
+					var req_37 = getValue('req_37.value');
+					var req_38 = getValue('req_38.value');
+
+
+					if (!req_1 || req_1 == "") {
+						getField('req_1.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_1.error').html('This field is required').hide();
+					}
+
+					if (!req_2 || req_2 == "") {
+						getField('req_2.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_2.error').html('This field is required').hide();
+					}
+
+
+					if (!req_3 || req_3 == "") {
+						getField('req_3.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_3.error').html('This field is required').hide();
+					}
+
+					if (!req_4 || req_4 == "") {
+						getField('req_4.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_4.error').html('This field is required').hide();
+					}
+
+					if (!req_5 || req_5 == "") {
+						getField('req_5.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_5.error').html('This field is required').hide();
+					}
+
+					if (!req_6 || req_6 == "") {
+						getField('req_6.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_6.error').html('This field is required').hide();
+					}
+
+					if (!req_7 || req_7 == "") {
+						getField('req_7.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_7.error').html('This field is required').hide();
+					}
+
+					if (!req_8 || req_8 == "") {
+						getField('req_8.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_8.error').html('This field is required').hide();
+					}
+
+					if (!req_9 || req_9 == "") {
+						getField('req_9.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_9.error').html('This field is required').hide();
+					}
+
+					if (!req_12 || req_12 == "") {
+						getField('req_12.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_12.error').html('This field is required').hide();
+					}
+					if (!req_13 || req_13 == "") {
+						getField('req_13.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_13.error').html('This field is required').hide();
+					}
+
+					if (!req_14 || req_14 == "") {
+						getField('req_14.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_14.error').html('This field is required').hide();
+					}
+
+					if (!req_15 || req_15 == "") {
+						getField('req_15.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_15.error').html('This field is required').hide();
+					}
+
+					if (!req_16 || req_16 == "") {
+						getField('req_16.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_16.error').html('This field is required').hide();
+					}
+
+					if (!req_17 || req_17 == "") {
+						getField('req_17.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_17.error').html('This field is required').hide();
+					}
+
+					if (!req_18 || req_18 == "") {
+						getField('req_18.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_18.error').html('This field is required').hide();
+					}
+
+					if (!req_19 || req_19 == "") {
+						getField('req_19.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_19.error').html('This field is required').hide();
+					}
+
+					if (!req_20 || req_20 == "") {
+						getField('req_20.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_20.error').html('This field is required').hide();
+					}
+
+					if (!req_21 || req_21 == "") {
+						getField('req_21.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_21.error').html('This field is required').hide();
+					}
+
+					if (!req_22 || req_22 == "") {
+						getField('req_22.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_22.error').html('This field is required').hide();
+					}
+
+					if (!req_23 || req_23 == "") {
+						getField('req_23.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_23.error').html('This field is required').hide();
+					}
+
+					if (!req_24 || req_24 == "") {
+						getField('req_24.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_24.error').html('This field is required').hide();
+					}
+
+					if (!req_25 || req_25 == "") {
+						getField('req_25.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_25.error').html('This field is required').hide();
+					}
+
+					if (!req_26 || req_26 == "") {
+						getField('req_26.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_26.error').html('This field is required').hide();
+					}
+
+					if (!req_27 || req_27 == "") {
+						getField('req_27.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_27.error').html('This field is required').hide();
+					}
+
+					if (!req_28 || req_28 == "") {
+						getField('req_28.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_28.error').html('This field is required').hide();
+					}
+
+					if (!req_29 || req_29 == "") {
+						getField('req_29.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_29.error').html('This field is required').hide();
+					}
+
+					if (!req_30 || req_30 == "") {
+						getField('req_30.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_30.error').html('This field is required').hide();
+					}
+
+					if (!req_31 || req_31 == "") {
+						getField('req_31.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_31.error').html('This field is required').hide();
+					}
+
+					if (!req_32 || req_32 == "") {
+						getField('req_32.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_32.error').html('This field is required').hide();
+					}
+
+					if (!req_33 || req_33 == "") {
+						getField('req_33.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_33.error').html('This field is required').hide();
+					}
+
+					if (!req_34 || req_34 == "") {
+						getField('req_34.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_34.error').html('This field is required').hide();
+					}
+
+					if (!req_35 || req_35 == "") {
+						getField('req_35.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_35.error').html('This field is required').hide();
+					}
+
+					if (!req_36 || req_36 == "") {
+						getField('req_36.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_36.error').html('This field is required').hide();
+					}
+
+					if (!req_37 || req_37 == "") {
+						getField('req_37.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_37.error').html('This field is required').hide();
+					}
+
+					if (!req_38 || req_38 == "") {
+						getField('req_38.error').html('This field is required').show();
+						window.scrollTo({ top: 0, behavior: 'smooth' });
+						return false;
+					} else {
+						getField('req_38.error').html('This field is required').hide();
+					}
+
+					return true;
+
+				});
+
+
 
 				hideByDefault();
 
@@ -505,6 +497,7 @@
 						x.css("visibility", "visible");
 					}
 				}
+
 			});
 
 		}
@@ -517,7 +510,7 @@
 	<section headerLabel="FICHE CLINIQUE EN PLANIFICATION FAMILIALE">
 		<table class="baseline-aligned" width="100%">
 			<tr>
-				<td>Region de:</td>
+				<td>Région de:</td>
 				<td>
 					<span class="value">Dosso</span>
 				</td>
@@ -531,7 +524,7 @@
 				<td>
 					<span class="value">HD Gaya</span>
 				</td>
-				<td>Date de la premiere visite:</td>
+				<td>Date de la première visite:</td>
 				<td colspan="3">
 					<encounterDate default="today" /> <span class="mandotory-star">*</span>
 				</td>
@@ -546,7 +539,7 @@
 
 		<table class="baseline-aligned" width="100%">
 			<tr>
-				<td>Nom et Prénon de la femme:</td>
+				<td>Nom et Prénom de la femme:</td>
 				<td colspan="3">
 					<lookup class="value" expression="patient.personName" />
 				</td>
@@ -580,7 +573,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>Nom et Prénon du mari:</td>
+				<td>Nom et Prénom du mari:</td>
 				<td colspan="3">
 					<obs conceptId="4881" id="req_5" /><span class="mandotory-star">*</span>
 				</td>
@@ -615,9 +608,9 @@
 				<td colspan="4">
 					<div id="hidden_1">
 						Si oui laquelle:
-						<obs conceptId="57" id="req_10" />
+						<obs conceptId="57" />
 						où:
-						<obs conceptId="5129" id="req_11" />
+						<obs conceptId="5129" />
 					</div>
 				</td>
 			</tr>
@@ -775,7 +768,7 @@
 				<td>
 					<div>IVA: Fait</div>
 					<div> <br /> </div>
-					<obs conceptId="$@iva_no@" answerConceptIds="$@YES@,$@NO@,$@Unknown@" answerCodes="Oui,Non,Inconu"
+					<obs conceptId="$@iva_no@" answerConceptIds="$@YES@,$@NO@,$@Unknown@" answerCodes="Oui,Non,Inconnu"
 						style="radio" answerSeparator="" id="req_32" /><span class="mandotory-star">*</span>
 				</td>
 				<td colspan="3">
@@ -791,7 +784,7 @@
 				<td>
 					<div>IVL: Fait</div>
 					<div> <br /> </div>
-					<obs conceptId="$@ivl_no@" answerConceptIds="$@YES@,$@NO@,$@Unknown@" answerCodes="Oui,Non,Inconu"
+					<obs conceptId="$@ivl_no@" answerConceptIds="$@YES@,$@NO@,$@Unknown@" answerCodes="Oui,Non,Inconnu"
 						style="radio" answerSeparator="" id="req_33" /><span class="mandotory-star">*</span>
 				</td>
 				<td colspan="3">
@@ -807,7 +800,7 @@
 				<td>
 					<div>IST: oui</div>
 					<div> <br /> </div>
-					<obs conceptId="$@ist@" answerConceptIds="$@YES@,$@NO@,$@Unknown@" answerCodes="Oui,Non,Inconu"
+					<obs conceptId="$@ist@" answerConceptIds="$@YES@,$@NO@,$@Unknown@" answerCodes="Oui,Non,Inconnu"
 						style="radio" answerSeparator="" id="req_34" /><span class="mandotory-star">*</span>
 				</td>
 				<td colspan="3">Si oui:
