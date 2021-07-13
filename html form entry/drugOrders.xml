@@ -159,18 +159,12 @@
                     Nombre de prise
                 </td>
                 <td>
-                    <obs conceptId="5120" size="10" />
-                </td>
-            </tr>
-
-            <tr>
-                <td width="20%">
-                    Fréquence
-                </td>
-                <td>
                     <obs conceptId="5121" />
                 </td>
-                <td colspan="2">
+                <td style="border:none;" width="1%" >
+                    X/
+                </td>
+                <td >
                     <obs conceptId="460" tags="Choisir la fréquence d'utilisation" />
                 </td>
             </tr>
