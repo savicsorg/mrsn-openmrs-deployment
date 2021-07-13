@@ -100,7 +100,7 @@
                     Date
                 </td>
                 <td colspan="3">
-                    <encounterDate default="now" showTime="false" />
+                    <encounterDate default="now" showTime="true" />
                 </td>
             </tr>
 

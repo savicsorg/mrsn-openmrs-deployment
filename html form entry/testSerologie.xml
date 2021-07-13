@@ -82,7 +82,7 @@
                         Date
                     </td>
                 <td colspan="3">
-                    <encounterDate default="now" showTime="false" />
+                    <encounterDate default="now" showTime="true" />
                 </td>
             </tr>
 
@@ -124,25 +124,6 @@
             </tr>
         </table>
 
-        <section headerLabel="Motif">
-            <table class="baseline-aligned" border="1" width="100%">
-                <tr>
-                    <td colspan="4">
-                        <obs conceptId="5125" tags="Motif de la demande d'analyse" style="textarea" rows="5" cols="110" />
-                    </td>
-                </tr>
-            </table>
-        </section>
-        <section headerLabel="Information clinique">
-            <table class="baseline-aligned" border="1" width="100%">
-                <tr>
-                    <td colspan="4">
-                        <obs conceptId="5126" tags="Information clinique" style="textarea" rows="5" cols="110" />
-                    </td>
-                </tr>
-            </table>
-        </section>
-
         <section headerLabel="Analyses disponibles">
             <table class="baseline-aligned" border="1" width="100%">
                 <tr>
@@ -167,6 +148,24 @@
                     </td>
                     <td>
                         <obs conceptId="2379" labelText="HcV" style="checkbox" />
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section headerLabel="Motif">
+            <table class="baseline-aligned" border="1" width="100%">
+                <tr>
+                    <td colspan="4">
+                        <obs conceptId="5125" tags="Motif de la demande d'analyse" style="textarea" rows="5" cols="110" />
+                    </td>
+                </tr>
+            </table>
+        </section>
+        <section headerLabel="Information clinique">
+            <table class="baseline-aligned" border="1" width="100%">
+                <tr>
+                    <td colspan="4">
+                        <obs conceptId="5126" tags="Information clinique" style="textarea" rows="5" cols="110" />
                     </td>
                 </tr>
             </table>
