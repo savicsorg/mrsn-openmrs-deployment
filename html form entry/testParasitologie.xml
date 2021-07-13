@@ -121,6 +121,18 @@
                 </td>
             </tr>
         </table>
+        <section headerLabel="Analyses disponibles">
+            <table class="baseline-aligned" border="1" width="100%">
+                <tr>
+                    <td>
+                        <obs conceptId="4856" labelText="GE" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="4857" labelText="Kopa" style="checkbox" />
+                    </td>
+                </tr>
+            </table>
+        </section>
 
         <section headerLabel="Motif">
             <table class="baseline-aligned" border="1" width="100%">
@@ -136,19 +148,6 @@
                 <tr>
                     <td colspan="4">
                         <obs conceptId="5126" tags="Information clinique" style="textarea" rows="5" cols="110" />
-                    </td>
-                </tr>
-            </table>
-        </section>
-
-        <section headerLabel="Analyses disponibles">
-            <table class="baseline-aligned" border="1" width="100%">
-                <tr>
-                    <td>
-                        <obs conceptId="4856" labelText="GE" style="checkbox" />
-                    </td>
-                    <td>
-                        <obs conceptId="4857" labelText="Kopa" style="checkbox" />
                     </td>
                 </tr>
             </table>

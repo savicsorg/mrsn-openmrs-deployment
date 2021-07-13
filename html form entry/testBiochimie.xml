@@ -123,6 +123,64 @@
             </tr>
         </table>
 
+        <section headerLabel="Analyses disponibles">
+            <table class="baseline-aligned" border="1" width="100%">
+                <tr>
+                    <td>
+                        <obs conceptId="4842" labelText="Magnésium" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="4843" labelText="Transaminase" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="4175" labelText="Acide urique" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="2528" labelText="Glycémie" style="checkbox" />
+                    </td>
+                </tr>
+    
+    
+                <tr>
+                    <td>
+                        <obs conceptId="4844" labelText="Alb" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="2528" labelText="Sucre" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="4847" labelText="CRP" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="4848" labelText="Calcium" style="checkbox" />
+                    </td>
+                </tr>
+    
+    
+    
+                <tr>
+                    <td>
+                        <obs conceptId="4168" labelText="Urée" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="4849" labelText="Créat" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="4850" labelText="Triglycéride" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="4183" labelText="Protéines Totales" style="checkbox" />
+                    </td>
+                </tr>
+    
+                <tr>
+                    <td colspan="4">
+                        <obs conceptId="4851" labelText="Hdl cholestérole" style="checkbox" />
+                    </td>
+                </tr>
+            </table>
+        </section>
+
         <section headerLabel="Motif">
             <table class="baseline-aligned" border="1" width="100%">
                 <tr>
@@ -142,65 +200,6 @@
             </table>
         </section>
 
-        <section headerLabel="Analyses disponibles">
-        
-    
-        <table class="baseline-aligned" border="1" width="100%">
-            <tr>
-                <td>
-                    <obs conceptId="4842" labelText="Magnésium" style="checkbox" />
-                </td>
-                <td>
-                    <obs conceptId="4843" labelText="Transaminase" style="checkbox" />
-                </td>
-                <td>
-                    <obs conceptId="4175" labelText="Acide urique" style="checkbox" />
-                </td>
-                <td>
-                    <obs conceptId="2528" labelText="Glycémie" style="checkbox" />
-                </td>
-            </tr>
-
-
-            <tr>
-                <td>
-                    <obs conceptId="4844" labelText="Alb" style="checkbox" />
-                </td>
-                <td>
-                    <obs conceptId="2528" labelText="Sucre" style="checkbox" />
-                </td>
-                <td>
-                    <obs conceptId="4847" labelText="CRP" style="checkbox" />
-                </td>
-                <td>
-                    <obs conceptId="4848" labelText="Calcium" style="checkbox" />
-                </td>
-            </tr>
-
-
-
-            <tr>
-                <td>
-                    <obs conceptId="4168" labelText="Urée" style="checkbox" />
-                </td>
-                <td>
-                    <obs conceptId="4849" labelText="Créat" style="checkbox" />
-                </td>
-                <td>
-                    <obs conceptId="4850" labelText="Triglycéride" style="checkbox" />
-                </td>
-                <td>
-                    <obs conceptId="4183" labelText="Protéines Totales" style="checkbox" />
-                </td>
-            </tr>
-
-            <tr>
-                <td colspan="4">
-                    <obs conceptId="4851" labelText="Hdl cholestérole" style="checkbox" />
-                </td>
-            </tr>
-        </table>
-    </section>
     <submit />
     </section>
 </htmlform>
