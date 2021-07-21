@@ -1,0 +1,248 @@
+{
+    "id": "referenceapplication.registrationapp.myRegisterPat",
+    "instanceOf": "registrationapp.registerPatient",
+    "label": "Register Patient",
+    "description": "Create a new Patient Record",
+    "extensions": [
+        {
+            "id": "referenceapplication.registrationapp.registerPatient.homepageLink",
+            "extensionPointId": "org.openmrs.referenceapplication.homepageLink",
+            "type": "link",
+            "label": "referenceapplication.app.registerPatient.label",
+            "url": "registrationapp/registerPatient.page?appId=referenceapplication.registrationapp.myRegisterPat",
+            "icon": "icon-user",
+            "order": 1,
+            "requiredPrivilege": "App: registrationapp.registerPatient"
+        },
+        {
+            "id": "application.registrationapp.summary.editPatientLink",
+            "extensionPointId": "patientDashboard.overallActions",
+            "type": "link",
+            "label": "referenceapplication.app.editRegistrationInfo.label",
+            "url": "registrationapp/registrationSummary.page?patientId={{patient.uuid}}&appId=referenceapplication.registrationapp.registerPatient",
+            "icon": "icon-pencil",
+            "order": 25,
+            "requiredPrivilege": "App: registrationapp.registerPatient"
+        }
+    ],
+    "config": {
+        "genderOptions": "M,F,U",
+        "afterCreatedUrl": "/coreapps/clinicianfacing/patient.page?patientId={{patientId}}",
+        "sections": [
+            {
+                "id": "identification",
+                "label": "Identification",
+                "questions": [
+                    {
+                        "legend": "Numero",
+                        "id": "Old_Identification_Number_patientIdentifier",
+                        "fields": [
+                            {
+                                "type": "patientIdentifier",
+                                "label": "N° de la carte nationale d'identité",
+                                "formFieldName": "IDCIdentificationNumber",
+                                "uuid": "d2dbd334-92dc-48e8-a6d2-18afd65a6271",
+                                "widget": {
+                                    "providerName": "uicommons",
+                                    "fragmentId": "field/text"
+                                },
+                                "cssClasses": [
+                                ]
+                            }
+                        ]
+                    },
+                    {
+                        "id": "nationality",
+                        "legend": "Origine",
+                        "fields": [{
+                            "label": "Nationalité",
+                            "type": "personAttribute",
+                            "formFieldName": "nationality",
+                            "uuid": "8d871afc-c2cc-11de-8d13-0010c6dffd0f",
+                            "widget": {
+                                "providerName": "registrationapp",
+                                "fragmentId": "field/dropDown",
+                                "config": {
+                                    "formFieldName": "nationality",
+                                    "conceptSet": "3934f642-b64b-42b6-8f4c-9e29bcd55737",
+                                    "options": [{
+                                        "label": "",
+                                        "value": ""
+                                    }],
+                                    "initialValue": "",
+                                    "hideEmptyLabel": true,
+                                    "expanded": false
+                                }
+                            }
+                        }]
+                    }
+                ]
+            },
+            {
+                "id": "demographics",
+                "label": "registrationapp.patient.demographics.label",
+                "questions": [
+                    {
+                        "id": "personName",
+                        "legend": "registration.nameIn.localLanguage",
+                        "fields": []
+                    }
+                ]
+            },
+            {
+                "id": "contactInfo",
+                "label": "registrationapp.patient.contactInfo.label",
+                "questions": [
+                    {
+                        "legend": "Person.address",
+                        "fields": [
+                            {
+                                "label": "Country",
+                                "type": "personAddress",
+                                "formFieldName": "country",
+                                "widget": {
+                                    "providerName": "uicommons",
+                                    "fragmentId": "field/dropDown",
+                                    "config": {
+                                        "formFieldName": "country",
+                                        "options": [
+                                            {
+                                                "label": "Niger",
+                                                "value": "Niger"
+                                            }
+                                        ],
+                                        "initialValue": "Niger",
+                                        "hideEmptyLabel": true,
+                                        "expanded": false
+                                    }
+                                }
+                            },
+                            {
+                                "label": "Region",
+                                "type": "personAddress",
+                                "formFieldName": "address1",
+                                "widget": {
+                                    "providerName": "uicommons",
+                                    "fragmentId": "field/dropDown",
+                                    "config": {
+                                        "formFieldName": "address1",
+                                        "options": [
+                                            {
+                                                "label": "Dosso",
+                                                "value": "Dosso"
+                                            },
+                                            {
+                                                "label": "Tilaberi",
+                                                "value": "Tilaberi"
+                                            }
+                                        ]
+                                    }
+                                }
+                            },
+                            {
+                                "label": "District",
+                                "type": "personAddress",
+                                "formFieldName": "country_district",
+                                "widget": {
+                                    "providerName": "uicommons",
+                                    "fragmentId": "field/dropDown",
+                                    "config": {
+                                        "formFieldName": "country_district",
+                                        "options": [
+                                            {
+                                                "label": "Ds Gaya",
+                                                "value": "Ds Gaya"
+                                            },
+                                            {
+                                                "label": "Ds Gotheye",
+                                                "value": "Ds Gotheye"
+                                            },
+                                            {
+                                                "label": "Ds Boboye",
+                                                "value": "Ds Boboye"
+                                            },
+                                            {
+                                                "label": "Ds Dogondoutchi",
+                                                "value": "Ds Dogondoutchi"
+                                            },
+                                            {
+                                                "label": "Ds Dosso",
+                                                "value": "Ds Dosso"
+                                            },
+                                            {
+                                                "label": "Ds Loga",
+                                                "value": "Ds Loga"
+                                            },
+                                            {
+                                                "label": "Ds Filingué",
+                                                "value": "Ds Filingué"
+                                            },
+                                            {
+                                                "label": "Ds Kollo",
+                                                "value": "Ds Kollo"
+                                            },
+                                            {
+                                                "label": "Ds Ouallam",
+                                                "value": "Ds Ouallam"
+                                            },
+                                            {
+                                                "label": "Ds Say",
+                                                "value": "Ds Say"
+                                            },
+                                            {
+                                                "label": "Ds Téra",
+                                                "value": "Ds Téra"
+                                            },
+                                            {
+                                                "label": "Ds Tillabéri",
+                                                "value": "Ds Tillabéri"
+                                            }
+                                        ]
+                                    }
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "legend": "registrationapp.patient.phone.label",
+                        "id": "phoneNumberLabel",
+                        "fields": [
+                            {
+                                "type": "personAttribute",
+                                "label": "registrationapp.patient.phone.question",
+                                "formFieldName": "phoneNumber",
+                                "uuid": "14d4f066-15f5-102d-96e4-000c29c2a5d7",
+                                "widget": {
+                                    "providerName": "uicommons",
+                                    "fragmentId": "field/text"
+                                },
+                                "cssClasses": [
+                                    "phone"
+                                ]
+                            }
+                        ]
+                    }
+                ]
+            },
+            {
+                "id": "relationships-info",
+                "label": "registrationapp.person.relationship",
+                "questions": [
+                    {
+                        "legend": "registrationapp.person.relationship.label",
+                        "header": "registrationapp.person.relationship.question",
+                        "fields": [
+                            {
+                                "type": "personRelationships",
+                                "widget": {
+                                    "providerName": "registrationapp",
+                                    "fragmentId": "field/personRelationship"
+                                }
+                            }
+                        ]
+                    }
+                ]
+            }
+        ]
+    }
+}

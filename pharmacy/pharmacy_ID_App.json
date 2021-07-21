@@ -9,7 +9,8 @@
         "type": "link",
         "label": "Gestion de la pharmacie",
         "url": "owa/savicspharmacy/index.html",
-        "icon": "icon-hospital"
+        "icon": "icon-hospital",
+        "requiredPrivilege": "pharmacy: Manage pharmacy"
       }
     ]
   }

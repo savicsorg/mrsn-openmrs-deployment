@@ -8,7 +8,7 @@
             "id": "referenceapplication.registrationapp.registerPatient.homepageLink",
             "extensionPointId": "org.openmrs.referenceapplication.homepageLink",
             "type": "link",
-            "label": "Créer Patient",
+            "label": "Enregister Patient",
             "url": "registrationapp/registerPatient.page?appId=referenceapplication.registrationapp.niger",
             "icon": "icon-user",
             "order": 1,
@@ -54,7 +54,7 @@
                 "label": "Identification",
                 "questions": [
                     {
-                        "legend": "Numéro",
+                        "legend": "N° de carte nationale",
                         "id": "national_card_Identifier",
                         "fields": [
                             {
@@ -65,11 +65,26 @@
                                 "widget": {
                                     "providerName": "uicommons",
                                     "fragmentId": "field/text",
-                                    "cssClasses": [
-                                    ],
-                                    "config": {
-                                     
-                                    }
+                                    "cssClasses": [],
+                                    "config": {}
+                                }
+                            }
+                        ]
+                    },
+                    {
+                        "legend": "N° de planning familial",
+                        "id": "family_planning_Identifier",
+                        "fields": [
+                            {
+                                "type": "patientIdentifier",
+                                "label": "Numéro de planning familial",
+                                "formFieldName": "PFIdentificationNumber",
+                                "uuid": "276785f2-272a-4377-81c3-408550d1490f",
+                                "widget": {
+                                    "providerName": "uicommons",
+                                    "fragmentId": "field/text",
+                                    "cssClasses": [],
+                                    "config": {}
                                 }
                             }
                         ]

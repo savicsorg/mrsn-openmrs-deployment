@@ -6,5 +6,5 @@
 		"url": "xreports/runReports.page?reportId=2&groupId=1&patientId={{patient.patientId}}",
 		"icon": "icon-user-md",
         "order": 100,
-		"requiredPrivilege": "App: xreports.run"
+		"requiredPrivilege": "patient-Dashboard:idCard"
 	}
