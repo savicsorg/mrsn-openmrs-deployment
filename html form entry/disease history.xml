@@ -230,7 +230,7 @@
 
                 <td>CU:</td>
                 <td>
-                    <obs conceptId="557f7d78-ce22-43cb-b215-ca0fbc3bc64d" size="40" />
+                    <obs conceptId="557f7d78-ce22-43cb-b215-ca0fbc3bc64d" size="25" />
                 </td>
             </tr>
             <tr>
@@ -258,7 +258,7 @@
 
                 <td>Spéculum:</td>
                 <td colspan="2">
-                    <obs conceptId="07225543-1394-442c-8c6d-d2e3d95a2c33"  size="60"/>
+                    <obs conceptId="07225543-1394-442c-8c6d-d2e3d95a2c33"  size="40"/>
                 </td>
             </tr>
 
@@ -296,14 +296,14 @@
 
                 <td>Bassin:</td>
                 <td colspan="2">
-                    <obs conceptId="5793db68-6f0d-404b-9370-d5c051b89dcd" size="60"/>
+                    <obs conceptId="5793db68-6f0d-404b-9370-d5c051b89dcd" size="40"/>
                 </td>
             </tr>
 
             <tr>
                 <td>Doigtier:</td>
                 <td colspan="5">
-                    <obs conceptId="1c55b28e-9392-4d65-9c5f-31b726f95a42" size="125"/>
+                    <obs conceptId="1c55b28e-9392-4d65-9c5f-31b726f95a42" size="110"/>
                 </td>
             </tr>
         </table>

@@ -49,8 +49,14 @@
 
  form label, .form label        {
     margin-top: 0px;
-    font-size: 12px;
+    font-size: 12px; 
 }
+
+form input, form select, form textarea, form ul.select, .form input, .form select, .form textarea, .form ul.select {
+    display: inline;
+}
+
+
 	</style>
 
 
@@ -156,7 +162,7 @@
                 </tr>
             </table>
         </section>
-        
+
         <submit />
     </section>
 </htmlform>
