@@ -128,6 +128,16 @@
             </tr>
         </table>
 
+        <section headerLabel="Motif">
+            <table class="baseline-aligned" border="1" width="100%">
+                <tr>
+                    <td colspan="4">
+                        <obs conceptId="5125" tags="Motif de la demande d'analyse" style="textarea" rows="5" cols="110" />
+                    </td>
+                </tr>
+            </table>
+        </section>
+
         <section headerLabel="Analyses disponibles">
             <table class="baseline-aligned" border="1" width="100%">
                 <tr>
@@ -140,19 +150,34 @@
                     <td>
                         <obs conceptId="4854" labelText="GSRH" style="checkbox" />
                     </td>
+                    <td>
+                        <obs conceptId="4193" labelText="Widal" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="4132" labelText="VS" style="checkbox" />
+                    </td>
                 </tr>
-            </table>
-        </section>
-        
-        <section headerLabel="Motif">
-            <table class="baseline-aligned" border="1" width="100%">
                 <tr>
-                    <td colspan="4">
-                        <obs conceptId="5125" tags="Motif de la demande d'analyse" style="textarea" rows="5" cols="110" />
+                    <td>
+                        <obs conceptId="4863" labelText="G test" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="4862" labelText="HF" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="4847" labelText="cRP" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="4858" labelText="ASLo" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="5349" labelText="FR" style="checkbox" />
                     </td>
                 </tr>
             </table>
         </section>
+        
+
         <section headerLabel="Information clinique">
             <table class="baseline-aligned" border="1" width="100%">
                 <tr>

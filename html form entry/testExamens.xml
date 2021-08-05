@@ -127,19 +127,7 @@
             </tr>
         </table>
 
-        <section headerLabel="Analyses disponibles">
-            <table class="baseline-aligned" border="1" width="100%">
-                <tr>
-                    <td>
-                        <obs conceptId="4862" labelText="HF" style="checkbox" />
-                    </td>
-                    <td>
-                        <obs conceptId="4863" labelText="G-test" style="checkbox" />
-                    </td>
-                </tr>
-            </table>
-        </section>
-        
+
         <section headerLabel="Motif">
             <table class="baseline-aligned" border="1" width="100%">
                 <tr>
@@ -149,6 +137,17 @@
                 </tr>
             </table>
         </section>
+
+        <section headerLabel="Analyses disponibles">
+            <table class="baseline-aligned" border="1" width="100%">
+                <tr>
+                    <td>
+                        <obs conceptId="5098" labelText="Autre examen"/>
+                    </td>
+                </tr>
+            </table>
+        </section>
+
 
         <section headerLabel="Information clinique">
             <table class="baseline-aligned" border="1" width="100%">

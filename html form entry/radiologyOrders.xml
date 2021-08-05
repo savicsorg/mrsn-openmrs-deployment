@@ -46,11 +46,14 @@
 			border: 1px solid black;
 		}
 
-
- form label, .form label        {
-    margin-top: 0px;
-    font-size: 12px;
-}
+        form label, .form label        {
+            margin-top: 0px;
+            font-size: 12px; 
+        }
+        
+        form input, form select, form textarea, form ul.select, .form input, .form select, .form textarea, .form ul.select {
+            display: inline;
+        }
 
 	</style>
 
@@ -73,24 +76,54 @@
             <label>When?</label>
             <encounterDate default="now" showTime="false" />
         </fieldset>
-
-        <fieldset>
-            <legend>Who?</legend>
-            <label>Who?</label>
-
-            <encounterProviderAndRole default="currentUser" encounterRole="240b26f9-dd88-4172-823d-4a8bfeb7841f" required="true" />
-        </fieldset>
-
-        <fieldset>
-            <legend>Where?</legend>
-            <label>Where?</label>
-
-            <encounterLocation default="SessionAttribute:emrContext.sessionLocationId" />
-        </fieldset>
     </div>
+
+    <table class="baseline-aligned" border="1" width="100%">
+        <tr>
+            <td>Prestataire:</td>
+            <td colspan="3">
+                <encounterProviderAndRole default="currentUser" encounterRole="1" required="true" />
+            </td>
+        </tr>
+        <tr>
+            <td>Service:</td>
+            <td colspan="3">
+                <encounterLocation required="true" tags="Admission Location,Transfer Location" />
+            </td>
+        </tr>
+
+        <tr>
+            <td>Date de sortie:</td>
+            <td colspan="3">
+                <encounterDate default="today" showTime="true" />
+            </td>
+        </tr>
+    </table>
+
+    <section headerLabel="Motif">
+        <table class="baseline-aligned" border="1" width="100%">
+            <tr>
+                <td colspan="4">
+                    <obs conceptId="5125" tags="Motif de la demande d'analyse" style="textarea" rows="5" cols="110" />
+                </td>
+            </tr>
+        </table>
+    </section>
+
 
     <section headerLabel="Demande de radiographies">
         <table class="baseline-aligned" border="1" width="100%">
+
+            <tr>
+                <td >
+                Contexte de la demande: 
+            </td>
+                <td colspan="3" >
+                    <obs conceptId="5124" tags="Choisir le contexte" />
+                </td>
+            </tr>
+
+
             <tr>
                 <td>
                     <obs labelText="Pulmonaire, 1 vue" conceptId="3246" style="checkbox" />
@@ -435,6 +468,15 @@
             <tr>
                 <td colspan="3">
                     <obs labelText="Crâne, 2 vues" conceptId="3323" style="checkbox" />
+                </td>
+            </tr>
+        </table>
+    </section>
+    <section headerLabel="Information clinique">
+        <table class="baseline-aligned" border="1" width="100%">
+            <tr>
+                <td colspan="4">
+                    <obs conceptId="5126" tags="Information clinique" style="textarea" rows="5" cols="110" />
                 </td>
             </tr>
         </table>

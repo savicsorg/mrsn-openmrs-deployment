@@ -128,6 +128,16 @@
             </tr>
         </table>
 
+        <section headerLabel="Motif">
+            <table class="baseline-aligned" border="1" width="100%">
+                <tr>
+                    <td colspan="4">
+                        <obs conceptId="5125" tags="Motif de la demande d'analyse" style="textarea" rows="5" cols="110" />
+                    </td>
+                </tr>
+            </table>
+        </section>
+
         <section headerLabel="Analyses disponibles">
             <table class="baseline-aligned" border="1" width="100%">
                 <tr>
@@ -186,15 +196,6 @@
             </table>
         </section>
 
-        <section headerLabel="Motif">
-            <table class="baseline-aligned" border="1" width="100%">
-                <tr>
-                    <td colspan="4">
-                        <obs conceptId="5125" tags="Motif de la demande d'analyse" style="textarea" rows="5" cols="110" />
-                    </td>
-                </tr>
-            </table>
-        </section>
         <section headerLabel="Information clinique">
             <table class="baseline-aligned" border="1" width="100%">
                 <tr>

@@ -129,6 +129,16 @@
             </tr>
         </table>
 
+        <section headerLabel="Motif">
+            <table class="baseline-aligned" border="1" width="100%">
+                <tr>
+                    <td colspan="4">
+                        <obs conceptId="5125" tags="Motif de la demande d'analyse" style="textarea" rows="5" cols="110" />
+                    </td>
+                </tr>
+            </table>
+        </section>
+
         <section headerLabel="Analyses disponibles">
             <table class="baseline-aligned" border="1" width="100%">
                 <tr>
@@ -144,28 +154,31 @@
                     <td>
                         <obs conceptId="4861" labelText="Widal et Félix" style="checkbox" />
                     </td>
-                </tr>
-            </table>
-            <table class="baseline-aligned" border="1" width="100%">
-                <tr>
                     <td>
                         <obs conceptId="1640" labelText="Hbs" style="checkbox" />
                     </td>
+                </tr>
+
+                <tr>
                     <td>
                         <obs conceptId="2379" labelText="HcV" style="checkbox" />
                     </td>
-                </tr>
-            </table>
-        </section>
-        <section headerLabel="Motif">
-            <table class="baseline-aligned" border="1" width="100%">
-                <tr>
-                    <td colspan="4">
-                        <obs conceptId="5125" tags="Motif de la demande d'analyse" style="textarea" rows="5" cols="110" />
+                    <td>
+                        <obs conceptId="5350" labelText="Agbs" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="4860" labelText="BW" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="5351" labelText="acHcv" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="5352" labelText="PTME" style="checkbox" />
                     </td>
                 </tr>
             </table>
         </section>
+
         <section headerLabel="Information clinique">
             <table class="baseline-aligned" border="1" width="100%">
                 <tr>

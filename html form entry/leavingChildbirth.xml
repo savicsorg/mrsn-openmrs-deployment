@@ -228,6 +228,8 @@
 
 
         </section>
+
+        <section headerLabel="SORTIE">
         <table class="baseline-aligned" border="1" width="100%">
             <tr>
                 <td>Conseil:</td>
@@ -242,22 +244,24 @@
                 </td>
             </tr>
         </table>
-        <section headerLabel="VISITE POST NATALE">
-            <table class="baseline-aligned" border="1" width="100%">
-                <tr>
-                    <td>Date:</td>
-                    <td colspan="3">
-                        <obs conceptId="e42a8903-6369-4026-9ac8-ced264c80515" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>Rendez-vous:</td>
-                    <td colspan="3">
-                        <obs conceptId="0184d504-ff60-403b-9063-bdd46fd9cee3" size="100" />
-                    </td>
-                </tr>
-            </table>
-        </section>
+    </section>
+
+    <section headerLabel="VISITE POST NATALE">
+        <table class="baseline-aligned" border="1" width="100%">
+            <tr>
+                <td>Date:</td>
+                <td colspan="3">
+                    <obs conceptId="e42a8903-6369-4026-9ac8-ced264c80515" />
+                </td>
+            </tr>
+            <tr>
+                <td>Rendez-vous:</td>
+                <td colspan="3">
+                    <obs conceptId="0184d504-ff60-403b-9063-bdd46fd9cee3" size="100" />
+                </td>
+            </tr>
+        </table>
+    </section>
     </section>
 
     <center>

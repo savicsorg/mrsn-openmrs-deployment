@@ -171,6 +171,8 @@
                 <td>
                     <obs conceptId="ffe896bb-89a9-4124-b867-9ecadf830753" answerConceptId="1" answerLabel="Précaire" style="checkbox" />
                 </td>
+                <td>
+                </td>
             </tr>
             <tr>
                 <td>Etat de la conscience:</td>
@@ -201,6 +203,11 @@
                 </td>
                 <td>
                     <obs conceptId="48ad7006-9cfe-4168-a12d-7dca71c8eee8" labelText="Respiration(mvts/min):" />
+                </td>
+            </tr>
+            <tr>
+                <td colspan="5">
+                    <obs conceptId="db7765a7-43d4-4abb-a975-f7bd9ed794df" labelText="VAT" />
                 </td>
             </tr>
         </table>

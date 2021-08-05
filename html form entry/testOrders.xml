@@ -110,7 +110,7 @@
                     <button id="btnParasitologie" type="button" class="btn md-raised md-primary md-button md-ink-ripple" onclick="showform('de325215-92ce-4adf-b854-0d53c0fbf098')">Parasitologie</button>
                 </td>
                 <td>
-                    <button id="btnExamen" type="button" class="btn md-raised md-primary md-button md-ink-ripple" onclick="showform('a8b183a5-c3a1-438f-b399-cb8185d1b41e')">Examen</button>
+                    <button id="btnExamen" type="button" class="btn md-raised md-primary md-button md-ink-ripple" onclick="showform('a8b183a5-c3a1-438f-b399-cb8185d1b41e')">Autre Examen</button>
                 </td>
             </tr>
         </table>

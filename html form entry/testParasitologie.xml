@@ -126,18 +126,6 @@
                 </td>
             </tr>
         </table>
-        <section headerLabel="Analyses disponibles">
-            <table class="baseline-aligned" border="1" width="100%">
-                <tr>
-                    <td>
-                        <obs conceptId="4856" labelText="GE" style="checkbox" />
-                    </td>
-                    <td>
-                        <obs conceptId="4857" labelText="Kopa" style="checkbox" />
-                    </td>
-                </tr>
-            </table>
-        </section>
 
         <section headerLabel="Motif">
             <table class="baseline-aligned" border="1" width="100%">
@@ -148,6 +136,28 @@
                 </tr>
             </table>
         </section>
+
+        <section headerLabel="Analyses disponibles">
+            <table class="baseline-aligned" border="1" width="100%">
+                <tr>
+                    <td>
+                        <obs conceptId="4292" labelText="GE" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="5353" labelText="ROB" style="checkbox" />
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <obs conceptId="4840" labelText="Culot urinaire" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="4857" labelText="Sellle kopa" style="checkbox" />
+                    </td>
+                </tr>
+            </table>
+        </section>
+
         <section headerLabel="Information clinique">
             <table class="baseline-aligned" border="1" width="100%">
                 <tr>
