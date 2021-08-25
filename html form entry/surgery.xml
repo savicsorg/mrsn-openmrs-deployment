@@ -1,0 +1,103 @@
+<htmlform formUuid="a000cb34-9ec1-4344-a1c8-f692232f6edd" formName="DrugOrders" formEncounterType="67a71486-1a54-468f-ac3e-7091a9a79584" formVersion="1.0">
+    <macros>
+        paperFormId = (Fill this in)
+        headerColor =#009d8e
+		secondFeaderColor =yellow
+		fontOnHeaderColor = white
+    </macros>
+
+    <style>
+		form select,
+		.form select {
+			min-width: 80px;
+		}
+
+		.section {
+			border: 1px solid $headerColor;
+			padding: 2px;
+			text-align: left;
+			margin-bottom: 1em;
+		}
+
+        md-button.md-raised:not([disabled]) {
+            box-shadow: 0 2px 5px 0 rgb(0 0 0 / 26%);
+        }
+
+        .md-button.md-default-theme.md-primary.md-fab, .md-button.md-primary.md-fab, .md-button.md-default-theme.md-primary.md-raised, .md-button.md-primary.md-raised {
+            color: rgba(255,255,255,0.87);
+            background-color: rgb(63,81,181);
+        }
+
+        .md-toolbar-tools .md-button {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .btn{
+            color: rgba(255,255,255,0.87);
+            background: rgb(63,81,181);
+            width: 60%
+        }
+
+		.sectionHeader {
+			background-color: $headerColor;
+			color: $fontOnHeaderColor;
+			display: block;
+			padding: 2px;
+			font-weight: bold;
+		}
+
+		.sectionSecondHeader {
+			background-color: $secondFeaderColor;
+			color: $fontOnHeaderColor;
+			display: block;
+			padding: 2px;
+			font-weight: bold;
+		}
+
+        td {
+            text-align: center;
+        }
+        table tr {
+            border: 0px;
+        }
+
+        table.baseline-aligned-borded td {
+			vertical-align: baseline;
+			border: 0px;
+		}
+        table th, table td {
+            padding: 5px 10px;
+            border: 0px
+        }
+
+        form label, .form label        {
+            margin-top: 0px;
+            font-size: 12px;
+        }
+	</style>
+
+    <script type="text/javascript">
+        var  showform=function(uuid){
+            var queryParameters = {}, queryString = location.search.substring(1),
+            re = /([^&amp;=]+)=([^&amp;]*)/g, m;
+
+           while (m = re.exec(queryString)) {
+               queryParameters[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
+            }
+            window.location = window.location.protocol + &quot;//&quot; + window.location.host + &quot;/&quot; + OPENMRS_CONTEXT_PATH + &quot;/htmlformentryui/htmlform/enterHtmlFormWithStandardUi.page?patientId=&quot; + queryParameters['patientId'] + &quot;&amp;visitId=&quot; + queryParameters['visitId'] + &quot;&amp;formUuid=&quot; + uuid
+        }
+    </script>
+
+    <section headerLabel="Choix du type de Chirurgie">
+        <table cellspacing="0" cellpadding="6" width="100%">
+            <tr>
+                <td>
+                    <button id="btnPetiteChirurgie" type="button" class="btn md-raised md-primary md-button md-ink-ripple" onclick="showform('d91e0f44-42bd-41ee-bb2d-9f7e96636505')">Petite chirurgie</button>
+                </td>
+                <td>
+                    <button id="btnGrandeChirurgie" type="button" class="btn md-raised md-primary md-button md-ink-ripple" onclick="showform('c6f06a6c-bf21-439d-bc3e-1e14b90a5165')">Grande chirurgie</button>
+                </td>
+            </tr>
+        </table>
+    </section>
+</htmlform>

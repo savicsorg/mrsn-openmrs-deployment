@@ -1,0 +1,60 @@
+<htmlform>
+    <script type="text/javascript">
+           $(function() {
+               $('#location-container select').focus();
+           });
+       </script>
+
+    <h2>
+        <label>Petite chirurgie</label>
+    </h2>
+
+    <section id="discharge">
+        <p>
+            <label>Date</label>
+            <encounterDate id="encounterDate" showTime="false" default="now" />
+        </p>
+
+        <p>
+            <label>Consulté par</label>
+            <encounterProviderAndRole default="currentUser" encounterRole="1" required="true" />
+        </p>
+
+        <p id="location-container">
+            <label>Service</label>
+            <encounterLocation required="true" tags="Admission Location,Transfer Location" />
+        </p>
+
+
+        <p id="outcome-container">
+            <label>Opération à réaliser</label>
+            <obs conceptId="4916" tags="Choisir l'opération" />
+        </p>
+
+        <p>
+            <label>Antécédent chirurgical</label>
+            <obs conceptId="5371" tags="Antécédent chirurgical" style="textarea" rows="5" />
+        </p>
+
+        <p>
+            <label>Raison</label>
+            <obs conceptId="5372" tags="Raison" style="textarea" rows="5" />
+        </p>
+
+        <p>
+            <label>Observations</label>
+            <obs conceptId="5011" tags="Observations" style="textarea" rows="5" />
+        </p>
+
+
+    </section>
+
+    <submit submitClass="confirm right" submitCode="uicommons.saveForm" />
+
+    <ifMode mode="VIEW" include="false">
+        <button class="cancel">
+            <uimessage code="uicommons.cancelForm" />
+        </button>
+    </ifMode>
+
+</htmlform>

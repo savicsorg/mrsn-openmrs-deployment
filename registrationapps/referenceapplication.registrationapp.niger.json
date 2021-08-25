@@ -188,10 +188,8 @@
                                     "fragmentId": "field/personAddressWithHierarchy",
                                     "config": {
                                         "manualFields": [
-                                            "stateProvince",
-                                            "countyDistrict",
-                                            "cityVillage",
-                                            "address1"
+                                            "address1",
+                                            "address2"
                                         ]
                                     }
                                 }
