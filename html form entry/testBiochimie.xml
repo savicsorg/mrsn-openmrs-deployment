@@ -142,16 +142,16 @@
             <table class="baseline-aligned" border="1" width="100%">
                 <tr>
                     <td>
-                        <obs conceptId="4842" labelText="Magnésémie" style="checkbox" />
-                    </td>
-                    <td>
-                        <obs conceptId="4843" labelText="Transaminase" style="checkbox" />
-                    </td>
-                    <td>
                         <obs conceptId="4175" labelText="Acide urique" style="checkbox" />
                     </td>
                     <td>
-                        <obs conceptId="2528" labelText="Glycémie" style="checkbox" />
+                        <obs conceptId="4844" labelText="Albumine sucre " style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="4163" labelText="Bilirubine directe" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="4179" labelText="Calcémie" style="checkbox" />
                     </td>
                     <td>
                         <obs conceptId="4181" labelText="Chlore" style="checkbox" />
@@ -161,19 +161,19 @@
     
                 <tr>
                     <td>
-                        <obs conceptId="4844" labelText="Albumine sucre " style="checkbox" />
+                        <obs conceptId="4169" labelText="Cholestérol total" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="4849" labelText="Créatinémie" style="checkbox" />
                     </td>
                     <td>
                         <obs conceptId="4847" labelText="CRP" style="checkbox" />
                     </td>
                     <td>
-                        <obs conceptId="4179" labelText="Calcémie" style="checkbox" />
+                        <obs conceptId="5361" labelText="Gamma GT" style="checkbox" />
                     </td>
                     <td>
-                        <obs conceptId="4170" labelText="Sodium" style="checkbox" />
-                    </td>
-                    <td>
-                        <obs conceptId="4168" labelText="Urée" style="checkbox" />
+                        <obs conceptId="2528" labelText="Glycémie" style="checkbox" />
                     </td>
                 </tr>
     
@@ -181,31 +181,31 @@
     
                 <tr>
                     <td>
-                        <obs conceptId="4849" labelText="Creatinemie" style="checkbox" />
+                        <obs conceptId="4851" labelText="HDL cholestérole" style="checkbox" />
                     </td>
                     <td>
-                        <obs conceptId="4850" labelText="Triglycéride" style="checkbox" />
-                    </td>
-                    <td>
-                        <obs conceptId="4183" labelText="Protéines Totales" style="checkbox" />
+                        <obs conceptId="4842" labelText="Magnésémie" style="checkbox" />
                     </td>
                     <td>
                         <obs conceptId="4182" labelText="Potassium" style="checkbox" />
                     </td>
+                    <td>
+                        <obs conceptId="4183" labelText="Protéines totales" style="checkbox" />
+                    </td>
                     <td >
-                        <obs conceptId="4851" labelText="Hdl cholestérole" style="checkbox" />
+                        <obs conceptId="4170" labelText="Sodium" style="checkbox" />
                     </td>
                 </tr>
     
                 <tr>
                     <td >
-                        <obs conceptId="4169" labelText="Cholestérol total" style="checkbox" />
+                        <obs conceptId="4843" labelText="Transaminase" style="checkbox" />
                     </td>
                     <td >
-                        <obs conceptId="4163" labelText="Bilirubine directe" style="checkbox" />
+                        <obs conceptId="4850" labelText="Triglycéride" style="checkbox" />
                     </td>
                     <td colspan="4">
-                        <obs conceptId="5361" labelText="Gamma GT" style="checkbox" />
+                        <obs conceptId="4168" labelText="Urée" style="checkbox" />
                     </td>
                 </tr>
             </table>
@@ -220,7 +220,6 @@
                 </tr>
             </table>
         </section>
-
     <submit />
     </section>
 </htmlform>

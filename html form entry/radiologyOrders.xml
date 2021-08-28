@@ -113,364 +113,275 @@
 
     <section headerLabel="Demande de radiographies">
         <table class="baseline-aligned" border="1" width="100%">
-
             <tr>
-                <td >
+                <td>
                 Contexte de la demande: 
             </td>
-                <td colspan="3" >
+                <td>
                     <obs conceptId="5124" tags="Choisir le contexte" />
                 </td>
             </tr>
-
-
-            <tr>
-                <td>
-                    <obs labelText="Pulmonaire, 1 vue" conceptId="3246" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Rachis thoraco-lombaire, 4 vues" conceptId="3293" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Colonne vertébrale, 1 vue" conceptId="3289" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs labelText="Sternum, 2 à 3 vues" conceptId="3255" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Pelvis, 1 vue" conceptId="3273" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Omoplate ghe, 2 vues" conceptId="3274" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs labelText="Abdomen, 1 vue" conceptId="3250" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Omoplate dte, 2 vues" conceptId="3310" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Mandibule, 3 vues" conceptId="3251" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs labelText="Genou - Gauche, 1 ou 2 vues" conceptId="3268" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Genou - Droit, 1 ou 2 vues" conceptId="3295" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Orbites , 2 à 4 vues" conceptId="3322" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs labelText="Os propre du nez, 1 vue" conceptId="3324" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Pulmonaire, 2 vues" conceptId="3235" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Selles turciques, 2 vues" conceptId="3254" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs labelText="Hanche - Gauche, 2 vues" conceptId="3296" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Main - Gauche, 2 vues" conceptId="3304" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Rachis lombo-sacré, 2 à 3 vues" conceptId="3279" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs labelText="Rachis Coccyx, 2 vues" conceptId="3319" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Hanche - Droit, 2 vues" conceptId="3270" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Genou droit AP/lat + oblique, 3 vues" conceptId="3249" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs labelText="Côtes - Gauche, 2 vues" conceptId="3240" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Pied - Gauche, 2 vues" conceptId="3299" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Hystérosalpingographie(HSG), 6 vues" conceptId="3316" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs labelText="Fémur - Gauche, 2 vues" conceptId="3277" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Bassin AP + hanche ghe laterale, 2 vues" conceptId="3278" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Côtes - Droit, 2 vues" conceptId="3309" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs labelText="Bassin AP + hanche dte laterale, 2 vues" conceptId="3286" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Rachis thoracique debout, 2 vues" conceptId="3243" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Pied - Droit, 2 vues" conceptId="3275" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs labelText="Bassin AP + frog legs, 2 vues" conceptId="3259" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Coude - Gauche, 2 vues" conceptId="3261" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Rachis lombaire debout, 2 vues" conceptId="3267" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs labelText="Main - Droit, 2 vues" conceptId="3258" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Poignet - Gauche, 2 vues" conceptId="3285" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Genoux tunnel droit et gauche, 2 vues" conceptId="3256" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs labelText="Genou gauche AP/lat + oblique, 3 vues" conceptId="3306" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Coude - Droit, 2 vues" conceptId="3317" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Mastoïdes, 3 vues" conceptId="3252" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs labelText="Poignet - Droit, 2 vues" conceptId="3264" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Fémur - Droit, 2 vues" conceptId="3282" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Genou gauche AP/lat + tunnel, 3 vues" conceptId="3269" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs labelText="Avant bras - Gauche, 2 vues" conceptId="3262" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Genou droit AP/lat + tunnel, 3 vues" conceptId="3271" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Humérus - Gauche, 2 vues" conceptId="3320" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs labelText="Pulmonaire PA/Lateral + decubitus lateral D et G, 4 vues" conceptId="3234" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Rachis lombaire, 2 ou 3 vues" conceptId="3280" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Pulmonaire decubitus lateral ghe, 1 vue" conceptId="3232" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs labelText="Avant bras - Droit, 2 vues" conceptId="3245" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Pulmonaire decubitus lateral dt, 1 vue" conceptId="3263" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Clavicule - Gauche, 2 vues" conceptId="3287" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs labelText="Épaule ghe incidence de Lamy (vue en Y), 1 vue" conceptId="3281" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Épaule dte incidence de Lamy (vue en Y), 1 vue" conceptId="3315" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Humérus - Droit, 2 vues" conceptId="3242" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs labelText="Rachis cervical dynamiques (flexion et extension), 2 vues" conceptId="3297" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Epaule - Gauche, 2 vues" conceptId="3248" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Epaule - Droit, 2 vues" conceptId="3312" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs labelText="Rachis cervical AP/lat et obliques, 4 vues" conceptId="3272" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Rachis cervical obliques dte et ghe, 2 vues" conceptId="3260" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Inférieure de la jambe - Gauche, 2 vues" conceptId="3237" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs labelText="Calcanéum - Gauche, 2 vues" conceptId="3291" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Rachis thoracique AP/Lat + obliques Dte et Ghe, 4 vues" conceptId="3288" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Rachis thoracique, 2 vues" conceptId="3231" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs labelText="Rachis thoracique obliques dte et ghe, 2 vues" conceptId="3253" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Clavicule - Droit, 2 vues" conceptId="3276" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Genou gauche defile rotulien, 3 vues" conceptId="3233" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs labelText="Genou droit defile rotulien, 3 vues" conceptId="3307" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Inférieure de la jambe - Droit, 2 vues" conceptId="3301" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Bassin AP frog legs,1 vue" conceptId="3283" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs labelText="Calcanéum - Droit, 2 vues" conceptId="3298" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Rachis cervical, 2 ou 3 vues" conceptId="3247" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Abdomen (ASP) debout, 1 vue" conceptId="3305" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs labelText="Abdomen (ASP) couché et debout, 2 vues" conceptId="3266" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Rachis thoracique et lombaire, 2 vues" conceptId="3257" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Sinuses, 3 vues" conceptId="3300" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs labelText="Rachis lombaire dynamique (flexion et extension), 2 vues" conceptId="3284" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Massif facial, 3 vues" conceptId="3244" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Rachis lombaire obliques Dte et Ghe, 2 vues" conceptId="3236" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs labelText="Crâne, 4 vues" conceptId="3238" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Rachis lombaire AP/lat +obliques Dte et Ghe, 4 vues" conceptId="3290" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Pulmonaire, 4 vues" conceptId="3313" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs labelText="Urographie Intra-Veineuse(UIV), 6 à 8 vues" conceptId="3318" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Cholangiographie" conceptId="3314" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Mandible panorex" conceptId="3292" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs labelText="Pulmonaire lordotic" conceptId="3294" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Pulmonaire oblique - Bilatéral" conceptId="3239" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Urographie rétrograde du rien" conceptId="3265" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs labelText="Acromioclavicular joints - Bilatéral" conceptId="3311" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Abdomen AP (supine and lateraldecubitus)" conceptId="3241" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Cheville - Gauche, 3 vues" conceptId="3321" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td>
-                    <obs labelText="Cheville - Droit, 3 vues" conceptId="3302" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Tissus mous du cou" conceptId="3303" style="checkbox" />
-                </td>
-                <td>
-                    <obs labelText="Articulation temporo-mandibulaire - Bilatéral" conceptId="3308" style="checkbox" />
-                </td>
-            </tr>
-            <tr>
-                <td colspan="3">
-                    <obs labelText="Crâne, 2 vues" conceptId="3323" style="checkbox" />
-                </td>
-            </tr>
         </table>
+
+
+        <section headerLabel="ECHOGRAPHIE">
+            <table class="baseline-aligned" border="1" width="100%">
+                <tr>
+                    <td>
+                        <obs labelText="Abdomino-pelvienne(Gyneco-obstetricale)" conceptId="5377" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Appareil urinaire" conceptId="5378" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Doppler des artères rénales" conceptId="5379" style="checkbox" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <obs labelText="Echographie Abdominale" conceptId="3326" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Echographie CPN pour le Specialiste" conceptId="5388" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Echographie du Sein Droit" conceptId="5380" style="checkbox" />
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <obs labelText="Echographie du Sein Gauche" conceptId="5381" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Echographie Generale" conceptId="5382" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Echographie Obstetricale Par le Generaliste" conceptId="5383" style="checkbox" />
+                    </td>
+                </tr>
+
+
+                <tr>
+                    <td>
+                        <obs labelText="Echographie Obstétricale par le specialiste" conceptId="5384" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Echographie Pelvienne" conceptId="5385" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Echographie Testiculaire" conceptId="5386" style="checkbox" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td colspan="3">
+                        <obs labelText="Histerosalpingographie" conceptId="5387" style="checkbox" />
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section headerLabel="RX DIVERS">
+            <table class="baseline-aligned" border="1" width="100%">
+                <tr>
+                    <td>
+                        <obs labelText="Abdomen sans preparation(ASP)" conceptId="5389" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Cervical" conceptId="5391" style="checkbox" />
+
+                    </td>
+                    <td>
+                        <obs labelText="Lavement baryte" conceptId="5390" style="checkbox" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <obs labelText="Lombaire" conceptId="5392" style="checkbox" />
+                    </td>
+                    <td colspan="2">
+                        <obs labelText="Rachis dorsal" conceptId="5393" style="checkbox" />
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+
+        <section headerLabel="RX CAGE THORACIQUE">
+            <table class="baseline-aligned" border="1" width="100%">
+                <tr>
+                    <td>
+                        <obs labelText="Gril costal F" conceptId="5394" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Thorax F" conceptId="5395" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Thorax P" conceptId="5396" style="checkbox" />
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section headerLabel="RX CRANE">
+            <table class="baseline-aligned" border="1" width="100%">
+                <tr>
+                    <td>
+                        <obs labelText="Crane (F et P)" conceptId="5397" style="checkbox" />
+                    </td>
+                    <td colspan="2">
+                        <obs labelText="Sinus (Blondeau)" conceptId="5398" style="checkbox" />
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+
+        <section headerLabel="RX MEMBRES INFERIEURS">
+            <table class="baseline-aligned" border="1" width="100%">
+                <tr>
+                    <td>
+                        <obs labelText="Bassin (F et P)" conceptId="5399" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Cheville Droit (F et P)" conceptId="5400" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Cheville Gauche (F et P)" conceptId="5401" style="checkbox" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <obs labelText="Femur Droit (F et P)" conceptId="5402" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Femur Gauche (F et P)" conceptId="5403" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Genou Droit (F et P)" conceptId="5404" style="checkbox" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <obs labelText="Genou Gauche (F et P)" conceptId="5405" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Hanche Droit (F et P)" conceptId="5406" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Hanche Gauche (F et P)" conceptId="5407" style="checkbox" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <obs labelText="Jambe Droit (F et P)" conceptId="5408" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Jambe Gauche (F et P)" conceptId="5409" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Orteils Droit (F et P)" conceptId="5410" style="checkbox" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <obs labelText="Orteils Gauche (F et P)" conceptId="5411" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Pied Droit (F et P)" conceptId="5412" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Pied Gauche (F et P)" conceptId="5413" style="checkbox" />
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+        <section headerLabel="RX MEMBRES SUPERIEURS ">
+            <table class="baseline-aligned" border="1" width="100%">
+                <tr>
+                    <td>
+                        <obs labelText="Avant-bras Droit (F et P)" conceptId="5414" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Avant-bras Gauche (F et P)" conceptId="5415" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Clavicule Droit (F et P)" conceptId="5416" style="checkbox" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <obs labelText="Clavicule Gauche (F et P)" conceptId="5417" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Coude Droit (F et P)" conceptId="5418" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Coude Gauche (F et P)" conceptId="5419" style="checkbox" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <obs labelText="Doigt Droit (F et P)" conceptId="5420" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Doigt Gauche (F et P)" conceptId="5421" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Epaule Droit (F et P)" conceptId="5422" style="checkbox" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <obs labelText="Epaule Gauche (F et P)" conceptId="5423" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Humerus Droit (F et P)" conceptId="5424" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Humerus Gauche (F et P)" conceptId="5425" style="checkbox" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <obs labelText="Main Droit (F et P)" conceptId="5426" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Main Gauche (F et P))" conceptId="5427" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Omoplate Droit (F et P)" conceptId="5428" style="checkbox" />
+                    </td>
+                </tr>
+
+                <tr>
+                    <td>
+                        <obs labelText="Omoplate Gauche (F et P)" conceptId="5429" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Poignet Droit (F et P)" conceptId="5430" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs labelText="Poignet Gauche (F et P)" conceptId="5431" style="checkbox" />
+                    </td>
+                </tr>
+            </table>
+        </section>
+
+
     </section>
     <section headerLabel="Information clinique">
         <table class="baseline-aligned" border="1" width="100%">

@@ -141,14 +141,6 @@
 				//If  submission does not work redirect with an error message
 				beforeSubmit.push(function () {
 
-					var req_1 = getValue('req_1.value');
-					var req_2 = getValue('req_2.value');
-					var req_3 = getValue('req_3.value');
-					var req_4 = getValue('req_4.value');
-					var req_5 = getValue('req_5.value');
-					var req_6 = getValue('req_6.value');
-					var req_7 = getValue('req_7.value');
-					var req_8 = getValue('req_8.value');
 					var req_9 = getValue('req_9.value');
 					var req_12 = getValue('req_12.value');
 					var req_13 = getValue('req_13.value');
@@ -179,70 +171,6 @@
 					var req_38 = getValue('req_38.value');
 
 
-					if (!req_1 || req_1 == "") {
-						getField('req_1.error').html('This field is required').show();
-						window.scrollTo({ top: 0, behavior: 'smooth' });
-						return false;
-					} else {
-						getField('req_1.error').html('This field is required').hide();
-					}
-
-					if (!req_2 || req_2 == "") {
-						getField('req_2.error').html('This field is required').show();
-						window.scrollTo({ top: 0, behavior: 'smooth' });
-						return false;
-					} else {
-						getField('req_2.error').html('This field is required').hide();
-					}
-
-
-					if (!req_3 || req_3 == "") {
-						getField('req_3.error').html('This field is required').show();
-						window.scrollTo({ top: 0, behavior: 'smooth' });
-						return false;
-					} else {
-						getField('req_3.error').html('This field is required').hide();
-					}
-
-					if (!req_4 || req_4 == "") {
-						getField('req_4.error').html('This field is required').show();
-						window.scrollTo({ top: 0, behavior: 'smooth' });
-						return false;
-					} else {
-						getField('req_4.error').html('This field is required').hide();
-					}
-
-					if (!req_5 || req_5 == "") {
-						getField('req_5.error').html('This field is required').show();
-						window.scrollTo({ top: 0, behavior: 'smooth' });
-						return false;
-					} else {
-						getField('req_5.error').html('This field is required').hide();
-					}
-
-					if (!req_6 || req_6 == "") {
-						getField('req_6.error').html('This field is required').show();
-						window.scrollTo({ top: 0, behavior: 'smooth' });
-						return false;
-					} else {
-						getField('req_6.error').html('This field is required').hide();
-					}
-
-					if (!req_7 || req_7 == "") {
-						getField('req_7.error').html('This field is required').show();
-						window.scrollTo({ top: 0, behavior: 'smooth' });
-						return false;
-					} else {
-						getField('req_7.error').html('This field is required').hide();
-					}
-
-					if (!req_8 || req_8 == "") {
-						getField('req_8.error').html('This field is required').show();
-						window.scrollTo({ top: 0, behavior: 'smooth' });
-						return false;
-					} else {
-						getField('req_8.error').html('This field is required').hide();
-					}
 
 					if (!req_9 || req_9 == "") {
 						getField('req_9.error').html('This field is required').show();
@@ -524,7 +452,7 @@
 	<h2>PF Consultation Form (v1.0)</h2>
 	<!--===============================   Section 1 =======================================  -->
 	<section headerLabel="FICHE CLINIQUE EN PLANIFICATION FAMILIALE">
-		<table class="baseline-aligned" width="100%">
+		<table class="baseline-aligned" border="1" width="100%">
 			<tr>
 				<td>Région de:</td>
 				<td>
@@ -553,7 +481,7 @@
 			<h3>IDENTITE</h3>
 		</center>
 
-		<table class="baseline-aligned" width="100%">
+		<table class="baseline-aligned" border="1" width="100%">
 			<tr>
 				<td>Nom et Prénom de la femme:</td>
 				<td colspan="3">
@@ -563,7 +491,7 @@
 			<tr>
 				<td>Profession de la femme:</td>
 				<td colspan="3">
-					<obs conceptId="107" id="req_1" /><span class="mandotory-star">*</span>
+					<lookup class="value" expression="personAttributes.get('Profession').name.name" />
 				</td>
 			</tr>
 			<tr>
@@ -575,59 +503,83 @@
 			<tr>
 				<td>Situation Matrimoniale:</td>
 				<td colspan="3">
-					<obs conceptId="$@civil_status@" id="req_2" /><span class="mandotory-star">*</span>
+					<lookup class="value" expression="personAttributes.get('Civil Status').name.name" />
 				</td>
 			</tr>
 			<tr>
 				<td>Niveau d'instruction:</td>
 				<td>
-					<obs conceptId="5319" id="req_3" /><span class="mandotory-star">*</span>
+					<lookup class="value" expression="personAttributes.get('Education').name.name" />
 				</td>
 				<td>Numéro du téléphone:</td>
 				<td>
-					<obs conceptId="4880" id="req_4" /><span class="mandotory-star">*</span>
+					<lookup class="value" expression="personAttributes.get('Telephone Number')" />
 				</td>
 			</tr>
 			<tr>
 				<td>Nom et Prénom du mari:</td>
 				<td colspan="3">
-					<obs conceptId="4881" id="req_5" /><span class="mandotory-star">*</span>
+					<lookup class="value" expression="personAttributes.get('spouse 1')" />
 				</td>
 			</tr>
 			<tr>
 				<td>Profession du mari:</td>
 				<td colspan="3">
-					<obs conceptId="4882" id="req_6" /><span class="mandotory-star">*</span>
+					<lookup class="value" expression="personAttributes.get('spouse 1 profession')" />
 				</td>
 			</tr>
 			<tr>
 				<td>Adresse:</td>
 				<td>
-					<obs conceptId="4883" rows="2" cols="10" id="req_7" /><span class="mandotory-star">*</span>
+					<lookup class="value" expression="patient.personAddress.country" />
+					,
+					<lookup class="value" expression="patient.personAddress.stateProvince" />
+					,
+					<lookup class="value" expression="patient.personAddress.countyDistrict" />
+					,
+					<lookup class="value" expression="patient.personAddress.cityVillage" />
+					,
+					<lookup class="value" expression="patient.personAddress.address1" />
+					,
+					<lookup class="value" expression="patient.personAddress.address2" />
 				</td>
 				<td>Numéro du téléphone:</td>
 				<td>
-					<obs conceptId="4884" id="req_8" /><span class="mandotory-star">*</span>
+					<lookup class="value" expression="personAttributes.get('spouse 1 telephone')" />
 				</td>
 			</tr>
 		</table>
-		<table class="baseline-aligned" width="100%">
+		<table class="baseline-aligned" border="1" width="100%">
 			<tr>
 				<td colspan="4">
-					<div>
-						Avez-vous déjà utilisé une méthode de contraception?
-					</div>
-					<div> <br /></div>
-					<obs conceptId="$@is_on_contraceptive@" answerConceptIds="$@YES@,$@NO@" answerCodes="Oui,Non"
-						style="radio" answerSeparator="" id="req_9" /><span class="mandotory-star">*</span>
+					<table class="baseline-aligned" border="1" width="100%">
+						<tr>
+							<td>Avez-vous déjà utilisé une méthode de contraception?</td>
+						</tr>
+						<tr>
+							<td>
+								<obs conceptId="$@is_on_contraceptive@" answerConceptIds="$@YES@,$@NO@"
+									answerCodes="Oui,Non" style="radio" answerSeparator="" id="req_9" /><span
+									class="mandotory-star">*</span>
+							</td>
+						</tr>
+					</table>
 				</td>
 				<td colspan="4">
-					<div id="hidden_1">
-						Si oui laquelle:
-						<obs conceptId="57" />
-						où:
-						<obs conceptId="5129" />
-					</div>
+					<table class="baseline-aligned" border="1" width="100%">
+						<tr>
+							<td>Si oui laquelle:</td>
+							<td>
+								<obs conceptId="57" />
+							</td>
+						</tr>
+						<tr id="hidden_1">
+							<td>où:</td>
+							<td>
+								<obs conceptId="5129" />
+							</td>
+						</tr>
+					</table>
 				</td>
 			</tr>
 			<tr>
@@ -671,7 +623,7 @@
 		<center>
 			<h3>PILULES,INJECTABLE OU IMPLANTS</h3>
 		</center>
-		<table class="baseline-aligned" width="100%">
+		<table class="baseline-aligned" border="1" width="100%">
 			<tr>
 				<td width="50%">Présence d'une masse au sein:</td>
 				<td>
@@ -681,7 +633,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>Hypertension Artérielle:</td>
+				<td width="50%">Hypertension Artérielle:</td>
 				<td>
 					<obs conceptId="$@is_Hypertension@" answerConceptIds="$@YES@,$@NO@,$@Unknown@"
 						answerCodes="Oui,Non,Inconnu" style="radio" answerSeparator="" id="req_20" /> <span
@@ -689,7 +641,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>Maux de tête fréquents et importants (migraines):</td>
+				<td width="50%">Maux de tête fréquents et importants (migraines):</td>
 				<td>
 					<obs conceptId="$@is_migraine@" answerConceptIds="$@YES@,$@NO@,$@Unknown@"
 						answerCodes="Oui,Non,Inconnu" style="radio" answerSeparator="" id="req_21" /> <span
@@ -697,7 +649,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>Ictère, hépatite datant de moins de 12 mois:</td>
+				<td width="50%">Ictère, hépatite datant de moins de 12 mois:</td>
 				<td>
 					<obs conceptId="$@is_hepatite@" answerConceptIds="$@YES@,$@NO@,$@Unknown@"
 						answerCodes="Oui,Non,Inconnu" style="radio" answerSeparator="" id="req_22" /><span
@@ -705,7 +657,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>Varices, crises hémorroïdaires fréquentes:</td>
+				<td width="50%">Varices, crises hémorroïdaires fréquentes:</td>
 				<td>
 					<obs conceptId="$@is_hemorroidaire@" answerConceptIds="$@YES@,$@NO@,$@Unknown@"
 						answerCodes="Oui,Non,Inconnu" style="radio" answerSeparator="" id="req_23" /><span
@@ -713,7 +665,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>Traitement antituberculeux ou anticonvulsant:</td>
+				<td width="50%">Traitement antituberculeux ou anticonvulsant:</td>
 				<td>
 					<obs conceptId="$@is_antituberculeux@" answerConceptIds="$@YES@,$@NO@,$@Unknown@"
 						answerCodes="Oui,Non,Inconnu" style="radio" answerSeparator="" id="req_24" /><span
@@ -721,7 +673,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>Cardiopathie:</td>
+				<td width="50%">Cardiopathie:</td>
 				<td>
 					<obs conceptId="$@is_Cardiopathie@" answerConceptIds="$@YES@,$@NO@,$@Unknown@"
 						answerCodes="Oui,Non,Inconnu" style="radio" answerSeparator="" id="req_25" /><span
@@ -729,7 +681,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>Diabète:</td>
+				<td width="50%">Diabète:</td>
 				<td>
 					<obs conceptId="$@is_Diabete@" answerConceptIds="$@YES@,$@NO@,$@Unknown@"
 						answerCodes="Oui,Non,Inconnu" style="radio" answerSeparator="" id="req_26" /><span
@@ -737,7 +689,7 @@
 				</td>
 			</tr>
 			<tr>
-				<td>Drépanocytose:</td>
+				<td width="50%">Drépanocytose:</td>
 				<td>
 					<obs conceptId="$@is_Drepanocylose@" answerConceptIds="$@YES@,$@NO@,$@Unknown@"
 						answerCodes="Oui,Non,Inconnu" style="radio" answerSeparator="" id="req_27" /><span
@@ -747,47 +699,62 @@
 			<tr>
 				<td>Autres (à préciser):</td>
 				<td>
-					<obs conceptId="4898" rows="4" cols="20" />
+					<obs conceptId="4898" style="textarea" rows="4" cols="50" />
 				</td>
 			</tr>
 		</table>
 	</section>
 	<!--===============================   Section 4 =======================================  -->
 	<section headerLabel="EXAMEN GYNECOLOGIQUE">
-		<table class="baseline-aligned" width="100%">
+		<table class="baseline-aligned" border="1" width="100%">
 			<tr>
-				<td>Aspect:</td>
-				<td colspan="3">
-					<p>de la vulve
-						<obs conceptId="4899" id="req_28" /><span class="mandotory-star">*</span>
-					</p>
-					<p>de la muqueuse vaginale
-						<obs conceptId="4900" id="req_29" /><span class="mandotory-star">*</span>
-					</p>
+				<td style="vertical-align:top" width="30%">Aspect:</td>
+				<td colspan="2">
+					<table class="baseline-aligned" border="1" width="100%">
+						<tr>
+							<td>
+								de la vulve
+							</td>
+							<td>
+								<obs conceptId="4899" id="req_28" size="30" /><span class="mandotory-star">*</span>
+							</td>
+						</tr>
+						<tr>
+							<td>de la muqueuse vaginale</td>
+							<td>
+								<obs conceptId="4900" id="req_29" size="30" /><span class="mandotory-star">*</span>
+							</td>
+						</tr>
+					</table>
 				</td>
 			</tr>
 			<tr>
-				<td>Sécrétions vaginales:</td>
-				<td colspan="3">
+				<td style="vertical-align:top" width="30%">Sécrétions vaginales:</td>
+				<td colspan="2">
 					<obs conceptId="$@is_Secretions@" answerConceptIds="$@YES@,$@NO@" answerCodes="Oui,Non"
 						id="req_30" /><span class="mandotory-star">*</span>
 				</td>
 			</tr>
+
 			<tr>
-				<td>Toucher Vaginal:</td>
-				<td colspan="3">
-					<obs conceptId="4902" labelText="état du col,utérus et annexes" rows="4" cols="10" id="req_31" />
+				<td style="vertical-align:top" width="30%">Toucher Vaginal:</td>
+				<td style="vertical-align:top">
+					état du col,utérus et annexes
+				</td>
+				<td>
+					<obs conceptId="4902" rows="4" cols="40" id="req_31" />
 					<span class="mandotory-star">*</span>
 				</td>
 			</tr>
+
 			<tr>
-				<td>
+				<td style="vertical-align:top">
 					<div>IVA: Fait</div>
 					<div> <br /> </div>
 					<obs conceptId="$@iva_no@" answerConceptIds="$@YES@,$@NO@,$@Unknown@" answerCodes="Oui,Non,Inconnu"
 						style="radio" answerSeparator="" id="req_32" /><span class="mandotory-star">*</span>
 				</td>
-				<td colspan="3">
+				<td colspan="2">
 					<div id="hidden_2">
 						Si fait:
 						<obs conceptId="$@iva_fait@" answerConceptIds="$@YES@,$@NO@" answerLabels="Positif,Négatif" />
@@ -796,14 +763,15 @@
 					</div>
 				</td>
 			</tr>
+
 			<tr>
-				<td>
+				<td style="vertical-align:top">
 					<div>IVL: Fait</div>
 					<div> <br /> </div>
 					<obs conceptId="$@ivl_no@" answerConceptIds="$@YES@,$@NO@,$@Unknown@" answerCodes="Oui,Non,Inconnu"
 						style="radio" answerSeparator="" id="req_33" /><span class="mandotory-star">*</span>
 				</td>
-				<td colspan="3">
+				<td colspan="2">
 					<div id="hidden_3">
 						Si fait:
 						<obs conceptId="$@ivl_fait@" answerConceptIds="$@YES@,$@NO@" answerLabels="Positif,Négatif" />
@@ -812,23 +780,26 @@
 					</div>
 				</td>
 			</tr>
+
 			<tr>
-				<td>
+				<td style="vertical-align:top">
 					<div>IST: oui</div>
 					<div> <br /> </div>
 					<obs conceptId="$@ist@" answerConceptIds="$@YES@,$@NO@,$@Unknown@" answerCodes="Oui,Non,Inconnu"
 						style="radio" answerSeparator="" id="req_34" /><span class="mandotory-star">*</span>
 				</td>
-				<td colspan="3">Si oui:
-					<obs conceptId="4908" labelText="Traitement prescrit" rows="4" cols="10" />
+				<td style="vertical-align:top">
+					Si oui: Traitement prescrit
 				</td>
-
+				<td>
+					<obs conceptId="4908" labelText="" rows="4" cols="40" />
+				</td>
 			</tr>
 		</table>
 	</section>
 	<!--===============================   Section 5 =======================================  -->
 	<section headerLabel="DIU">
-		<table class="baseline-aligned" width="100%">
+		<table class="baseline-aligned" border="1" width="100%">
 			<tr>
 				<td width="50%">GEU:</td>
 				<td>
@@ -864,7 +835,7 @@
 	</section>
 	<!--===============================   Section 6 =======================================  -->
 	<section headerLabel="">
-		<table class="baseline-aligned" width="100%">
+		<table class="baseline-aligned" border="1" width="100%">
 			<tr>
 				<td>Méthode</td>
 				<td>
@@ -892,23 +863,27 @@
 			<tr>
 				<td>Désirée</td>
 				<td>
-					<table class="baseline-aligned" width="100%">
+					<table class="baseline-aligned" border="1" width="100%">
 						<tr>
 							<td>
-								progestative
-								<obs conceptId="5329" labelText="" answerLabel="" answerConceptId="1" />
+								<div style="float: right;">
+									progestative
+									<obs conceptId="5329" labelText="" answerLabel="" answerConceptId="1" />
+								</div>
 							</td>
 						</tr>
 						<tr>
 							<td>
-								contraceptive
-								<obs conceptId="5330" labelText="" answerLabel="" answerConceptId="1" />
+								<div style="float: right;">
+									contraceptive
+									<obs conceptId="5330" labelText="" answerLabel="" answerConceptId="1" />
+								</div>
 							</td>
 						</tr>
 					</table>
 				</td>
 				<td>
-					<table class="baseline-aligned" width="100%">
+					<table class="baseline-aligned" border="1" width="100%">
 						<tr>
 							<td>
 								IM
@@ -931,7 +906,7 @@
 					<obs conceptId="4923" labelText="" answerLabel="" answerConceptId="1" />
 				</td>
 				<td>
-					<table class="baseline-aligned" width="100%">
+					<table class="baseline-aligned" border="1" width="100%">
 						<tr>
 							<td>
 								jadel
@@ -941,17 +916,17 @@
 							</td>
 						</tr>
 						<tr>
-							<td>
+							<td width="40%">
 								<obs conceptId="4925" labelText="" answerLabel="" answerConceptId="1" />
 							</td>
-							<td>
+							<td width="60%">
 								<obs conceptId="4926" labelText="" answerLabel="" answerConceptId="1" />
 							</td>
 						</tr>
 					</table>
 				</td>
 				<td>
-					<table class="baseline-aligned" width="100%">
+					<table class="baseline-aligned" border="1" width="100%">
 						<tr>
 							<td>
 								masc
@@ -961,10 +936,10 @@
 							</td>
 						</tr>
 						<tr>
-							<td>
+							<td width="50%">
 								<obs conceptId="4929" labelText="" answerLabel="" answerConceptId="1" />
 							</td>
-							<td>
+							<td width="50%">
 								<obs conceptId="4930" labelText="" answerLabel="" answerConceptId="1" />
 							</td>
 						</tr>
@@ -974,7 +949,7 @@
 					<obs conceptId="4932" labelText="" answerLabel="" answerConceptId="1" />
 				</td>
 				<td>
-					<obs conceptId="4934" rows="1" cols="2" />
+					<obs conceptId="4934" rows="2" cols="20" />
 				</td>
 			</tr>
 			<tr>
@@ -983,7 +958,7 @@
 					<obs conceptId="4918" labelText="" answerLabel="" answerConceptId="1" />
 				</td>
 				<td>
-					<table>
+					<table class="baseline-aligned" border="1" width="100%">
 						<tr>
 							<td>
 								<obs conceptId="4921" labelText="" answerLabel="" answerConceptId="1" />
@@ -998,24 +973,24 @@
 					<obs conceptId="4924" labelText="" answerLabel="" answerConceptId="1" />
 				</td>
 				<td>
-					<table>
+					<table class="baseline-aligned" border="1" width="100%">
 						<tr>
-							<td>
+							<td width="40%">
 								<obs conceptId="4927" labelText="" answerLabel="" answerConceptId="1" />
 							</td>
-							<td>
+							<td width="60%">
 								<obs conceptId="4928" labelText="" answerLabel="" answerConceptId="1" />
 							</td>
 						</tr>
 					</table>
 				</td>
 				<td>
-					<table>
+					<table class="baseline-aligned" border="1" width="100%">
 						<tr>
-							<td>
+							<td width="50%">
 								<obs conceptId="4936" labelText="" answerLabel="" answerConceptId="1" />
 							</td>
-							<td>
+							<td width="50%">
 								<obs conceptId="4931" labelText="" answerLabel="" answerConceptId="1" />
 							</td>
 						</tr>
@@ -1025,24 +1000,38 @@
 					<obs conceptId="4933" labelText="" answerLabel="" answerConceptId="1" />
 				</td>
 				<td>
-					<obs conceptId="4935" rows="1" cols="2" />
+					<obs conceptId="4935" rows="2" cols="20" />
 				</td>
 			</tr>
 		</table>
-		<p>
-			Intervention et observation :
-			<obs conceptId="5321" rows="4" cols="10" />
-		</p>
-		<p>
-			Nom du prestataire :
-			<obs conceptId="5322" />
-		</p>
-		<p>
-			Autres décisions (à préciser) :
-			<obs conceptId="4913" rows="4" cols="10" />
-		</p>
+
+
+		<table class="baseline-aligned" border="1" width="100%">
+			<tr>
+				<td style="vertical-align:top">
+					Intervention et observation :
+				</td>
+				<td>
+					<obs conceptId="5321" style="textarea" rows="5" cols="75" />
+				</td>
+			</tr>
+			<tr>
+				<td style="vertical-align:top">
+					Nom du prestataire :
+				</td>
+				<td>
+					<obs conceptId="5322" size="80" />
+				</td>
+			</tr>
+			<tr>
+				<td style="vertical-align:top">
+					Autres décisions (à préciser) :
+				</td>
+				<td>
+					<obs conceptId="4913" style="textarea" rows="5" cols="75" />
+				</td>
+			</tr>
+		</table>
 	</section>
-
 	<submit />
-
 </htmlform>

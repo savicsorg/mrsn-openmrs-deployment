@@ -1,0 +1,75 @@
+<htmlform>
+    <macros>
+        paperFormId = DossierGynécologique
+        headerColor =#009d8e
+		secondFeaderColor =yellow
+		fontOnHeaderColor = white
+    </macros>
+
+    <style>
+		form select,
+		.form select {
+			min-width: 80px;
+		}
+
+		.section {
+			border: 1px solid $headerColor;
+			padding: 2px;
+			text-align: left;
+			margin-bottom: 1em;
+		}
+
+		.sectionHeader {
+			background-color: $headerColor;
+			color: $fontOnHeaderColor;
+			display: block;
+			padding: 2px;
+			font-weight: bold;
+		}
+
+		.sectionSecondHeader {
+			background-color: $secondFeaderColor;
+			color: $fontOnHeaderColor;
+			display: block;
+			padding: 2px;
+			font-weight: bold;
+		}
+
+		table.baseline-aligned td {
+			vertical-align: baseline;
+		}
+
+
+
+		table.baseline-aligned-borded td {
+			vertical-align: baseline;
+			border: 1px solid black;
+		}
+	</style>
+
+
+
+    <table>
+        <div>
+            <section headerLabel="Gestations antérieures de la patiente">
+                <htmlformflowsheet formId="146b0e96-72e8-4c0c-b766-428f2c77562a" sharedEncounter="true" addAnotherButtonLabel="Nouveau"  windowHeight="700" showHtmlForm="true"  />
+            </section>
+        </div>
+        <div>
+            <section headerLabel="Histoire de la maladie">
+				<htmlformflowsheet formId="1e3e37c8-ac98-46e2-ae81-1ecdf91a76b6" sharedEncounter="true" addAnotherButtonLabel="Nouveau"  windowHeight="700" showHtmlForm="true" />
+			</section>
+        </div>
+        <div>
+            <section headerLabel="Accouchement">
+                <htmlformflowsheet formId="f28d96a9-989e-41dd-b159-e316c5478312" sharedEncounter="true" addAnotherButtonLabel="Nouveau"  windowHeight="700" showHtmlForm="true" />
+            </section>
+        </div>
+        <div>
+            <section headerLabel="Sortie">
+                <htmlformflowsheet formId="1c5013ca-87a5-4e1b-b179-fb08d9c74dc3" sharedEncounter="true" addAnotherButtonLabel="Nouveau"  windowHeight="700" showHtmlForm="true" />
+            </section>
+        </div>
+    </table>
+
+</htmlform>

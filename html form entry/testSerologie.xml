@@ -143,37 +143,32 @@
             <table class="baseline-aligned" border="1" width="100%">
                 <tr>
                     <td>
-                        <obs conceptId="4858" labelText="Aslo" style="checkbox" />
+                        <obs conceptId="5350" labelText="Agbs" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="4858" labelText="ASLO" style="checkbox" />
+
                     </td>
                     <td>
                         <obs conceptId="4860" labelText="BW" style="checkbox" />
                     </td>
                     <td>
-                        <obs conceptId="4193" labelText="Widal" style="checkbox" />
+                        <obs conceptId="1640" labelText="HBs" style="checkbox" />
                     </td>
                     <td>
-                        <obs conceptId="4861" labelText="Widal et Félix" style="checkbox" />
-                    </td>
-                    <td>
-                        <obs conceptId="1640" labelText="Hbs" style="checkbox" />
+                        <obs conceptId="2379" labelText="HCV" style="checkbox" />
                     </td>
                 </tr>
 
                 <tr>
                     <td>
-                        <obs conceptId="2379" labelText="HcV" style="checkbox" />
-                    </td>
-                    <td>
-                        <obs conceptId="5350" labelText="Agbs" style="checkbox" />
-                    </td>
-                    <td>
-                        <obs conceptId="4860" labelText="BW" style="checkbox" />
-                    </td>
-                    <td>
-                        <obs conceptId="5351" labelText="acHcv" style="checkbox" />
-                    </td>
-                    <td>
                         <obs conceptId="5352" labelText="PTME" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="4193" labelText="Widal" style="checkbox" />
+                    </td>
+                    <td colspan="3">
+                        <obs conceptId="4861" labelText="Widal et Félix" style="checkbox" />
                     </td>
                 </tr>
             </table>

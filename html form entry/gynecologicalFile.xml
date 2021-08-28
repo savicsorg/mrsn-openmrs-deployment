@@ -1,6 +1,6 @@
-<htmlform>
+<htmlform formUuid="a000cb34-9ec1-4344-a1c8-f692232f6edd" formName="DrugOrders" formEncounterType="67a71486-1a54-468f-ac3e-7091a9a79584" formVersion="1.0">
     <macros>
-        paperFormId = DossierGynécologique
+        paperFormId = (Fill this in)
         headerColor =#009d8e
 		secondFeaderColor =yellow
 		fontOnHeaderColor = white
@@ -19,6 +19,25 @@
 			margin-bottom: 1em;
 		}
 
+        md-button.md-raised:not([disabled]) {
+            box-shadow: 0 2px 5px 0 rgb(0 0 0 / 26%);
+        }
+
+        .md-button.md-default-theme.md-primary.md-fab, .md-button.md-primary.md-fab, .md-button.md-default-theme.md-primary.md-raised, .md-button.md-primary.md-raised {
+            color: rgba(255,255,255,0.87);
+            background-color: rgb(63,81,181);
+        }
+
+        .md-toolbar-tools .md-button {
+            margin-top: 0;
+            margin-bottom: 0;
+        }
+        .btn{
+            color: rgba(255,255,255,0.87);
+            background: rgb(63,81,181);
+            width: 60%
+        }
+
 		.sectionHeader {
 			background-color: $headerColor;
 			color: $fontOnHeaderColor;
@@ -35,52 +54,50 @@
 			font-weight: bold;
 		}
 
-		table.baseline-aligned td {
+        td {
+            text-align: center;
+        }
+        table tr {
+            border: 0px;
+        }
+
+        table.baseline-aligned-borded td {
 			vertical-align: baseline;
+			border: 0px;
 		}
+        table th, table td {
+            padding: 5px 10px;
+            border: 0px
+        }
 
-
-
-		table.baseline-aligned-borded td {
-			vertical-align: baseline;
-			border: 1px solid black;
-		}
+        form label, .form label        {
+            margin-top: 0px;
+            font-size: 12px;
+        }
 	</style>
 
+    <script type="text/javascript">
+        var  showform=function(uuid){
+            var queryParameters = {}, queryString = location.search.substring(1),
+            re = /([^&amp;=]+)=([^&amp;]*)/g, m;
 
+           while (m = re.exec(queryString)) {
+               queryParameters[decodeURIComponent(m[1])] = decodeURIComponent(m[2]);
+            }
+            window.location = window.location.protocol + &quot;//&quot; + window.location.host + &quot;/&quot; + OPENMRS_CONTEXT_PATH + &quot;/htmlformentryui/htmlform/enterHtmlFormWithStandardUi.page?patientId=&quot; + queryParameters['patientId'] + &quot;&amp;visitId=&quot; + queryParameters['visitId'] + &quot;&amp;formUuid=&quot; + uuid
+        }
+    </script>
 
-    <table>
-        <div>
-            <section headerLabel="Gestations antérieures de la patiente">
-                <htmlformflowsheet formId="146b0e96-72e8-4c0c-b766-428f2c77562a" sharedEncounter="true" addAnotherButtonLabel="Nouveau"  windowHeight="700" showHtmlForm="true"  />
-            </section>
-        </div>
-        <div>
-            <section headerLabel="Histoire de la maladie">
-				<htmlformflowsheet formId="1e3e37c8-ac98-46e2-ae81-1ecdf91a76b6" sharedEncounter="true" addAnotherButtonLabel="Nouveau"  windowHeight="700" showHtmlForm="true" />
-			</section>
-        </div>
-        <div>
-            <section headerLabel="Accouchement">
-                <htmlformflowsheet formId="f28d96a9-989e-41dd-b159-e316c5478312" sharedEncounter="true" addAnotherButtonLabel="Nouveau"  windowHeight="700" showHtmlForm="true" />
-            </section>
-        </div>
-        <div>
-            <section headerLabel="Sortie">
-                <htmlformflowsheet formId="1c5013ca-87a5-4e1b-b179-fb08d9c74dc3" sharedEncounter="true" addAnotherButtonLabel="Nouveau"  windowHeight="700" showHtmlForm="true" />
-            </section>
-        </div>
-
-		<div>
-            <section headerLabel="Première consultation familiale">
-                <htmlformflowsheet formId="1aad92db-e5b8-4429-8f4a-428627483e77" sharedEncounter="true" addAnotherButtonLabel="Nouveau"  windowHeight="700" showHtmlForm="true" />
-            </section>
-        </div>
-		<div>
-            <section headerLabel="Suivi de consultation familiale">
-                <htmlformflowsheet formId="95b19d37-1abf-4b29-98de-9430f5b74e7b" sharedEncounter="true" addAnotherButtonLabel="Nouveau"  windowHeight="500" showHtmlForm="true" />
-            </section>
-        </div>
-    </table>
-
+    <section headerLabel="Dossier gynécologique, obstérical et planning familial">
+        <table cellspacing="0" cellpadding="6" width="100%">
+            <tr>
+                <td>
+                    <button id="btnGF" type="button" class="btn md-raised md-primary md-button md-ink-ripple" onclick="showform('ff768b45-3ba3-4202-8c85-9c9ee4e2d17d')">Dossier gynécologique</button>
+                </td>
+                <td>
+                    <button id="btnPF" type="button" class="btn md-raised md-primary md-button md-ink-ripple" onclick="showform('74c9c3af-8c0b-477b-a8f5-11a8b58f8a7f')">Planning familial</button>
+                </td>
+            </tr>
+        </table>
+    </section>
 </htmlform>

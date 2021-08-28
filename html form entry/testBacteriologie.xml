@@ -140,19 +140,19 @@ form input, form select, form textarea, form ul.select, .form input, .form selec
                 </tr>
             </table>
         </section>
-        
+
         <section headerLabel="Analyses disponibles">
             <table class="baseline-aligned" border="1" width="100%">
                 <tr>
                     <td>
-                        <obs conceptId="4862" labelText="HF" style="checkbox" />
+                        <obs conceptId="5354" labelText="BK" style="checkbox" />
                     </td>
                     <td>
                         <obs conceptId="4863" labelText="G-test" style="checkbox" />
                     </td>
                     <td>
-                        <obs conceptId="5354" labelText="BK" style="checkbox" />
-                    </td>                  
+                        <obs conceptId="4862" labelText="HF" style="checkbox" />
+                    </td>
                 </tr>
             </table>
         </section>

@@ -1,0 +1,63 @@
+<htmlform>
+    <macros>
+        paperFormId = DossierGynécologique
+        headerColor =#009d8e
+		secondFeaderColor =yellow
+		fontOnHeaderColor = white
+    </macros>
+
+    <style>
+		form select,
+		.form select {
+			min-width: 80px;
+		}
+
+		.section {
+			border: 1px solid $headerColor;
+			padding: 2px;
+			text-align: left;
+			margin-bottom: 1em;
+		}
+
+		.sectionHeader {
+			background-color: $headerColor;
+			color: $fontOnHeaderColor;
+			display: block;
+			padding: 2px;
+			font-weight: bold;
+		}
+
+		.sectionSecondHeader {
+			background-color: $secondFeaderColor;
+			color: $fontOnHeaderColor;
+			display: block;
+			padding: 2px;
+			font-weight: bold;
+		}
+
+		table.baseline-aligned td {
+			vertical-align: baseline;
+		}
+
+
+
+		table.baseline-aligned-borded td {
+			vertical-align: baseline;
+			border: 1px solid black;
+		}
+	</style>
+
+    <table>
+		<div>
+            <section headerLabel="Première consultation familiale">
+                <htmlformflowsheet formId="1aad92db-e5b8-4429-8f4a-428627483e77" sharedEncounter="true" addAnotherButtonLabel="Nouveau"  windowHeight="700" showHtmlForm="true" />
+            </section>
+        </div>
+		<div>
+            <section headerLabel="Suivi de consultation familiale">
+                <htmlformflowsheet formId="95b19d37-1abf-4b29-98de-9430f5b74e7b" sharedEncounter="true" addAnotherButtonLabel="Nouveau"  windowHeight="500" showHtmlForm="true" />
+            </section>
+        </div>
+    </table>
+
+</htmlform>

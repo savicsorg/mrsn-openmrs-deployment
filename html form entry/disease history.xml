@@ -207,7 +207,7 @@
             </tr>
             <tr>
                 <td colspan="5">
-                    <obs conceptId="db7765a7-43d4-4abb-a975-f7bd9ed794df" labelText="VAT" />
+                    <obs conceptId="db7765a7-43d4-4abb-a975-f7bd9ed794df" labelText="VAT:" />
                 </td>
             </tr>
         </table>

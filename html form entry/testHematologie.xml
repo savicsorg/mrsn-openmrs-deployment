@@ -142,36 +142,36 @@
             <table class="baseline-aligned" border="1" width="100%">
                 <tr>
                     <td>
-                        <obs conceptId="4852" labelText="NFS" style="checkbox" />
-                    </td>
-                    <td>
-                        <obs conceptId="4372" labelText="Electrophorèse de l'hémoglobine" style="checkbox" />
-                    </td>
-                    <td>
-                        <obs conceptId="4854" labelText="GSRH" style="checkbox" />
-                    </td>
-                    <td>
-                        <obs conceptId="4193" labelText="Widal" style="checkbox" />
-                    </td>
-                    <td>
-                        <obs conceptId="4132" labelText="VS" style="checkbox" />
-                    </td>
-                </tr>
-                <tr>
-                    <td>
-                        <obs conceptId="4863" labelText="G test" style="checkbox" />
-                    </td>
-                    <td>
-                        <obs conceptId="4862" labelText="HF" style="checkbox" />
+                        <obs conceptId="4858" labelText="ASLO" style="checkbox" />
                     </td>
                     <td>
                         <obs conceptId="4847" labelText="cRP" style="checkbox" />
                     </td>
                     <td>
-                        <obs conceptId="4858" labelText="ASLo" style="checkbox" />
+                        <obs conceptId="4372" labelText="Electrophorèse de l'hémoglobine" style="checkbox" />
                     </td>
                     <td>
                         <obs conceptId="5349" labelText="FR" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="4863" labelText="G-test" style="checkbox" />       
+                    </td>
+                </tr>
+                <tr>
+                    <td>
+                        <obs conceptId="4854" labelText="GSRH" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="4862" labelText="HF" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="4852" labelText="NFS" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="4132" labelText="VS" style="checkbox" />
+                    </td>
+                    <td>
+                        <obs conceptId="4193" labelText="Widal" style="checkbox" />
                     </td>
                 </tr>
             </table>
