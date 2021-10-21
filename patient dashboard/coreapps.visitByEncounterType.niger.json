@@ -1,0 +1,25 @@
+{
+    "id": "coreapps.visitByEncounterType.niger",
+    "instanceOf": "coreapps.template.dashboardWidget",
+    "description": "coreapps.visitByEncounterType.app.description",
+    "order": 10,
+    "config": {
+        "widget": "visitbyencountertype",
+        "icon": "icon-calendar",
+        "label": "coreapps.clinicianfacing.recentVisits",
+        "maxRecords": "3",
+        "combineEncounterTypes": "true"
+    },
+    "extensions": [
+        {
+            "id": "$oreapps.visitByEncounterType",
+            "appId": "coreapps.visitByEncounterType",
+            "extensionPointId": "patientDashboard.secondColumnFragments",
+            "extensionParams": {
+                "provider": "coreapps",
+                "fragment": "dashboardwidgets/dashboardWidget"
+            },
+            "requiredPrivilege": "patient.section.visitby.encounter"
+        }
+    ]
+}

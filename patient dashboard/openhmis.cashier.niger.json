@@ -1,0 +1,17 @@
+{
+    "id": "openhmis.cashier.niger",
+    "label": "caissier",
+    "icon": "icon-money",
+    "order": 100,
+    "extensions": [
+        {
+            "id": "org.openmrs.module.openhmis.cashier.patientDashboard.secondColumnFragments",
+            "extensionPointId": "patientDashboard.secondColumnFragments",
+            "extensionParams": {
+                "provider": "coreapps",
+                "fragment": "bills"
+            },
+            "requiredPrivilege": "patient.section.cashier"
+        }
+    ]
+}

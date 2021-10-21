@@ -1,0 +1,26 @@
+{
+    "id": "coreapps.latestObsForConceptList.niger",
+    "instanceOf": "coreapps.template.dashboardWidget",
+    "description": "coreapps.latestObsForConceptList.app.description",
+    "order": 10,
+    "config": {
+      "widget": "latestobsforconceptlist",
+      "obsGroupLabels": "FSN",
+      "icon": "icon-user-md",
+      "label": "Concept List",
+      "maxAge": "10d",
+      "concepts": "5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA, 5090AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA, 5088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA, 5085AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA, 5086AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
+    },
+    "extensions": [
+      {
+        "id": "org.openmrs.module.coreapps.mostRecentVitals.clinicianDashboardFirstColumn",
+        "appId": "coreapps.latestObsForConceptList",
+        "extensionPointId": "patientDashboard.firstColumnFragments",
+        "extensionParams": {
+          "provider": "coreapps",
+          "fragment": "dashboardwidgets/dashboardWidget"
+        }
+       ,"requiredPrivilege": "patient.section.recent.obs"
+      }
+    ]
+  }

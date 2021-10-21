@@ -1,0 +1,19 @@
+
+    {
+      "id": "coreapps.conditionlist.niger",
+      "label": "coreapps.conditionui.conditions",
+      "icon": "icon-diagnosis",
+      "order": 100,
+      "extensions": [
+        {
+          "id": "${project.parent.groupId}.${project.parent.artifactId}.conditionlist",
+          "appId": "coreapps.conditionlist",
+          "extensionPointId": "patientDashboard.secondColumnFragments",
+          "extensionParams": {
+            "provider": "coreapps",
+            "fragment": "conditionlist/conditions"
+          },
+          "requiredPrivilege": "patient.section.condition.list"
+        }
+      ]
+    }

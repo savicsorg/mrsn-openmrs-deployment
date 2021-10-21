@@ -1,0 +1,26 @@
+{
+    "id": "coreapps.obsAcrossEncounters.niger",
+    "instanceOf": "coreapps.template.dashboardWidget",
+    "description": "coreapps.obsAcrossEncounters.app.description",
+    "order": 10,
+    "config": {
+        "widget": "obsacrossencounters",
+        "icon": "icon-user-md",
+        "label": "coreapps.clinicianfacing.healthTrendSummary",
+        "concepts": "5087AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,5088AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA,5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+        "maxRecords": "5",
+        "maxAge": "1m"
+    },
+    "extensions": [
+        {
+            "id": "coreapps.obsAcrossEncounters",
+            "appId": "coreapps.obsAcrossEncounters",
+            "extensionPointId": "patientDashboard.firstColumnFragments",
+            "extensionParams": {
+                "provider": "coreapps",
+                "fragment": "dashboardwidgets/dashboardWidget"
+            },
+            "requiredPrivilege": "patient.section.accross.encounter"
+        }
+    ]
+}

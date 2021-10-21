@@ -1,0 +1,17 @@
+{
+  "id": "org.openmrs.module.allergyui.niger",
+  "label": "ALLERGIES",
+  "icon": "icon-medical",
+  "order": 100,
+  "extensions": [
+    {
+      "id": "org.openmrs.module.allergyui.patientDashboard.secondColumnFragments",
+      "appId": "coreapps.conditionlist",
+      "extensionPointId": "patientDashboard.secondColumnFragments",
+      "extensionParams": {
+        "fragment": "allergies"
+      },
+      "requiredPrivilege": "patient.section.allergy"
+    }
+  ]
+}

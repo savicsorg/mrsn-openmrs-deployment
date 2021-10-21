@@ -1,0 +1,26 @@
+{
+    "id": "coreapps.obsGraph.niger",
+    "instanceOf": "coreapps.template.dashboardWidget",
+    "description": "coreapps.obsGraph.app.description",
+    "order": 10,
+    "config": {
+      "widget": "obsgraph",
+      "icon": "icon-bar-chart",
+      "label": "coreapps.clinicianfacing.weightGraph",
+      "conceptId": "5089AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA",
+      "maxResults": "10",
+      "maxAge": "1y"
+    },
+    "extensions": [
+      {
+        "id": "coreapps.obsGraph.",
+        "appId": "coreapps.obsGraph",
+        "extensionPointId": "patientDashboard.firstColumnFragments",
+        "extensionParams": {
+          "provider": "coreapps",
+          "fragment": "dashboardwidgets/dashboardWidget"
+        }
+        , "requiredPrivilege": "patient.section.graph"
+      }
+    ]
+  }
