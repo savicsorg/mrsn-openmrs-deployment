@@ -92,7 +92,7 @@
         <table cellspacing="0" cellpadding="6" width="100%">
             <tr>
                 <td>
-                    <button id="btnGF" type="button" class="btn md-raised md-primary md-button md-ink-ripple" onclick="showform('ff768b45-3ba3-4202-8c85-9c9ee4e2d17d')">Dossier gynécologique</button>
+                    <button id="btnGF" type="button" class="btn md-raised md-primary md-button md-ink-ripple" onclick="showform('ff768b45-3ba3-4202-8c85-9c9ee4e2d17d')">Dossiers gynécologiques</button>
                 </td>
                 <td>
                     <button id="btnPF" type="button" class="btn md-raised md-primary md-button md-ink-ripple" onclick="showform('74c9c3af-8c0b-477b-a8f5-11a8b58f8a7f')">Planning familial</button>

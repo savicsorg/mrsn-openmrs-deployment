@@ -146,7 +146,7 @@
             <tr>
                 <td>Rendez-vous:</td>
                 <td colspan="3">
-                    <obs conceptId="0184d504-ff60-403b-9063-bdd46fd9cee3" size="100" />
+                    <obs  allowFutureDates="true" conceptId="0184d504-ff60-403b-9063-bdd46fd9cee3" size="100" />
                 </td>
             </tr>
         </table>

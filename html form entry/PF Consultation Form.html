@@ -133,8 +133,9 @@
 
 
 	<script type="text/javascript">
+		var $ = jQuery;
 
-		if (jQuery) {
+		if ($) {
 
 			$(document).ready(function () {
 
@@ -449,7 +450,26 @@
 	</script>
 
 	<span style="float:right">Paper Form ID: $paperFormId</span>
-	<h2>PF Consultation Form (v1.0)</h2>
+	<h2>Première consultation familiale (v1.0)</h2>
+
+
+	<div class="hidden" id="encounter-details" sectionTag="section" headerStyle="title" headerLabel="Encounter Details">
+		<fieldset>
+			<legend>Who?</legend>
+			<label>Who?</label>
+			<encounterProviderAndRole default="currentUser" encounterRole="240b26f9-dd88-4172-823d-4a8bfeb7841f"
+				required="true" />
+		</fieldset>
+
+		<fieldset>
+			<legend>Where?</legend>
+			<label>Where?</label>
+			<encounterLocation default="SessionAttribute:emrContext.sessionLocationId" />
+		</fieldset>
+	</div>
+
+
+
 	<!--===============================   Section 1 =======================================  -->
 	<section headerLabel="FICHE CLINIQUE EN PLANIFICATION FAMILIALE">
 		<table class="baseline-aligned" border="1" width="100%">

@@ -7,6 +7,8 @@
         @DATE-DE-PROCHAIN-RENDEZ-VOUS@=73af23cf-ab40-4091-8f47-c3d303cd4a85
     </macros>
 
+
+
     <style>
         .section {
             border: 1px solid $headerColor;
@@ -34,7 +36,24 @@
     </style>
 
     <span style="float:right">Paper Form ID: $paperFormId</span>
-    <h2>Formulaire de suivi individuel PF (v1.0)</h2>
+    <h2>Suivi de consultation familiale (v1.0)</h2>
+
+
+
+    <div class="hidden" id="encounter-details" sectionTag="section" headerStyle="title" headerLabel="Encounter Details">
+        <fieldset>
+            <legend>Who?</legend>
+            <label>Who?</label>
+            <encounterProviderAndRole default="currentUser" encounterRole="240b26f9-dd88-4172-823d-4a8bfeb7841f" required="true" />
+        </fieldset>
+
+        <fieldset>
+            <legend>Where?</legend>
+            <label>Where?</label>
+            <encounterLocation default="SessionAttribute:emrContext.sessionLocationId" />
+        </fieldset>
+    </div>
+
 
     <section headerLabel="1. Encounter Details">
         <table class="baseline-aligned-borded" cellspacing="0" cellpadding="6" width="100%">

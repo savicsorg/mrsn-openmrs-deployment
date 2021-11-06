@@ -1,0 +1,13 @@
+{
+  "id": "overrideSettings.niger",
+  "extensions": [
+     {
+        "id": "override.configureStandardHeader",
+        "extensionPointId": "org.openmrs.module.appui.header.config",
+        "type": "config",
+        "extensionParams": {
+            "logo-icon-url": "/ms/uiframework/resource/referenceapplication/images/openMrsLogo.png"
+        }
+    }
+  ]
+}
