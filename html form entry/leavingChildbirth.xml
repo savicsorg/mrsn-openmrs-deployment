@@ -64,9 +64,9 @@
     </style>
 
     <span style="float:right">Paper Form ID: $paperFormId</span>
-    <h2>Sortie post-accouchement (v1.0)</h2>
+    <h2>Sortie de maternité (v1.0)</h2>
 
-    <section headerLabel="SORTIE D'ACCOUCHEMENT">
+    <section headerLabel="SORTIE DE MATERNITÉ">
         <table class="baseline-aligned" border="1" width="100%">
             <tr>
                 <td>Prestataire:</td>
@@ -84,7 +84,7 @@
             <tr>
                 <td>Date de sortie:</td>
                 <td colspan="3">
-                    <encounterDate default="today" showTime="true" />
+                    <encounterDate allowFutureDates="true" default="today" showTime="true" />
                 </td>
             </tr>
         </table>
@@ -104,21 +104,193 @@
         </section>
 
         <section headerLabel="Nouveau(x)-né(s)">
-            <table class="baseline-aligned" border="1" width="100%">
-                <tr>
-                    <td width="10%">Sortie:</td>
+
+		<table class="baseline-aligned" border="1" width="100%">
+			<tr>
+				<th scope="row">N°</th>
+				<th width="10">Sortie</th>
+                <th>Date et heure de naissance</th>
+				<th>Taille(cm)</th>
+				<th>Poids(g)</th>
+				<th>Commentaires</th>
+			</tr>
+
+			<obsgroup groupingConceptId="5459ae2c-955e-4325-9a62-0621818e7fd2">
+				<tr>
+					<th scope="row" width="3%">01</th>
+					<td width="15%">
+						<obs conceptId="2681438b-c795-4ac5-b9de-b7bf1b340946"/>
+					</td>
                     <td width="30%">
-                        <obs conceptId="2681438b-c795-4ac5-b9de-b7bf1b340946"/>
-                    </td>
-                    <td width="10%">Commentaires:</td>
-                    <td width="50%">
-                        <obs conceptId="e277475f-77ae-48c9-b2d6-509caa72541f" size="70" />
-                    </td>
-                </tr>
-            </table>
+						<obs conceptId="59f1a51a-d775-4a91-a074-cb6d7f3da8e5"/>
+					</td>
+					<td width="9%" >
+						<obs conceptId="163554AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"/>
+					</td>
+					<td width="9%" >
+						<obs conceptId="d6dfa19c-d298-46a1-a087-dcf99d000dff"/>
+					</td>
+					<td width="34%" > 
+						<obs conceptId="e277475f-77ae-48c9-b2d6-509caa72541f"  size="50"/>
+					</td>
+				</tr>
+			</obsgroup>
+            <obsgroup groupingConceptId="b0ed16e7-4fcf-4ab5-afa9-9d63bfacf3ee">
+				<tr>
+					<th scope="row" width="3%">02</th>
+					<td width="15%">
+						<obs conceptId="2681438b-c795-4ac5-b9de-b7bf1b340946"/>
+					</td>
+                    <td width="30%">
+						<obs conceptId="59f1a51a-d775-4a91-a074-cb6d7f3da8e5"/>
+					</td>
+					<td width="9%" >
+						<obs conceptId="163554AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"/>
+					</td>
+					<td width="9%" >
+						<obs conceptId="d6dfa19c-d298-46a1-a087-dcf99d000dff"/>
+					</td>
+					<td width="34%" > 
+						<obs conceptId="e277475f-77ae-48c9-b2d6-509caa72541f"  size="50"/>
+					</td>
+				</tr>
+			</obsgroup>
+
+            <obsgroup groupingConceptId="7fec334c-a964-4fe2-914b-61b4b2774bbf">
+				<tr>
+					<th scope="row" width="3%">03</th>
+					<td width="15%">
+						<obs conceptId="2681438b-c795-4ac5-b9de-b7bf1b340946"/>
+					</td>
+                    <td width="30%">
+						<obs conceptId="59f1a51a-d775-4a91-a074-cb6d7f3da8e5"/>
+					</td>
+					<td width="9%" >
+						<obs conceptId="163554AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"/>
+					</td>
+					<td width="9%" >
+						<obs conceptId="d6dfa19c-d298-46a1-a087-dcf99d000dff"/>
+					</td>
+					<td width="34%" > 
+						<obs conceptId="e277475f-77ae-48c9-b2d6-509caa72541f"  size="50"/>
+					</td>
+				</tr>
+			</obsgroup>
+
+            <obsgroup groupingConceptId="8469bc99-ac82-4a27-87d0-ba903177660e">
+				<tr>
+					<th scope="row" width="3%">04</th>
+					<td width="15%">
+						<obs conceptId="2681438b-c795-4ac5-b9de-b7bf1b340946"/>
+					</td>
+                    <td width="30%">
+						<obs conceptId="59f1a51a-d775-4a91-a074-cb6d7f3da8e5"/>
+					</td>
+					<td width="9%" >
+						<obs conceptId="163554AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"/>
+					</td>
+					<td width="9%" >
+						<obs conceptId="d6dfa19c-d298-46a1-a087-dcf99d000dff"/>
+					</td>
+					<td width="34%" > 
+						<obs conceptId="e277475f-77ae-48c9-b2d6-509caa72541f"  size="50"/>
+					</td>
+				</tr>
+			</obsgroup>
+
+            <obsgroup groupingConceptId="d40532eb-37a0-47a5-9a3b-3105ea75cfb0">
+				<tr>
+					<th scope="row" width="3%">05</th>
+					<td width="15%">
+						<obs conceptId="2681438b-c795-4ac5-b9de-b7bf1b340946"/>
+					</td>
+                    <td width="30%">
+						<obs conceptId="59f1a51a-d775-4a91-a074-cb6d7f3da8e5"/>
+					</td>
+					<td width="9%" >
+						<obs conceptId="163554AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"/>
+					</td>
+					<td width="9%" >
+						<obs conceptId="d6dfa19c-d298-46a1-a087-dcf99d000dff"/>
+					</td>
+					<td width="34%" > 
+						<obs conceptId="e277475f-77ae-48c9-b2d6-509caa72541f"  size="50"/>
+					</td>
+				</tr>
+			</obsgroup>
+
+            <obsgroup groupingConceptId="4af5d482-5569-44a7-b1d9-6c0e00ceac76">
+				<tr>
+					<th scope="row" width="3%">06</th>
+					<td width="15%">
+						<obs conceptId="2681438b-c795-4ac5-b9de-b7bf1b340946"/>
+					</td>
+                    <td width="30%">
+						<obs conceptId="59f1a51a-d775-4a91-a074-cb6d7f3da8e5"/>
+					</td>
+					<td width="9%" >
+						<obs conceptId="163554AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"/>
+					</td>
+					<td width="9%" >
+						<obs conceptId="d6dfa19c-d298-46a1-a087-dcf99d000dff"/>
+					</td>
+					<td width="34%" > 
+						<obs conceptId="e277475f-77ae-48c9-b2d6-509caa72541f"  size="50"/>
+					</td>
+				</tr>
+			</obsgroup>
+
+            <obsgroup groupingConceptId="4343abd8-409b-4eb5-935d-a2a2ba283ade">
+				<tr>
+					<th scope="row" width="3%">07</th>
+					<td width="15%">
+						<obs conceptId="2681438b-c795-4ac5-b9de-b7bf1b340946"/>
+					</td>
+                    <td width="30%">
+						<obs conceptId="59f1a51a-d775-4a91-a074-cb6d7f3da8e5"/>
+					</td>
+					<td width="9%" >
+						<obs conceptId="163554AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"/>
+					</td>
+					<td width="9%" >
+						<obs conceptId="d6dfa19c-d298-46a1-a087-dcf99d000dff"/>
+					</td>
+					<td width="34%" > 
+						<obs conceptId="e277475f-77ae-48c9-b2d6-509caa72541f"  size="50"/>
+					</td>
+				</tr>
+			</obsgroup>
+
+            <obsgroup groupingConceptId="2f9b5e8b-9821-42f6-8bea-ff4860217f8a">
+				<tr>
+					<th scope="row" width="3%">08</th>
+					<td width="15%">
+						<obs conceptId="2681438b-c795-4ac5-b9de-b7bf1b340946"/>
+					</td>
+                    <td width="30%">
+						<obs conceptId="59f1a51a-d775-4a91-a074-cb6d7f3da8e5"/>
+					</td>
+					<td width="9%" >
+						<obs conceptId="163554AAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"/>
+					</td>
+					<td width="9%" >
+						<obs conceptId="d6dfa19c-d298-46a1-a087-dcf99d000dff"/>
+					</td>
+					<td width="34%" > 
+						<obs conceptId="e277475f-77ae-48c9-b2d6-509caa72541f"  size="50"/>
+					</td>
+				</tr>
+			</obsgroup>
+
+
+		</table>
+
+
+
+
         </section>
 
-        <section headerLabel="SORTIE">
+    <section headerLabel="Sortie">
         <table class="baseline-aligned" border="1" width="100%">
             <tr>
                 <td>Conseil:</td>
@@ -135,7 +307,7 @@
         </table>
     </section>
 
-    <section headerLabel="VISITE POST NATALE">
+    <section headerLabel="Visite post natale">
         <table class="baseline-aligned" border="1" width="100%">
             <tr>
                 <td>Date:</td>
