@@ -1,0 +1,18 @@
+INSERT INTO pharm_route(id,code,name,uuid) VALUES (100,'V01','Intraveineuse','b31a0ddd-d35b-493e-98e9-6f1de052z002');
+INSERT INTO pharm_route(id,code,name,uuid) VALUES (101,'V02','Intramusculaire','b31a0ddd-d35b-493e-98e9-6f1de052z003');
+INSERT INTO pharm_route(id,code,name,uuid) VALUES (102,'V03','Sous-cutané','b31a0ddd-d35b-493e-98e9-6f1de052z004');
+INSERT INTO pharm_route(id,code,name,uuid) VALUES (103,'V04','Inhalation','b31a0ddd-d35b-493e-98e9-6f1de052z005');
+INSERT INTO pharm_route(id,code,name,uuid) VALUES (104,'V05','Intranasal','b31a0ddd-d35b-493e-98e9-6f1de052z006');
+INSERT INTO pharm_route(id,code,name,uuid) VALUES (105,'V06','Dans l''oreille gauche','b31a0ddd-d35b-493e-98e9-6f1de052z007');
+INSERT INTO pharm_route(id,code,name,uuid) VALUES (106,'V07','Dans l''oreille droite','b31a0ddd-d35b-493e-98e9-6f1de052z008');
+INSERT INTO pharm_route(id,code,name,uuid) VALUES (107,'V08','Dans les deux oreilles','b31a0ddd-d35b-493e-98e9-6f1de052z009');
+INSERT INTO pharm_route(id,code,name,uuid) VALUES (108,'V09','Dans l''œil gauche','b31a0ddd-d35b-493e-98e9-6f1de052z010');
+INSERT INTO pharm_route(id,code,name,uuid) VALUES (109,'V10','Dans l''œil droit','b31a0ddd-d35b-493e-98e9-6f1de052z011');
+INSERT INTO pharm_route(id,code,name,uuid) VALUES (110,'V11','Dans les deux yeux','b31a0ddd-d35b-493e-98e9-6f1de052z012');
+INSERT INTO pharm_route(id,code,name,uuid) VALUES (111,'V12','Transcutané','b31a0ddd-d35b-493e-98e9-6f1de052z013');
+INSERT INTO pharm_route(id,code,name,uuid) VALUES (112,'V13','Par tube NG','b31a0ddd-d35b-493e-98e9-6f1de052z014');
+INSERT INTO pharm_route(id,code,name,uuid) VALUES (113,'V14','Intra-osseux','b31a0ddd-d35b-493e-98e9-6f1de052z015');
+INSERT INTO pharm_route(id,code,name,uuid) VALUES (114,'V15','Topique','b31a0ddd-d35b-493e-98e9-6f1de052z016');
+INSERT INTO pharm_route(id,code,name,uuid) VALUES (115,'V16','Sublingua','b31a0ddd-d35b-493e-98e9-6f1de052z017');
+INSERT INTO pharm_route(id,code,name,uuid) VALUES (116,'V17','Intra-articulaire','b31a0ddd-d35b-493e-98e9-6f1de052z018');
+INSERT INTO pharm_route(id,code,name,uuid) VALUES (117,'V18','Inconnue','b31a0ddd-d35b-493e-98e9-6f1de052z019');
