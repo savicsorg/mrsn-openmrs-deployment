@@ -84,7 +84,7 @@
             <tr>
                 <td>Date de sortie:</td>
                 <td colspan="3">
-                    <encounterDate allowFutureDates="true" default="today" showTime="true" />
+                    <encounterDate allowFutureDates="true"  default="today" showTime="true" />
                 </td>
             </tr>
         </table>
@@ -312,13 +312,13 @@
             <tr>
                 <td>Date:</td>
                 <td colspan="3">
-                    <obs conceptId="e42a8903-6369-4026-9ac8-ced264c80515" />
+                    <obs allowFutureDates="true" conceptId="e42a8903-6369-4026-9ac8-ced264c80515" />
                 </td>
             </tr>
             <tr>
                 <td>Rendez-vous:</td>
                 <td colspan="3">
-                    <obs  allowFutureDates="true" conceptId="0184d504-ff60-403b-9063-bdd46fd9cee3" size="100" />
+                    <obs  conceptId="0184d504-ff60-403b-9063-bdd46fd9cee3" size="100" />
                 </td>
             </tr>
         </table>
