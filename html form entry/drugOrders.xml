@@ -93,7 +93,7 @@
     </div>
 
 
-    <section headerLabel="Prescription de médicament">
+    <section headerLabel="prescription de médicament (1 médicament par formulaire rempli)">
         <table class="baseline-aligned" border="1" width="100%">
             <tr>
                 <td width="20%">
@@ -122,14 +122,14 @@
                 </td>
             </tr>
 
-            <tr>
+            <!-- <tr>
                 <td width="20%">
                    Autre médicament
                 </td>
                 <td colspan="3">
                     <obs id="drugOther" conceptId="5108" size="87" />
                 </td>
-            </tr>
+            </tr> -->
 
             <tr>
                 <td width="20%">
