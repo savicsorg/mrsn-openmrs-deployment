@@ -121,7 +121,6 @@
                     <obs id="drug" conceptId="5106" answerDrugs="true" displayTemplate="{{name}} {{concept}}" />
                 </td>
             </tr>
-
             <!-- <tr>
                 <td width="20%">
                    Autre médicament
