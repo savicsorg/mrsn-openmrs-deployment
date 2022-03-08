@@ -12,6 +12,13 @@
         @reference_structure@=c1b5370f-e62f-4301-8603-d6049e5429b3
         @dosso@=ed4660ff-0927-496d-827f-ab3ef7c7b11f
         @tilaberi@=456d6fdc-36a2-4645-821b-d9f7f0ebc8c4
+
+        @district_rettachement@=e51631a8-4431-475a-ab6a-d6080f90287e
+        @reference_site@=c1b5370f-e62f-4301-8603-d6049e5429b3
+        @gaya@=5f4b25dd-62cc-40aa-ba35-74450e06737e
+        @goteye@=f35cf935-c79c-4ba8-b967-3d4b687ab47a
+
+
     </macros>
 
     <style>
@@ -95,12 +102,16 @@
                         answerCodes="Dosso,Tilabéry" />
                 </td>
                 <td>District de rattachement (où le malade est référé):
-                    <obs conceptId="4944" />
+                    <!-- <obs conceptId="4944" /> -->
+                    <obs conceptId="$@district_rettachement@" answerConceptIds="$@gaya@,$@goteye@"
+                        answerCodes="Gaya,Gotheye" />
                 </td>
             </tr>
             <tr>
                 <td>Site de référence:
-                    <obs conceptId="4945" />
+                    <!-- <obs conceptId="4945" /> -->
+                    <obs conceptId="$@reference_site@" answerConceptIds="$@gaya@,$@goteye@"
+                        answerCodes="HD de Gaya,HD de Gotheye" />
                 </td>
                 <td>Nom et prenom:
                     <lookup class="value" expression="patient.personName" />
