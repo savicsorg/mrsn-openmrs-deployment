@@ -8,6 +8,10 @@
         @conscience@=0cc95b40-7ac2-454e-b24a-9b161c96ab73
         @YES@=3cd6f600-26fe-102b-80cb-0017a47871b2
         @NO@=3cd6f86c-26fe-102b-80cb-0017a47871b2
+
+        @reference_structure@=c1b5370f-e62f-4301-8603-d6049e5429b3
+        @dosso@=ed4660ff-0927-496d-827f-ab3ef7c7b11f
+        @tilaberi@=456d6fdc-36a2-4645-821b-d9f7f0ebc8c4
     </macros>
 
     <style>
@@ -62,17 +66,17 @@
             <tr>
                 <td>Region de:</td>
                 <td>
-                    <span class="value">Dosso</span>
+                    <!-- <span class="value">Dosso</span> -->
                 </td>
                 <td>District sanitaire de:</td>
                 <td>
-                    <span class="value">DS Gaya</span>
+                    <!-- <span class="value">DS Gaya</span> -->
                 </td>
             </tr>
             <tr>
                 <td>Formation sanitaire:</td>
                 <td>
-                    <span class="value">HD Gaya</span>
+                    <!-- <span class="value">HD Gaya</span> -->
                 </td>
                 <td>Date de la premiere visite:</td>
                 <td>
@@ -86,15 +90,17 @@
         <table class="baseline-aligned">
             <tr>
                 <td>Structure de référence (qui envoie le malade):
-                    <obs conceptId="4943" />
+                    <!-- <obs conceptId="5557" />  -->
+                    <obs conceptId="$@reference_structure@" answerConceptIds="$@dosso@,$@tilaberi@"
+                        answerCodes="Dosso,Tilabéry" />
                 </td>
                 <td>District de rattachement (où le malade est référé):
-                    <obs conceptId="4944" />
+                    <!-- <obs conceptId="4944" /> -->
                 </td>
             </tr>
             <tr>
                 <td>Site de référence:
-                    <obs conceptId="4945" />
+                    <!-- <obs conceptId="4945" /> -->
                 </td>
                 <td>Nom et prenom:
                     <lookup class="value" expression="patient.personName" />
