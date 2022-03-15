@@ -1,4 +1,3 @@
-
 select
 
 (
@@ -10,9 +9,11 @@ inner join
 	FROM visit v
 	inner join encounter e on v.`visit_id`=  e.`visit_id`
 	inner join person p on p.`person_id`=e.`patient_id`
+	inner join  `form` f on f.`form_id`= e.`form_id`
 	Where v.`voided`=0 
+	and f.uuid='a6a93f74-9bd4-4934-b4b2-e1811b1cc105'
 	and e.`voided`=0
-	and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <1)
+	and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <1)
     and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 ) U
 on v.visit_id = U.visit_id
@@ -26,7 +27,7 @@ inner join person p on p.`person_id`=e.`patient_id`
 where f.`uuid`='145235c8-51df-4896-8540-65a5ef6f66b6' 
 and e.`visit_id`=v.`visit_id`
 and o.`concept_id`=4838 and o.`value_coded`=4836
-and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <1)
+and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <1)
 and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 ) --  in discharge with refered=true
 
@@ -40,7 +41,7 @@ inner join person p on p.`person_id`=e.`patient_id`
 where f.`uuid`='bc5c5485-9697-416b-934f-40fd27db6f42' 
 and e.`visit_id`=v.`visit_id`
 and o.`concept_id`=4975 and o.`value_coded`=1
-and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <1)
+and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <1)
 and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 ) --  in contre ref with refered=true
 
@@ -59,9 +60,11 @@ inner join
 	FROM visit v
 	inner join encounter e on v.`visit_id`=  e.`visit_id`
 	inner join person p on p.`person_id`=e.`patient_id`
+	inner join  `form` f on f.`form_id`= e.`form_id`
 	Where v.`voided`=0 
+	and f.uuid='a6a93f74-9bd4-4934-b4b2-e1811b1cc105'
 	and e.`voided`=0
-	and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) >=1 and TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <=4)
+	and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) >=1 and TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <=4)
     and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 ) U
 on v.visit_id = U.visit_id
@@ -77,7 +80,7 @@ inner join person p on p.`person_id`=e.`patient_id`
 where f.`uuid`='145235c8-51df-4896-8540-65a5ef6f66b6' 
 and e.`visit_id`=v.`visit_id`
 and o.`concept_id`=4838 and o.`value_coded`=4836
-and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) >=1 and TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <=4)
+and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) >=1 and TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <=4)
 and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 ) --  in discharge with refered=true
 
@@ -91,7 +94,7 @@ inner join person p on p.`person_id`=e.`patient_id`
 where f.`uuid`='bc5c5485-9697-416b-934f-40fd27db6f42' 
 and e.`visit_id`=v.`visit_id`
 and o.`concept_id`=4975 and o.`value_coded`=1
-and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) >=1 and TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <=4)
+and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) >=1 and TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <=4)
 and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 ) --  in contre ref with refered=true
 
@@ -108,9 +111,11 @@ inner join
 	FROM visit v
 	inner join encounter e on v.`visit_id`=  e.`visit_id`
 	inner join person p on p.`person_id`=e.`patient_id`
+	inner join  `form` f on f.`form_id`= e.`form_id`
 	Where v.`voided`=0 
+	and f.uuid='a6a93f74-9bd4-4934-b4b2-e1811b1cc105'
 	and e.`voided`=0
-	and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) >=5 and TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <=14)
+	and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) >=5 and TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <=14)
     and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 ) U
 on v.visit_id = U.visit_id
@@ -125,7 +130,7 @@ inner join person p on p.`person_id`=e.`patient_id`
 where f.`uuid`='145235c8-51df-4896-8540-65a5ef6f66b6' 
 and e.`visit_id`=v.`visit_id`
 and o.`concept_id`=4838 and o.`value_coded`=4836
-and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) >=5 and TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <=14)
+and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) >=5 and TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <=14)
 and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 ) --  in discharge with refered=true
 
@@ -139,7 +144,7 @@ inner join person p on p.`person_id`=e.`patient_id`
 where f.`uuid`='bc5c5485-9697-416b-934f-40fd27db6f42' 
 and e.`visit_id`=v.`visit_id`
 and o.`concept_id`=4975 and o.`value_coded`=1
-and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) >=5 and TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <=14)
+and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) >=5 and TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <=14)
 and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 ) --  in contre ref with refered=true
 
@@ -156,9 +161,11 @@ inner join
 	FROM visit v
 	inner join encounter e on v.`visit_id`=  e.`visit_id`
 	inner join person p on p.`person_id`=e.`patient_id`
+	inner join  `form` f on f.`form_id`= e.`form_id`
 	Where v.`voided`=0 
+	and f.uuid='a6a93f74-9bd4-4934-b4b2-e1811b1cc105'
 	and e.`voided`=0
-	and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) >=15 and TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <=200)
+	and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) >=15 and TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <=200)
     and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 ) U
 on v.visit_id = U.visit_id
@@ -173,7 +180,7 @@ inner join person p on p.`person_id`=e.`patient_id`
 where f.`uuid`='145235c8-51df-4896-8540-65a5ef6f66b6' 
 and e.`visit_id`=v.`visit_id`
 and o.`concept_id`=4838 and o.`value_coded`=4836
-and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) >=15 and TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <=200)
+and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) >=15 and TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <=200)
 and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 ) --  in discharge with refered=true
 
@@ -187,7 +194,7 @@ inner join person p on p.`person_id`=e.`patient_id`
 where f.`uuid`='bc5c5485-9697-416b-934f-40fd27db6f42' 
 and e.`visit_id`=v.`visit_id`
 and o.`concept_id`=4975 and o.`value_coded`=1
-and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) >=15 and TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <=200)
+and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) >=15 and TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <=200)
 and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 ) --  in contre ref with refered=true
 
@@ -207,7 +214,9 @@ inner join
 	FROM visit v
 	inner join encounter e on v.`visit_id`=  e.`visit_id`
 	inner join person p on p.`person_id`=e.`patient_id`
+	inner join  `form` f on f.`form_id`= e.`form_id`
 	Where v.`voided`=0 
+	and f.uuid='a6a93f74-9bd4-4934-b4b2-e1811b1cc105'
 	and e.`voided`=0
 	and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 ) U

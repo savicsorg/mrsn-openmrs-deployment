@@ -11,7 +11,7 @@ inner join
 	inner join person p on p.`person_id`=e.`patient_id`
 	Where v.`voided`=0 
 	and e.`voided`=0
-	and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <1)
+	and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <1)
     and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 ) U
 on v.visit_id = U.visit_id
@@ -28,7 +28,7 @@ inner join person p on p.`person_id`=e.`patient_id`
 where f.`uuid`='145235c8-51df-4896-8540-65a5ef6f66b6' 
 and e.`visit_id`=v.`visit_id`
 and o.`concept_id`=4838 and o.`value_coded`=4972
-and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <1)
+and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <1)
 and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 ) --  in discharge with refered=true
 
@@ -42,7 +42,7 @@ inner join person p on p.`person_id`=e.`patient_id`
 where f.`uuid`='bc5c5485-9697-416b-934f-40fd27db6f42' 
 and e.`visit_id`=v.`visit_id`
 and o.`concept_id`=4972 and o.`value_coded`=1
-and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <1)
+and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <1)
 and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 ) --  in contre ref with refered=true
 )) retour_domicil_moins_1,
@@ -60,7 +60,7 @@ inner join
 	inner join person p on p.`person_id`=e.`patient_id`
 	Where v.`voided`=0 
 	and e.`voided`=0
-	and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) >=1 and TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <=4)
+	and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) >=1 and TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <=4)
     and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 ) U
 on v.visit_id = U.visit_id
@@ -77,7 +77,7 @@ inner join person p on p.`person_id`=e.`patient_id`
 where f.`uuid`='145235c8-51df-4896-8540-65a5ef6f66b6' 
 and e.`visit_id`=v.`visit_id`
 and o.`concept_id`=4838 and o.`value_coded`=4972
-and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) >=1 and TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <=4)
+and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) >=1 and TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <=4)
 and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 ) --  in discharge with refered=true
 
@@ -91,7 +91,7 @@ inner join person p on p.`person_id`=e.`patient_id`
 where f.`uuid`='bc5c5485-9697-416b-934f-40fd27db6f42' 
 and e.`visit_id`=v.`visit_id`
 and o.`concept_id`=4972 and o.`value_coded`=1
-and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) >=1 and TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <=4)
+and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) >=1 and TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <=4)
 and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 ) --  in contre ref with refered=true
 )) retour_domicil_1_4,
@@ -109,7 +109,7 @@ inner join
 	inner join person p on p.`person_id`=e.`patient_id`
 	Where v.`voided`=0 
 	and e.`voided`=0
-	and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) >=5 and TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <=14)
+	and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) >=5 and TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <=14)
     and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 ) U
 on v.visit_id = U.visit_id
@@ -126,7 +126,7 @@ inner join person p on p.`person_id`=e.`patient_id`
 where f.`uuid`='145235c8-51df-4896-8540-65a5ef6f66b6' 
 and e.`visit_id`=v.`visit_id`
 and o.`concept_id`=4838 and o.`value_coded`=4972
-and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) >=5 and TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <=14)
+and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) >=5 and TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <=14)
 and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 ) --  in discharge with refered=true
 
@@ -140,7 +140,7 @@ inner join person p on p.`person_id`=e.`patient_id`
 where f.`uuid`='bc5c5485-9697-416b-934f-40fd27db6f42' 
 and e.`visit_id`=v.`visit_id`
 and o.`concept_id`=4972 and o.`value_coded`=1
-and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) >=5 and TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <=14)
+and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) >=5 and TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <=14)
 and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 ) --  in contre ref with refered=true
 )) retour_domicil_5_14,
@@ -159,7 +159,7 @@ inner join
 	inner join person p on p.`person_id`=e.`patient_id`
 	Where v.`voided`=0 
 	and e.`voided`=0
-	and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) >=15 and TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <=200)
+	and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) >=15 and TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <=200)
     and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 ) U
 on v.visit_id = U.visit_id
@@ -176,7 +176,7 @@ inner join person p on p.`person_id`=e.`patient_id`
 where f.`uuid`='145235c8-51df-4896-8540-65a5ef6f66b6' 
 and e.`visit_id`=v.`visit_id`
 and o.`concept_id`=4838 and o.`value_coded`=4972
-and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) >=15 and TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <=200)
+and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) >=15 and TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <=200)
 and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 ) --  in discharge with refered=true
 
@@ -190,7 +190,7 @@ inner join person p on p.`person_id`=e.`patient_id`
 where f.`uuid`='bc5c5485-9697-416b-934f-40fd27db6f42' 
 and e.`visit_id`=v.`visit_id`
 and o.`concept_id`=4972 and o.`value_coded`=1
-and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) >=15 and TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <=200)
+and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) >=15 and TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <=200)
 and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 ) --  in contre ref with refered=true
 )) retour_domicil_15_plus,

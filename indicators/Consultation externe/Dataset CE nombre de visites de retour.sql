@@ -12,7 +12,7 @@ inner join
 	Where v.`voided`=0 
 	and e.`voided`=0
 	and et.`uuid` not in ('e22e39fd-7db2-45e7-80f1-60fa0d5a4378','181820aa-88c9-479b-9077-af92f5364329')
-	and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <1)
+	and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <1)
     and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 	-- CE = (encounters without ET that is in admission and discharge)
 ) CE
@@ -25,7 +25,7 @@ inner join form f on f.`form_id`= e.`form_id`
 inner join person p on p.`person_id`=e.`patient_id`
 where f.`uuid`='bc5c5485-9697-416b-934f-40fd27db6f42' 
 and e.`visit_id`=v.`visit_id`
-and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <1)
+and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <1)
 and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 ) --  in contre ref
 ) visite_retour_moins_1,
@@ -44,7 +44,7 @@ inner join
 	Where v.`voided`=0 
 	and e.`voided`=0
 	and et.`uuid` not in ('e22e39fd-7db2-45e7-80f1-60fa0d5a4378','181820aa-88c9-479b-9077-af92f5364329')
-	and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) >=1 and TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <=4)
+	and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) >=1 and TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <=4)
     and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 	-- CE = (encounters without ET that is in admission and discharge)
 ) CE
@@ -57,7 +57,7 @@ inner join form f on f.`form_id`= e.`form_id`
 inner join person p on p.`person_id`=e.`patient_id`
 where f.`uuid`='bc5c5485-9697-416b-934f-40fd27db6f42' 
 and e.`visit_id`=v.`visit_id`
-and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) >=1 and TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <=4)
+and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) >=1 and TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <=4)
 and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 ) --  in contre ref
 ) visite_retour_1_4,
@@ -77,7 +77,7 @@ inner join
 	Where v.`voided`=0 
 	and e.`voided`=0
 	and et.`uuid` not in ('e22e39fd-7db2-45e7-80f1-60fa0d5a4378','181820aa-88c9-479b-9077-af92f5364329')
-	and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) >=5 and TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <=14)
+	and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) >=5 and TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <=14)
     and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 	-- CE = (encounters without ET that is in admission and discharge)
 ) CE
@@ -90,7 +90,7 @@ inner join form f on f.`form_id`= e.`form_id`
 inner join person p on p.`person_id`=e.`patient_id`
 where f.`uuid`='bc5c5485-9697-416b-934f-40fd27db6f42' 
 and e.`visit_id`=v.`visit_id`
-and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) >=5 and TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <=14)
+and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) >=5 and TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <=14)
 and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 ) --  in contre ref
 ) visite_retour_moins_5_14,
@@ -110,7 +110,7 @@ inner join
 	Where v.`voided`=0 
 	and e.`voided`=0
 	and et.`uuid` not in ('e22e39fd-7db2-45e7-80f1-60fa0d5a4378','181820aa-88c9-479b-9077-af92f5364329')
-	and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) >=15 and TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <=200)
+	and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) >=15 and TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <=200)
     and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 	-- CE = (encounters without ET that is in admission and discharge)
 ) CE
@@ -123,7 +123,7 @@ inner join form f on f.`form_id`= e.`form_id`
 inner join person p on p.`person_id`=e.`patient_id`
 where f.`uuid`='bc5c5485-9697-416b-934f-40fd27db6f42' 
 and e.`visit_id`=v.`visit_id`
-and (TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) >=15 and TIMESTAMPDIFF(year,p.`birthdate`, :endOfPeriod) <=200)
+and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) >=15 and TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <=200)
 and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
 ) --  in contre ref
 ) visite_retour_15_plus,

@@ -9,12 +9,13 @@ inner join
 	inner join encounter e on v.`visit_id`=  e.`visit_id`
 	inner join encounter_type et on et.`encounter_type_id`=e.`encounter_type`
 	inner join person p on p.`person_id`=e.`patient_id`
+	inner join  `form` f on f.`form_id`= e.`form_id`
 	Where v.`voided`=0 
+	and f.uuid='a6a93f74-9bd4-4934-b4b2-e1811b1cc105'
 	and e.`voided`=0
-	and et.`uuid` not in ('e22e39fd-7db2-45e7-80f1-60fa0d5a4378','181820aa-88c9-479b-9077-af92f5364329')
 	and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <1)
     and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
-	-- CE = (encounters without ET that is in admission and discharge)
+	-- CE = (All encounters)
 ) CE
 on v.visit_id = CE.visit_id
 Where
@@ -44,12 +45,13 @@ inner join
 	inner join encounter e on v.`visit_id`=  e.`visit_id`
 	inner join encounter_type et on et.`encounter_type_id`=e.`encounter_type`
 	inner join person p on p.`person_id`=e.`patient_id`
+	inner join  `form` f on f.`form_id`= e.`form_id`
 	Where v.`voided`=0 
+	and f.uuid='a6a93f74-9bd4-4934-b4b2-e1811b1cc105'
 	and e.`voided`=0
-	and et.`uuid` not in ('e22e39fd-7db2-45e7-80f1-60fa0d5a4378','181820aa-88c9-479b-9077-af92f5364329')
 	and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) >=1 and TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <=4)
     and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
-	-- CE = (encounters without ET that is in admission and discharge)
+	-- CE = (All encounters)
 ) CE
 on v.visit_id = CE.visit_id
 Where
@@ -78,12 +80,13 @@ inner join
 	inner join encounter e on v.`visit_id`=  e.`visit_id`
 	inner join encounter_type et on et.`encounter_type_id`=e.`encounter_type`
 	inner join person p on p.`person_id`=e.`patient_id`
+	inner join  `form` f on f.`form_id`= e.`form_id`
 	Where v.`voided`=0 
+	and f.uuid='a6a93f74-9bd4-4934-b4b2-e1811b1cc105'
 	and e.`voided`=0
-	and et.`uuid` not in ('e22e39fd-7db2-45e7-80f1-60fa0d5a4378','181820aa-88c9-479b-9077-af92f5364329')
 	and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) >=5 and TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <=14)
     and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
-	-- CE = (encounters without ET that is in admission and discharge)
+	-- CE = (All encounters)
 ) CE
 on v.visit_id = CE.visit_id
 Where
@@ -112,12 +115,13 @@ inner join
 	inner join encounter e on v.`visit_id`=  e.`visit_id`
 	inner join encounter_type et on et.`encounter_type_id`=e.`encounter_type`
 	inner join person p on p.`person_id`=e.`patient_id`
+	inner join  `form` f on f.`form_id`= e.`form_id`
 	Where v.`voided`=0 
+	and f.uuid='a6a93f74-9bd4-4934-b4b2-e1811b1cc105'
 	and e.`voided`=0
-	and et.`uuid` not in ('e22e39fd-7db2-45e7-80f1-60fa0d5a4378','181820aa-88c9-479b-9077-af92f5364329')
 	and (TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) >=15 and TIMESTAMPDIFF(year,p.`birthdate`, v.date_started) <=200)
     and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
-	-- CE = (encounters without ET that is in admission and discharge)
+	-- CE = (All encounters)
 ) CE
 on v.visit_id = CE.visit_id
 Where
@@ -146,11 +150,12 @@ inner join
 	inner join encounter e on v.`visit_id`=  e.`visit_id`
 	inner join encounter_type et on et.`encounter_type_id`=e.`encounter_type`
 	inner join person p on p.`person_id`=e.`patient_id`
+	inner join  `form` f on f.`form_id`= e.`form_id`
 	Where v.`voided`=0 
+	and f.uuid='a6a93f74-9bd4-4934-b4b2-e1811b1cc105'
 	and e.`voided`=0
-	and et.`uuid` not in ('e22e39fd-7db2-45e7-80f1-60fa0d5a4378','181820aa-88c9-479b-9077-af92f5364329')
     and e.`encounter_datetime` >= :startOfPeriod AND e.`encounter_datetime`<= :endOfPeriod and v.location_id =:locationId
-	-- CE = (encounters without ET that is in admission and discharge)
+	-- CE = (All encounters)
 ) CE
 on v.visit_id = CE.visit_id
 Where
