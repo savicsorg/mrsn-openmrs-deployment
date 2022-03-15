@@ -112,14 +112,22 @@
                     <!-- <obs conceptId="$@district_rettachement@" answerConceptIds="$@gaya@,$@goteye@"
                         answerCodes="Gaya,Gotheye" /> -->
                 </td>
-            </tr>
-            <tr>
                 <td>Site de référence:
                     <obs conceptId="4945" />
                     <!-- <obs conceptId="$@reference_site@" answerConceptIds="$@gaya@,$@goteye@"
                         answerCodes="HD de Gaya,HD de Gotheye" /> -->
                 </td>
-                <td>Nom et prenom:
+            </tr>
+        </table>
+    </section>
+
+    <section headerLabel="Information sur le patient et son suici médical">
+        <table class="baseline-aligned">
+            <tr>
+                <td>
+                    Nom et prenom:
+                </td>
+                <td>
                     <lookup class="value" expression="patient.personName" />
                 </td>
             </tr>
