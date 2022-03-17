@@ -68,7 +68,7 @@
     <span style="float:right">Paper Form ID: $paperFormId</span>
     <h2>référence (v1.0)</h2>
 
-    <section headerLabel="1. Détails de la rencontre">
+    <section headerLabel="Information sur le site de destination du patient">
         <table class="baseline-aligned">
             <tr>
                 <td>Region de:</td>
@@ -99,27 +99,35 @@
         </table>
     </section>
 
-    <section headerLabel="Information de référence">
+    <section headerLabel="Information sur le site de provenance du patient">
         <table class="baseline-aligned">
             <tr>
                 <td>Structure de référence (qui envoie le malade):
-                    <!-- <obs conceptId="5557" />  -->
-                    <obs conceptId="$@reference_structure@" answerConceptIds="$@dosso@,$@tilaberi@"
-                        answerCodes="Dosso,Tilabéry" />
+                    <obs conceptId="4943" />
+                    <!-- <obs conceptId="$@reference_structure@" answerConceptIds="$@dosso@,$@tilaberi@"
+                        answerCodes="Dosso,Tilabéry" /> -->
                 </td>
                 <td>District de rattachement (où le malade est référé):
-                    <!-- <obs conceptId="4944" /> -->
-                    <obs conceptId="$@district_rettachement@" answerConceptIds="$@gaya@,$@goteye@"
-                        answerCodes="Gaya,Gotheye" />
+                    <obs conceptId="4944" />
+                    <!-- <obs conceptId="$@district_rettachement@" answerConceptIds="$@gaya@,$@goteye@"
+                        answerCodes="Gaya,Gotheye" /> -->
+                </td>
+                <td>Site de référence:
+                    <obs conceptId="4945" />
+                    <!-- <obs conceptId="$@reference_site@" answerConceptIds="$@gaya@,$@goteye@"
+                        answerCodes="HD de Gaya,HD de Gotheye" /> -->
                 </td>
             </tr>
+        </table>
+    </section>
+
+    <section headerLabel="Information sur le patient et son suici médical">
+        <table class="baseline-aligned">
             <tr>
-                <td>Site de référence:
-                    <!-- <obs conceptId="4945" /> -->
-                    <obs conceptId="$@reference_site@" answerConceptIds="$@gaya@,$@goteye@"
-                        answerCodes="HD de Gaya,HD de Gotheye" />
+                <td>
+                    Nom et prenom:
                 </td>
-                <td>Nom et prenom:
+                <td>
                     <lookup class="value" expression="patient.personName" />
                 </td>
             </tr>
