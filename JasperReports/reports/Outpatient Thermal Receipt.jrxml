@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<!-- Created with Jaspersoft Studio version 6.19.0.final using JasperReports Library version 6.19.0-646c68931cebf1a58bc65c4359d1f0ca223c5e94  -->
 <jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="Outpatient Thermal Receipt" language="groovy" pageWidth="216" pageHeight="297" columnWidth="216" leftMargin="0" rightMargin="0" topMargin="0" bottomMargin="0" isIgnorePagination="true" uuid="b0650e21-f6cf-4aad-acec-9e81aea4c41f">
 	<property name="ireport.zoom" value="3.0"/>
 	<property name="ireport.x" value="0"/>
@@ -77,81 +76,84 @@ LIMIT 1]]>
 	<title>
 		<band height="170" splitType="Stretch">
 			<staticText>
-				<reportElement style="style1" mode="Transparent" x="0" y="0" width="216" height="70" uuid="e49ce628-bd2d-4cb0-b1c7-1ae5d963e2c3"/>
+				<reportElement uuid="e49ce628-bd2d-4cb0-b1c7-1ae5d963e2c3" style="style1" mode="Transparent" x="0" y="0" width="216" height="70"/>
 				<textElement textAlignment="Center">
 					<font fontName="Arial" size="10"/>
 				</textElement>
-				<text><![CDATA[Hôpital de district de Gaya
-Adresse: Gaya, Région de Dosso
-]]></text>
+				<text><![CDATA[OpenHMIS Demo
+DEMO CLINIC
+Address: 12345 Nairobi
+Tel: 070 712 3456
+Fax: 070 712 3457
+Email: openhmisproject@gmail.com]]></text>
 			</staticText>
 			<textField>
-				<reportElement style="style1" x="69" y="117" width="141" height="17" uuid="0d6439ca-7f1c-489d-944a-c648c6a72d21"/>
+				<reportElement uuid="0d6439ca-7f1c-489d-944a-c648c6a72d21" style="style1" x="69" y="117" width="141" height="17"/>
 				<textElement>
 					<font fontName="Arial" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{receipt_number}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="69" y="100" width="141" height="17" uuid="a7732435-dc8b-4660-a88b-2aa12830e7b5"/>
+				<reportElement uuid="a7732435-dc8b-4660-a88b-2aa12830e7b5" x="69" y="100" width="141" height="17"/>
 				<textElement>
 					<font fontName="Arial" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[new SimpleDateFormat("yyyy-dd-MM HH:mm").format($F{bill_date})]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="69" y="151" width="141" height="16" uuid="a7732435-dc8b-4660-a88b-2aa12830e7b5"/>
+				<reportElement uuid="a7732435-dc8b-4660-a88b-2aa12830e7b5" x="69" y="151" width="141" height="16"/>
 				<textElement>
 					<font fontName="Arial" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA[$F{patient_family_name} + ", " + $F{patient_given_name}]]></textFieldExpression>
 			</textField>
 			<staticText>
-				<reportElement x="0" y="77" width="216" height="17" uuid="c583cfb7-4b4a-4320-a203-d61ae2e3311f"/>
+				<reportElement uuid="c583cfb7-4b4a-4320-a203-d61ae2e3311f" x="0" y="77" width="216" height="17"/>
 				<textElement textAlignment="Center">
 					<font fontName="Arial"/>
 				</textElement>
 				<text><![CDATA[Receipt]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="13" y="117" width="56" height="17" uuid="11372256-903a-4f4c-9d38-a588c5f39958"/>
+				<reportElement uuid="11372256-903a-4f4c-9d38-a588c5f39958" x="13" y="117" width="56" height="17"/>
 				<textElement>
 					<font fontName="Arial"/>
 				</textElement>
 				<text><![CDATA[Receipt #:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="13" y="100" width="56" height="17" uuid="11372256-903a-4f4c-9d38-a588c5f39958"/>
+				<reportElement uuid="11372256-903a-4f4c-9d38-a588c5f39958" x="13" y="100" width="56" height="17"/>
 				<textElement>
 					<font fontName="Arial"/>
 				</textElement>
 				<text><![CDATA[Date:]]></text>
 			</staticText>
 			<staticText>
-				<reportElement x="13" y="134" width="56" height="17" uuid="11372256-903a-4f4c-9d38-a588c5f39958"/>
+				<reportElement uuid="11372256-903a-4f4c-9d38-a588c5f39958" x="13" y="134" width="56" height="17"/>
 				<textElement>
 					<font fontName="Arial"/>
 				</textElement>
 				<text><![CDATA[Cashier:]]></text>
 			</staticText>
 			<line>
-				<reportElement x="0" y="72" width="216" height="1" uuid="3da84233-25c2-471f-be29-1e9532a22240"/>
+				<reportElement uuid="3da84233-25c2-471f-be29-1e9532a22240" x="0" y="72" width="216" height="1"/>
 			</line>
 			<line>
-				<reportElement x="0" y="94" width="216" height="1" uuid="3da84233-25c2-471f-be29-1e9532a22240"/>
+				<reportElement uuid="3da84233-25c2-471f-be29-1e9532a22240" x="0" y="94" width="216" height="1"/>
 			</line>
 			<line>
-				<reportElement x="0" y="167" width="216" height="1" uuid="3da84233-25c2-471f-be29-1e9532a22240"/>
+				<reportElement uuid="3da84233-25c2-471f-be29-1e9532a22240" x="0" y="167" width="216" height="1"/>
 			</line>
 			<staticText>
-				<reportElement x="13" y="151" width="56" height="16" uuid="11372256-903a-4f4c-9d38-a588c5f39958"/>
+				<reportElement uuid="11372256-903a-4f4c-9d38-a588c5f39958" x="13" y="151" width="56" height="16"/>
 				<textElement>
 					<font fontName="Arial"/>
 				</textElement>
 				<text><![CDATA[Patient:]]></text>
 			</staticText>
 			<textField>
-				<reportElement x="69" y="134" width="141" height="17" uuid="a7732435-dc8b-4660-a88b-2aa12830e7b5"/>
+				<reportElement uuid="a7732435-dc8b-4660-a88b-2aa12830e7b5" x="69" y="134" width="141" height="17"/>
 				<textElement>
 					<font fontName="Arial" size="10"/>
 				</textElement>
@@ -162,7 +164,7 @@ Adresse: Gaya, Région de Dosso
 	<detail>
 		<band height="31" splitType="Stretch">
 			<subreport>
-				<reportElement x="0" y="5" width="216" height="18" uuid="43fd8c34-ad1b-4f84-a082-d22f749fe009"/>
+				<reportElement uuid="43fd8c34-ad1b-4f84-a082-d22f749fe009" x="0" y="5" width="216" height="18"/>
 				<subreportParameter name="billId">
 					<subreportParameterExpression><![CDATA[$P{billId}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -173,7 +175,7 @@ Adresse: Gaya, Région de Dosso
 		</band>
 		<band height="25">
 			<subreport>
-				<reportElement x="0" y="0" width="216" height="21" uuid="1e6ea689-e420-4b4e-b7a9-fe9cf5da9b91"/>
+				<reportElement uuid="1e6ea689-e420-4b4e-b7a9-fe9cf5da9b91" x="0" y="0" width="216" height="21"/>
 				<subreportParameter name="totalCost">
 					<subreportParameterExpression><![CDATA[$V{totalCost}]]></subreportParameterExpression>
 				</subreportParameter>
@@ -188,14 +190,14 @@ Adresse: Gaya, Région de Dosso
 	<summary>
 		<band height="21">
 			<textField>
-				<reportElement x="13" y="6" width="96" height="12" uuid="7e44d78c-4b3c-4a07-89af-fd0a08995dbe"/>
+				<reportElement uuid="7e44d78c-4b3c-4a07-89af-fd0a08995dbe" x="13" y="6" width="96" height="12"/>
 				<textElement>
 					<font fontName="Arial" size="10"/>
 				</textElement>
 				<textFieldExpression><![CDATA["Cashier: " + $F{cashier}]]></textFieldExpression>
 			</textField>
 			<textField>
-				<reportElement x="109" y="6" width="101" height="12" uuid="6c430987-cd11-40be-bd9d-2077e233745f"/>
+				<reportElement uuid="6c430987-cd11-40be-bd9d-2077e233745f" x="109" y="6" width="101" height="12"/>
 				<textElement textAlignment="Right">
 					<font fontName="Arial" size="10"/>
 				</textElement>
