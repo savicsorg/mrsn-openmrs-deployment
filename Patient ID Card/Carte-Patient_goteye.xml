@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Report Width="425px" Height="275px" backgroundColor="white" PageWidth="425" PageHeight="275" PageMargin="50">
+    <DesignItems>
+        <DesignItem type="0" id="15" name="Patient id Card" binding="Patient-id-Card" description="Patient id Card" sourceType="Grouping">
+            <DesignItem type="1" id="2" name="reg_nos" binding="reg_nos" description="reg_nos" text="reg_nos" sourceType="Custom" />
+            <DesignItem type="1" id="3" name="identifier1" binding="identifier1" description="identifier1" text="identifier1" sourceType="Custom" />
+            <DesignItem type="1" id="4" name="identifier2" binding="identifier2" description="identifier2" text="identifier2" sourceType="Custom" />
+            <DesignItem type="1" id="5" name="identifier3" binding="identifier3" description="identifier3" text="identifier3" sourceType="Custom" />
+            <DesignItem type="1" id="6" name="register_date" binding="register_date" description="register_date" text="register_date" sourceType="Custom" />
+            <DesignItem type="1" id="7" name="given_name" binding="given_name" description="given_name" text="given_name" sourceType="Custom" />
+            <DesignItem type="1" id="8" name="family_name" binding="family_name" description="family_name" text="family_name" sourceType="Custom" />
+            <DesignItem type="1" id="9" name="fullname" binding="fullname" description="fullname" text="fullname" sourceType="Custom" />
+            <DesignItem type="1" id="10" name="birthdate" binding="birthdate" description="birthdate" text="birthdate" sourceType="Custom" />
+            <DesignItem type="1" id="11" name="gender" binding="gender" description="gender" text="gender" sourceType="Custom" />
+            <DesignItem type="1" id="12" name="fathername" binding="fathername" description="fathername" text="fathername" sourceType="Custom" />
+            <DesignItem type="1" id="13" name="mothername" binding="mothername" description="mothername" text="mothername" sourceType="Custom" />
+            <DesignItem type="1" id="14" name="address" binding="address" description="address" text="address" sourceType="Custom" />
+        </DesignItem>
+    </DesignItems>
+    <Item WidgetType="HorizontalLine" Left="99px" Top="47px" Width="312px" fontSize="16px" fontFamily="Arial" borderStyle="solid none none solid" borderWidth="1px" />
+    <Item WidgetType="HorizontalLine" Left="4px" Top="96px" Width="407px" fontSize="16px" fontFamily="Arial" borderStyle="solid none none solid" borderWidth="1px" />
+    <Item WidgetType="Label" Text="Goteye - Région de Tilabéry" HelpText="Label" Left="205px" Top="23px" color="rgb(136, 136, 136)" fontSize="10px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Nom:" HelpText="Nom" Left="7px" Top="105px" Width="0px" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Prénom: " HelpText="Prénom" Left="7px" Top="139px" Width="0px" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Sexe: " HelpText="Sexe" Left="7px" Top="210px" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Date d'entrée: " HelpText="Date d'entrée" Left="7px" Top="249px" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Patient N°: " HelpText="N° du patient" Left="95px" Top="80px" fontWeight="normal" fontSize="10px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Carte d'identité de patient" HelpText="Carte d'indentité de patient" Left="155px" Top="53px" color="rgb(0, 107, 214)" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="HOPITAL DE DISTRICT DE GOTEYE" HelpText="HOPITAL DE DISTRICT DE GOTEYE" Left="130px" Top="3px" fontWeight="bold" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Label" Text="Date de naissance: " HelpText="Date de naissance" Left="7px" Top="173px" fontSize="14px" fontFamily="Arial" />
+    <Item WidgetType="Logo" Left="4px" Top="5px" Width="84px" Height="81px" fontSize="16px" fontFamily="Arial" backgroundColor="initial" borderStyle="solid" />
+    <PtPos>
+        <Item ID="3" XPOS="148px" YPOS="79px" Binding="identifier1" Text="identifier1" HelpText="identifier1" color="rgb(0, 107, 214)" fontSize="10px" fontFamily="Arial" />
+        <Item ID="6" XPOS="135px" YPOS="246px" Binding="register_date" Text="register_date" HelpText="register_date" color="rgb(68, 68, 68)" fontSize="14px" fontFamily="Arial" />
+        <Item ID="7" XPOS="135px" YPOS="139px" Binding="given_name" Text="given_name" HelpText="given_name" color="rgb(68, 68, 68)" fontSize="14px" fontFamily="Arial" Width="0px" />
+        <Item ID="8" XPOS="134px" YPOS="105px" Binding="family_name" Text="family_name" HelpText="family_name" color="rgb(68, 68, 68)" fontSize="14px" fontFamily="Arial" Width="0px" />
+        <Item ID="10" XPOS="135px" YPOS="173px" Binding="birthdate" Text="birthdate" HelpText="birthdate" color="rgb(68, 68, 68)" fontSize="14px" fontFamily="Arial" />
+        <Item ID="11" XPOS="135px" YPOS="210px" Binding="gender" Text="gender" HelpText="gender" color="rgb(68, 68, 68)" fontSize="14px" fontFamily="Arial" />
+    </PtPos>
+</Report>
