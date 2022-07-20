@@ -21,6 +21,11 @@
         </p>
 
         <p>
+            <label>Date de sortie prévue</label>
+            <obs conceptId="5802" allowFutureDates="true" tags="Date de sortie prévue" />
+        </p>
+
+        <p>
             <label>
                 <uimessage code="referenceapplication.simpleAdmission.admittingClinician" />
             </label>

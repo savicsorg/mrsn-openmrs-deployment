@@ -25,7 +25,7 @@
    
    
        <p id="outcome-container">
-               <label>Résultat du patient</label>
+               <label>Raison de sortie</label>
                <obs conceptId="4838" tags="Choisir un résultat"/>
            </p>
    
