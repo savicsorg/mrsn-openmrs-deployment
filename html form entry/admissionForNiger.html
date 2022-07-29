@@ -1,9 +1,15 @@
-<htmlform formUuid="d2c7532c-fb01-11e2-8ff2-fd54ab5fdb2a" formName="Admission (Simple)" formEncounterType="e22e39fd-7db2-45e7-80f1-60fa0d5a4378" formVersion="1.0">
-
+<htmlform formUuid="d2c7532c-fb01-11e2-8ff2-fd54ab5fdb2a" formName="Admission (Simple)"
+    formEncounterType="e22e39fd-7db2-45e7-80f1-60fa0d5a4378" formVersion="1.0">
+    <style>
+        .error {
+            color: red
+        }
+    </style>
     <script type="text/javascript">
-        $(function() {
-            $('#location-container select').focus();
+        $(function () {
+            // $('#location-container select').focus();
         });
+
     </script>
 
     <h2>
@@ -17,12 +23,13 @@
             <label>
                 <uimessage code="referenceapplication.simpleAdmission.admissionDate" />
             </label>
-            <encounterDate id="encounterDate" showTime="false" default="now" />
+            <encounterDate id="encounterDate" showTime="false" default="now" required="true" />
         </p>
 
         <p>
             <label>Date de sortie prévue</label>
-            <obs conceptId="5802" allowFutureDates="true" tags="Date de sortie prévue" />
+            <obs conceptId="5802" allowFutureDates="true" tags="Date de sortie prévue" id="sortieDate"
+                required="true" />
         </p>
 
         <p>
@@ -36,17 +43,17 @@
             <label>
                 <uimessage code="referenceapplication.simpleAdmission.admittedTo" />
             </label>
-            <encounterLocation required="true" tags="Admission Location" />
+            <encounterLocation tags="Admission Location" required="true" />
         </p>
 
         <p>
             <label>N° de chambre</label>
-            <obs conceptId="4994" tags="N° de chambre" />
+            <obs conceptId="4994" tags="N° de chambre" required="true" />
         </p>
 
         <p>
             <label>N° de lit</label>
-            <obs conceptId="4995" tags="N° de lit" />
+            <obs conceptId="4995" tags="N° de lit" required="true" />
         </p>
 
         <p>
