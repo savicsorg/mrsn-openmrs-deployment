@@ -1,5 +1,9 @@
 <htmlform formUuid="a007bbfe-fbe5-11e2-8ff2-fd54ab5fdb2a" formName="Transfer Within Hospital (Simple)" formEncounterType="7b68d557-85ef-4fc8-b767-4fa4f5eb5c23" formVersion="1.0">
-
+    <style>
+        .error {
+            color: red
+        }
+    </style>
     <script type="text/javascript">
         $(function() {
             $('#location-container select').focus();
@@ -26,17 +30,17 @@
         <!-- adding by lcdamy-->
         <p>
             <label>N° de lit</label>
-            <obs conceptId="4995" tags="N° de lit" />
+            <obs conceptId="4995" tags="N° de lit" required="true"/>
         </p>
 
         <p>
             <label>Date et heure du transfert</label>
-            <obs allowFutureDates="true" conceptId="4447" tags="Date et heure du transfert" />
+            <obs allowFutureDates="true" conceptId="4447" tags="Date et heure du transfert" required="true"/>
         </p>
 
         <p>
             <label>Motif</label>
-            <obs conceptId="5011" tags="Observations" style="textarea" rows="5" />
+            <obs conceptId="5011" tags="Observations" style="textarea" rows="5" required="true"/>
         </p>
     </section>
 
