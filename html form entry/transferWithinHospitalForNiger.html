@@ -12,19 +12,11 @@
     <script type="text/javascript">
         $(function () {
             beforeSubmit.push(function () {
-                var lit = getValue('lit.value');
                 var transfertMotif = getValue('transfertMotif.value');
-
-                if (!lit == true || lit == "") {
-                    alert("fill all the fields");
-                    return false;
-                }
-
                 if (!transfertMotif == true || transfertMotif == "") {
                     alert("fill all the fields");
                     return false;
                 }
-
                 return true;
             });
         });
@@ -62,9 +54,8 @@
         <p>
             <label>
                 N° de lit
-                <span class="mandotory-star">*</span>
             </label>
-            <obs conceptId="4995" tags="N° de lit" id="lit" />
+            <obs conceptId="4995" tags="N° de lit" />
         </p>
 
         <p>
