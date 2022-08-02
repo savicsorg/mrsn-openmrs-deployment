@@ -1,53 +1,87 @@
-<htmlform formUuid="a007bbfe-fbe5-11e2-8ff2-fd54ab5fdb2a" formName="Transfer Within Hospital (Simple)" formEncounterType="7b68d557-85ef-4fc8-b767-4fa4f5eb5c23" formVersion="1.0">
+<htmlform formUuid="a007bbfe-fbe5-11e2-8ff2-fd54ab5fdb2a" formName="Transfer Within Hospital (Simple)"
+    formEncounterType="7b68d557-85ef-4fc8-b767-4fa4f5eb5c23" formVersion="1.0">
     <style>
+        .mandotory-star {
+            color: #ff0000;
+        }
+
         .error {
-            color: red
+            color: #ff0000;
         }
     </style>
     <script type="text/javascript">
-        $(function() {
-            $('#location-container select').focus();
+        $(function () {
+            beforeSubmit.push(function () {
+                var lit = getValue('lit.value');
+                var transfertMotif = getValue('transfertMotif.value');
+
+                if (!lit == true || lit == "") {
+                    alert("fill all the fields");
+                    return false;
+                }
+
+                if (!transfertMotif == true || transfertMotif == "") {
+                    alert("fill all the fields");
+                    return false;
+                }
+
+                return true;
+            });
         });
     </script>
 
-    <h2><label><uimessage code="referenceapplication.simpleTransfer.title"/></label></h2>
+    <h2><label>
+            <uimessage code="referenceapplication.simpleTransfer.title" />
+        </label></h2>
 
     <section id="discharge">
         <p>
-            <label><uimessage code="referenceapplication.simpleTransfer.transferDate"/></label>
-            <encounterDate id="encounterDate" showTime="false" default="now"/>
+            <label>
+                Date et heure du transfert
+                <span class="mandotory-star">*</span>
+            </label>
+            <obs allowFutureDates="true" conceptId="4447" tags="Date et heure du transfert" id="transfertTime"
+                required="true" />
         </p>
 
         <p>
-            <label><uimessage code="referenceapplication.simpleTransfer.transferringClinician"/></label>
-            <encounterProviderAndRole default="currentUser" encounterRole="1" required="true"/>
-        </p>
-
-        <p id="location-container">
-            <label><uimessage code="referenceapplication.simpleTransfer.transferTo"/></label>
-            <encounterLocation required="true" tags="Transfer Location"/>
-        </p>
-        <!-- adding by lcdamy-->
-        <p>
-            <label>N° de lit</label>
-            <obs conceptId="4995" tags="N° de lit" required="true"/>
+            <label>
+                <uimessage code="referenceapplication.simpleTransfer.transferringClinician" />
+                <span class="mandotory-star">*</span>
+            </label>
+            <encounterProviderAndRole default="currentUser" encounterRole="1" required="true" />
         </p>
 
         <p>
-            <label>Date et heure du transfert</label>
-            <obs allowFutureDates="true" conceptId="4447" tags="Date et heure du transfert" required="true"/>
+            <label>
+                <uimessage code="referenceapplication.simpleTransfer.transferTo" />
+            </label>
+            <encounterLocation tags="Transfer Location" required="true" />
         </p>
 
         <p>
-            <label>Motif</label>
-            <obs conceptId="5011" tags="Observations" style="textarea" rows="5" required="true"/>
+            <label>
+                N° de lit
+                <span class="mandotory-star">*</span>
+            </label>
+            <obs conceptId="4995" tags="N° de lit" id="lit" />
+        </p>
+
+        <p>
+            <label>
+                Motif
+                <span class="mandotory-star">*</span>
+            </label>
+            <obs conceptId="5011" tags="Observations" ols="40" rows="5" id="transfertMotif" />
         </p>
     </section>
 
     <submit submitClass="confirm right" submitCode="uicommons.saveForm" />
 
     <ifMode mode="VIEW" include="false">
-        <button class="cancel"><uimessage code="uicommons.cancelForm"/></button>
+        <button class="cancel">
+            <uimessage code="uicommons.cancelForm" />
+        </button>
     </ifMode>
 
 </htmlform>
