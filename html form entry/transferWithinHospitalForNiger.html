@@ -13,7 +13,8 @@
         $(function () {
             beforeSubmit.push(function () {
                 var transfertMotif = getValue('transfertMotif.value');
-                if (!transfertMotif == true || transfertMotif == "") {
+                var transfertTime = getValue('transfertMotif.value');
+                if (!transfertMotif == true || transfertMotif == "" || !transfertTime == true || transfertTime == "") {
                     alert("fill all mandatory fields");
                     return false;
                 }
@@ -32,8 +33,7 @@
                 Date et heure du transfert
                 <span class="mandotory-star">*</span>
             </label>
-            <obs allowFutureDates="true" conceptId="4447" tags="Date et heure du transfert" id="transfertTime"
-                required="true" />
+            <obs allowFutureDates="true" conceptId="4447" tags="Date et heure du transfert" id="transfertTime" />
         </p>
 
         <p>
