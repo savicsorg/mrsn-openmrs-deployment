@@ -63,13 +63,60 @@
             if (val == null || val == '') {
                 if  (valOther == null || valOther == '') {
                     getField('drug.error').html('Veuillez selectionner ici un médicament').show();
-                    getField('drugOther.error').html('Ou veuillez saisir ici un médicament').show();
+                    //getField('drugOther.error').html('Ou veuillez saisir ici un médicament').show();
                     return false;
                 }
             }
             return true;
         });
+
+        $j(document).ready(function () {
+                $j('#drug').change(function (value) {
+                    var url = new URL(window.location.href);
+                        $j("#obs1").hide();
+                        var username = $j("#obs_username").text().trim();
+                        var password = $j("#obs_password").text().trim();
+                        $j("#obs_username").remove();
+                        $j("#obs_password").remove();
+                        var drugId = getValue('drug.value');
+                        if (drugId){
+                            drugId = drugId.substring("Drug:".length)
+                        }
+                        
+                        const params = new URLSearchParams({
+                            drug: $j.trim(drugId),
+                            v: "full"
+                        });
+                        var apiAddress = url.origin + "/openmrs/ws/rest/v1/savicspharmacy/item?"
+                        apiAddress = apiAddress + params.toString();
+                        const url1 = apiAddress;
+                        const options = {
+                            headers: {
+                                Authorization: "Basic " + btoa(username + ":" + password)
+                            }
+                        };
+                        var availableQuantity= 0;
+                        fetch(url1, options)
+                            .then(res => res.json())
+                            .then(
+                                data => {
+                                    var items = data.results;
+                                    if (items &amp;&amp; items[0]) {
+                                        availableQuantity= items[0].soh;
+                                        getField('drug.error').html("Quantité disponible: "+availableQuantity).show();
+                                        //$j("#quantityAvailable").text("Quantité disponible: "+availableQuantity);
+                                    }
+                                }
+                            );
+                    
+                });
+            });
+
+
+
     </script>
+
+    
 
     <ifMode mode="ENTER">
         <script type="text/javascript"></script>
@@ -118,9 +165,10 @@
                     Médicament
                 </td>
                 <td colspan="3">
-                    <obs id="drug" conceptId="5106" answerDrugs="true" displayTemplate="{{name}} {{concept}}" />
+                    <obs id="drug" conceptId="5106" answerDrugs="true" displayTemplate="{{name}} - {{id}}" />
                 </td>
             </tr>
+
             <!-- <tr>
                 <td width="20%">
                    Autre médicament
@@ -135,7 +183,7 @@
                     Voie d'administration
                 </td>
                 <td width="20%">
-                    <obs conceptId="2441" />
+                    <obs conceptId="2441" id="vadmi" class="caaa"/>
                 </td>
                 <td colspan="2"></td>
             </tr>
