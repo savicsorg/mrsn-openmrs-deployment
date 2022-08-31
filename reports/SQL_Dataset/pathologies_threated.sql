@@ -1,36 +1,37 @@
 select distinct 
-hostpitalisation_avec_lit.visit_id ,
-hostpitalisation_avec_lit.date_created as "Date",
-pathologies.pathologie as "Pathologie",
-hostpitalisation_avec_lit.location_name as "Service/unite de l'HD",
-hostpitalisation_avec_lit.patient_id as "ID Patient",
-hostpitalisation_avec_lit.num_lit as "N° Lit",
-DATEDIFF(hostpitalisation_avec_lit.date_created, hostpitalisation_avec_date_sortie.date_sortie)  as "Durée du séjour",
-hostpitalisation_avec_lit.medecin  as "Médécin",
-hostpitalisation_avec_date_sortie.date_sortie as "Date Sortie",
-transferts.transfered as "Transfert Oui/Non",
-transfert_avec_date_transfert.date_transfert as "Date Transfert",
-transferts.service_de_transfert as "Service Transfert",
-transfert_avec_numero_lit.numero_nouveau_lit as "N° Nouveau lit"
+hostpitalisation_avec_lit.date_created as date_created,
+pathologies.pathologie as pathologie,
+hostpitalisation_avec_lit.location_name as service,
+hostpitalisation_avec_lit.patient_id as id_patient,
+hostpitalisation_avec_lit.num_lit as num_bed,
+DATEDIFF(hostpitalisation_avec_date_sortie.date_sortie, hostpitalisation_avec_lit.date_created)  as duree_sejour,
+hostpitalisation_avec_lit.medecin  as medecin,
+hostpitalisation_avec_date_sortie.date_sortie as date_sortie,
+transferts.transfered as transfert_or_not,
+transfert_avec_date_transfert.date_transfert as date_transfert,
+transferts.service_de_transfert as new_service,
+transfert_avec_numero_lit.numero_nouveau_lit as new_bed
 from (
 	select distinct 
 	encounter.visit_id as visit_id,
 	encounter.encounter_id as encounter_id,
 	encounter.encounter_datetime  as date_created,
 	location.name as location_name,
-	encounter.patient_id as patient_id,
+	patient_identifier.identifier as patient_id,
 	obs.value_text as num_lit,
 	"" as duree_sejour,
 	person_name.given_name as medecin,
 	obs.value_datetime as date_sortie,
 	"" as transfert_or_not,
 	"" as date_transfert,
-	"" as numero_nouveau_lit
+	"" as numero_nouveau_lit,
+	encounter.voided as voided
 	from encounter
 	inner join location on location.location_id = encounter.location_id
 	inner join encounter_provider on encounter.encounter_id  = encounter_provider.encounter_id
 	inner join provider on encounter_provider.provider_id = provider.provider_id 
 	inner join person on provider.person_id  = person.person_id
+        inner join patient_identifier on patient_identifier.patient_id = encounter.patient_id
 	inner join person_name on person_name.person_id = person.person_id
 	inner join encounter_type on encounter_type.encounter_type_id = encounter.encounter_type 
 	inner join obs on obs.encounter_id  = encounter.encounter_id 
@@ -100,4 +101,7 @@ left join (
 	where concept.uuid = "1640AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA"
 	and encounter_type.uuid = "7b68d557-85ef-4fc8-b767-4fa4f5eb5c23") transfert_avec_date_transfert
 on hostpitalisation_avec_lit.visit_id = transfert_avec_date_transfert.visit_id
+where hostpitalisation_avec_lit.voided = 0
+and hostpitalisation_avec_lit.date_created between :startDate and :endDate
 group by pathologies.pathologie, hostpitalisation_avec_lit.encounter_id
+order by hostpitalisation_avec_lit.date_created
