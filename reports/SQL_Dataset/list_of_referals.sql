@@ -1,15 +1,16 @@
 select distinct 
-date_admissions.date_admission as "Date d'arrivée",
-pathologies.pathologie as "Pathologie",
-structure_provenances.structure_provenance as "Structure de provenance",
-encounter.patient_id  as "ID du patient",
-person_name.given_name as "Médécin",
-contre_references.contre_references.have_contre_reference as "Contre referé Oui/Non",
-date_contre_reference as "Date de la contre reférence",
-structure_contre_references.structure_contre_reference as "Structure de la contre reférence"
+date_admissions.date_admission as Date_arrivee,
+pathologies.pathologie as Pathologie,
+structure_provenances.structure_provenance as Structure_de_provenance,
+patient_identifier.identifier as ID_du_patient,
+person_name.given_name as Medecin,
+contre_references.contre_references.have_contre_reference as Contre_refere_Oui_Non,
+date_contre_reference as Date_de_la_contre_reference,
+structure_contre_references.structure_contre_reference as Structure_de_la_contre_reference
 from encounter 
 inner join encounter_type on encounter.encounter_type = encounter_type.encounter_type_id
 inner join users on users.user_id = encounter.creator
+inner join patient_identifier on patient_identifier.patient_id = encounter.patient_id
 inner join person on person.person_id = users.person_id 
 inner join person_name on person_name.person_id = person.person_id
 inner join(
@@ -72,4 +73,6 @@ left join (
 	inner join concept_name on concept_name.concept_id = obs.value_coded 
 	where concept.uuid = "c1b5370f-e62f-4301-8603-d6049e5429b3" ) structure_contre_references
 on encounter.encounter_id = structure_contre_references.encounter_id
+where encounter.voided = 0
+and date_admissions.date_admission between :startDate and :endDate
 order by date_admissions.date_admission
